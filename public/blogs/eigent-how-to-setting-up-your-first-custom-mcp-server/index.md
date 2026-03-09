@@ -106,7 +106,7 @@ For example, you can extend the ”args” array to include the GitHub server im
 
 ‍
 
-In this configuration, we pass the official **GitHub MCP server** (hosted at [ghcr.io/github/github-mcp-server](http://ghcr.io/github/github-mcp-server) as an argument to the sequential thinking agent. The sequential agent will spin up the GitHub toolset internally. We also set GITHUB_PERSONAL_ACCESS_TOKEN in the environment so the agent can authenticate to GitHub. _(Make sure to replace_ **_"ghp_yourGitHubTokenHere”_** _with your actual PAT.)_ Once the JSON is ready, click **Install** or **Add** to save the MCP server. Eigent will download and initialize the server in the background. After a moment, you should see the new server listed in your MCP tools, indicating a successful installation.
+In this configuration, we pass the official **GitHub MCP server** (hosted at [ghcr.io/github/github-mcp-server](http://ghcr.io/github/github-mcp-server) as an argument to the sequential thinking agent. The sequential agent will spin up the GitHub toolset internally. We also set GITHUB*PERSONAL_ACCESS_TOKEN in the environment so the agent can authenticate to GitHub. *(Make sure to replace\* \*\**"ghp*yourGitHubTokenHere”**\* *with your actual PAT.)* Once the JSON is ready, click **Install** or **Add\*\* to save the MCP server. Eigent will download and initialize the server in the background. After a moment, you should see the new server listed in your MCP tools, indicating a successful installation.
 
 ### **Step 4: Add a GitHub-Focused Worker (Agent) Using the New MCP Server**
 

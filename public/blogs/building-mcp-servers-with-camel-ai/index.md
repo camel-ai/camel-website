@@ -362,7 +362,7 @@ if __name__ == "__main__":
 
 ‍
 
-- **Server Transport Method**: The **main** function accepts a server_transport parameter to choose between \*'\***_stdio'_** and **_'sse'_** modes. Based on this choice, it sets up the _appropriate server connection_.​
+- **Server Transport Method**: The **main** function accepts a server\*transport parameter to choose between \*'\*\*\*\_stdio'**\* and **_'sse'_\*\* modes. Based on this choice, it sets up the _appropriate server connection_.​
 - ‍**System Message**: guides the assistant’s behavior, emphasizing the use of external tools for filesystem operations and ensuring responses are token-efficient.​
 - **Model Initialization**: We use the **ModelFactory** class to initialise the LLM with specified parameters, including the _model platform_, _type_, _API key,_ and _configuration settings._
 - **Chat Agent Creation**: The **ChatAgent** binds the system message, model, and tools, creating an agent capable of interacting with the filesystem through the defined tools.​**‍**

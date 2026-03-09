@@ -42,7 +42,10 @@
         "title": "CAMEL",
         "description": "最初で最高のマルチエージェントフレームワーク。"
       },
-      "seta": { "title": "SETA", "description": "ターミナルエージェントのためのスケーリング環境" },
+      "seta": {
+        "title": "SETA",
+        "description": "ターミナルエージェントのためのスケーリング環境"
+      },
       "owl": {
         "title": "OWL",
         "description": "マルチエージェント支援のための最適化ワークフォース学習"
@@ -55,7 +58,10 @@
         "title": "CRAB",
         "description": "マルチモーダル言語モデルエージェントのクロス環境ベンチマーク"
       },
-      "loong": { "title": "LOONG", "description": "検証器による大規模長鎖思考の合成" },
+      "loong": {
+        "title": "LOONG",
+        "description": "検証器による大規模長鎖思考の合成"
+      },
       "agentTrust": {
         "title": "AGENT TRUST",
         "description": "LLMエージェントが人間の信頼行動をシミュレート"

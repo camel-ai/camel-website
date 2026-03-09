@@ -8,7 +8,12 @@
   "theme_color": "#000000",
   "orientation": "portrait-primary",
   "icons": [
-    { "src": "/favicon.ico", "sizes": "48x48", "type": "image/x-icon", "purpose": "any" },
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon",
+      "purpose": "any"
+    },
     {
       "src": "/android-chrome-192x192.png",
       "sizes": "192x192",

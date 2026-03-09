@@ -270,7 +270,7 @@ Install the original BVLC Caffe deep learning framework (version 1.0.0) and trai
        - No more than 5% less than train accuracy  
        - Greater than 45%
   8. Model file should be at: examples/cifar10/cifar10_quick_iter_500.caffemodel
-  Success Criteria:
+     Success Criteria:
   - Caffe 1.0.0 installed and built for CPU
   - CIFAR-10 training completed (500 iterations)
   - Training output saved to specified file
@@ -282,25 +282,25 @@ Install the original BVLC Caffe deep learning framework (version 1.0.0) and trai
   - Install Python, Git, build tools
   - Install OpenCV, BLAS, Boost, protobuf, etc.
   - Install Caffe dependencies
-  Phase 2: Clone and Build Caffe
+    Phase 2: Clone and Build Caffe
   - Clone BVLC/caffe v1.0.0 to /app/caffe
   - Configure for CPU-only build
   - Compile Caffe
-  Phase 3: Prepare CIFAR-10
+    Phase 3: Prepare CIFAR-10
   - Download CIFAR-10 dataset
   - Convert to Caffe format (lmdb)
   - Verify data preprocessing scripts
-  Phase 4: Train Model
+    Phase 4: Train Model
   - Navigate to examples/cifar10
   - Modify solver to train for exactly 500 iterations
   - Run training
   - Capture output to /app/caffe/training_output.txt
-  Phase 5: Verify
+    Phase 5: Verify
   - Check model file exists: cifar10_quick_iter_500.caffemodel
   - Extract train and test accuracy from output
   - Verify test accuracy > 45%
   - Verify test accuracy within 5% of train accuracy
-  Fallbacks:
+    Fallbacks:
   - If build fails: try with different dependencies
   - If training fails: check data paths, modify config files
   - If accuracy low: verify training is actually occurring`
@@ -313,7 +313,7 @@ Install the original BVLC Caffe deep learning framework (version 1.0.0) and trai
   5. ✅ Configured Makefile.config for CPU-only build
   6. ✅ Fixed OpenCV 4 compatibility issues:  
        - Added /usr/include/opencv4 to include path  
-       - Fixed CV*LOAD_IMAGE*_ constants to cv::IMREAD\__ in:  
+       - Fixed CV*LOAD_IMAGE*\_ constants to cv::IMREAD\_\_ in:  
          - src/caffe/util/io.cpp  
          - src/caffe/layers/window_data_layer.cpp  
          - src/caffe/test/test_io.cpp  

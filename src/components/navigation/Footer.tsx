@@ -42,18 +42,36 @@ const RESOURCE_KEYS = [
   { key: "docs", href: "https://docs.camel-ai.org" },
   { key: "techStack", href: "/techstacks" },
   { key: "about", href: "/about" },
-  { key: "careers", href: "https://eigent-ai.notion.site/eigent-ai-careers?source=copy_link" },
+  {
+    key: "careers",
+    href: "https://eigent-ai.notion.site/eigent-ai-careers?source=copy_link",
+  },
   { key: "branding", href: "/branding" },
 ];
 
 export default function Footer() {
   const t = useTranslations("Footer");
 
-  const productItems = PRODUCT_KEYS.map(({ key, href }) => ({ title: t(key), href }));
-  const researchItems = RESEARCH_KEYS.map(({ key, href }) => ({ title: t(key), href }));
-  const communityItems = COMMUNITY_KEYS.map(({ key, href }) => ({ title: t(key), href }));
-  const frameworkItems = FRAMEWORK_KEYS.map(({ key, href }) => ({ title: t(key), href }));
-  const resourceItems = RESOURCE_KEYS.map(({ key, href }) => ({ title: t(key), href }));
+  const productItems = PRODUCT_KEYS.map(({ key, href }) => ({
+    title: t(key),
+    href,
+  }));
+  const researchItems = RESEARCH_KEYS.map(({ key, href }) => ({
+    title: t(key),
+    href,
+  }));
+  const communityItems = COMMUNITY_KEYS.map(({ key, href }) => ({
+    title: t(key),
+    href,
+  }));
+  const frameworkItems = FRAMEWORK_KEYS.map(({ key, href }) => ({
+    title: t(key),
+    href,
+  }));
+  const resourceItems = RESOURCE_KEYS.map(({ key, href }) => ({
+    title: t(key),
+    href,
+  }));
   return (
     <footer className="bg-card rounded-t-[40px] py-6 md:rounded-t-[80px] md:py-8">
       <div className="mx-auto flex max-w-[1280px] flex-col gap-12 px-4 md:gap-20 md:px-8">

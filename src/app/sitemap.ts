@@ -15,7 +15,10 @@ function getBlogSlugsWithDates(): { slug: string; date: string }[] {
     if (!indexPath) continue;
     const content = fs.readFileSync(indexPath, "utf8");
     const dateMatch = content.match(/^date:\s*["']?([^"'\n]+)["']?/m);
-    result.push({ slug: entry.name, date: dateMatch?.[1] ?? new Date().toISOString() });
+    result.push({
+      slug: entry.name,
+      date: dateMatch?.[1] ?? new Date().toISOString(),
+    });
   }
   return result;
 }
@@ -24,14 +27,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.camel-ai.org";
 
   const staticPages: MetadataRoute.Sitemap = [
-    { url: baseUrl, lastModified: new Date(), changeFrequency: "weekly", priority: 1 },
+    {
+      url: baseUrl,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 1,
+    },
     {
       url: `${baseUrl}/about`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
-    { url: `${baseUrl}/blogs`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
+    {
+      url: `${baseUrl}/blogs`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
     {
       url: `${baseUrl}/community`,
       lastModified: new Date(),
@@ -92,7 +105,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
-    { url: `${baseUrl}/sea`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+    {
+      url: `${baseUrl}/sea`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
     {
       url: `${baseUrl}/sea/collaboration`,
       lastModified: new Date(),

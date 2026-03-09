@@ -46,13 +46,29 @@ export async function GET() {
       const fileSize = await getFileSize(asset.browser_download_url);
 
       if (name.includes("mac") && (name.includes("m1") || name.includes("arm64"))) {
-        return { type: "MAC_M", size: fileSize, url: asset.browser_download_url };
+        return {
+          type: "MAC_M",
+          size: fileSize,
+          url: asset.browser_download_url,
+        };
       } else if (name.includes("mac") && (name.includes("intel") || name.includes("x64"))) {
-        return { type: "MAC_I", size: fileSize, url: asset.browser_download_url };
+        return {
+          type: "MAC_I",
+          size: fileSize,
+          url: asset.browser_download_url,
+        };
       } else if (name.includes("windows") || name.includes("win")) {
-        return { type: "WINDOWS", size: fileSize, url: asset.browser_download_url };
+        return {
+          type: "WINDOWS",
+          size: fileSize,
+          url: asset.browser_download_url,
+        };
       } else if (name.includes("linux")) {
-        return { type: "LINUX", size: fileSize, url: asset.browser_download_url };
+        return {
+          type: "LINUX",
+          size: fileSize,
+          url: asset.browser_download_url,
+        };
       }
       return null;
     });

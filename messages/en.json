@@ -38,17 +38,38 @@
     "becomeAmbassador": "Become an Ambassador",
     "starOnGitHub": "Star on GitHub",
     "researchItems": {
-      "camel": { "title": "CAMEL", "description": "The first and the best multi-agent framework." },
-      "seta": { "title": "SETA", "description": "Scaling Environments for Terminal Agents" },
+      "camel": {
+        "title": "CAMEL",
+        "description": "The first and the best multi-agent framework."
+      },
+      "seta": {
+        "title": "SETA",
+        "description": "Scaling Environments for Terminal Agents"
+      },
       "owl": {
         "title": "OWL",
         "description": "Optimized Workforce Learning for Multi-Agent Assistance"
       },
-      "oasis": { "title": "OASIS", "description": "Open Agent Social Interaction Simulations" },
-      "crab": { "title": "CRAB", "description": "Cross-environment Agent Benchmark" },
-      "loong": { "title": "LOONG", "description": "Synthesize Long CoTs at Scale" },
-      "agentTrust": { "title": "AGENT TRUST", "description": "LLM Agents Simulate Human Trust" },
-      "emos": { "title": "EMOS", "description": "Embodiment-aware Multi-robot OS" }
+      "oasis": {
+        "title": "OASIS",
+        "description": "Open Agent Social Interaction Simulations"
+      },
+      "crab": {
+        "title": "CRAB",
+        "description": "Cross-environment Agent Benchmark"
+      },
+      "loong": {
+        "title": "LOONG",
+        "description": "Synthesize Long CoTs at Scale"
+      },
+      "agentTrust": {
+        "title": "AGENT TRUST",
+        "description": "LLM Agents Simulate Human Trust"
+      },
+      "emos": {
+        "title": "EMOS",
+        "description": "Embodiment-aware Multi-robot OS"
+      }
     }
   },
   "Footer": {

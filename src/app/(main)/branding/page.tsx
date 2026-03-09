@@ -8,13 +8,23 @@ const downloadLinks = [
   {
     brand: "Eigent AI",
     items: [
-      { label: "Logo", file: "Eigent Logo.zip", size: "142.9KB", href: "/package/eigent-logo.zip" },
+      {
+        label: "Logo",
+        file: "Eigent Logo.zip",
+        size: "142.9KB",
+        href: "/package/eigent-logo.zip",
+      },
     ],
   },
   {
     brand: "Font",
     items: [
-      { label: "Palatino", file: "Palatino.zip", size: "1779.3KB", href: "/package/palatino.zip" },
+      {
+        label: "Palatino",
+        file: "Palatino.zip",
+        size: "1779.3KB",
+        href: "/package/palatino.zip",
+      },
     ],
   },
   {

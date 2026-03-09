@@ -191,7 +191,14 @@ export function getPostBySlug(slug: string): BlogPost | null {
   const toc = frontmatter.toc ? buildTocFromMDX(content) : [];
   const readingTime = calculateReadingTime(content);
   const authorData = resolveAuthor(frontmatter.author, frontmatter.authorprofile);
-  return { slug, content: resolvedContent, data: frontmatter, toc, readingTime, authorData };
+  return {
+    slug,
+    content: resolvedContent,
+    data: frontmatter,
+    toc,
+    readingTime,
+    authorData,
+  };
 }
 
 export function getAllPosts(): BlogPost[] {

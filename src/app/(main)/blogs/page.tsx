@@ -13,7 +13,14 @@ export const metadata = {
     title: "Blog | CAMEL-AI",
     description:
       "CAMEL-AI blog: updates, tutorials, and insights on multi-agent systems, data generation, and AI research.",
-    images: [{ url: "/image/thumbnail.png", width: 1200, height: 630, alt: "CAMEL-AI Blog" }],
+    images: [
+      {
+        url: "/image/thumbnail.png",
+        width: 1200,
+        height: 630,
+        alt: "CAMEL-AI Blog",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",

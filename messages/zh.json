@@ -38,13 +38,25 @@
     "becomeAmbassador": "成为大使",
     "starOnGitHub": "在 GitHub 上星标",
     "researchItems": {
-      "camel": { "title": "CAMEL", "description": "首个也是最好的多智能体框架。" },
+      "camel": {
+        "title": "CAMEL",
+        "description": "首个也是最好的多智能体框架。"
+      },
       "seta": { "title": "SETA", "description": "终端智能体的扩展环境" },
-      "owl": { "title": "OWL", "description": "多智能体辅助的优化工作队伍学习" },
+      "owl": {
+        "title": "OWL",
+        "description": "多智能体辅助的优化工作队伍学习"
+      },
       "oasis": { "title": "OASIS", "description": "开放智能体社交交互模拟" },
       "crab": { "title": "CRAB", "description": "跨环境智能体基准" },
-      "loong": { "title": "LOONG", "description": "通过验证器大规模合成长链推理" },
-      "agentTrust": { "title": "AGENT TRUST", "description": "LLM 智能体模拟人类信任行为" },
+      "loong": {
+        "title": "LOONG",
+        "description": "通过验证器大规模合成长链推理"
+      },
+      "agentTrust": {
+        "title": "AGENT TRUST",
+        "description": "LLM 智能体模拟人类信任行为"
+      },
       "emos": { "title": "EMOS", "description": "具身感知的多机器人操作系统" }
     }
   },

@@ -62,7 +62,10 @@ export default config({
           label: "Keywords",
           itemLabel: (props) => props.value || "New keyword",
         }),
-        toc: fields.checkbox({ label: "Show Table of Contents", defaultValue: true }),
+        toc: fields.checkbox({
+          label: "Show Table of Contents",
+          defaultValue: true,
+        }),
         content: fields.mdx({ label: "Content" }),
       },
     }),
