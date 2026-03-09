@@ -1,0 +1,322 @@
+{
+  "title": "Tools",
+  "variant": "yellow",
+  "items": [
+    {
+      "id": "alibaba-tongxiao-search",
+      "name": "Alibaba Tongxiao Search",
+      "logo": true,
+      "url": ""
+    },
+    {
+      "id": "arxiv-toolkit",
+      "name": "arXiv Toolkit",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/arxiv_toolkit.py"
+    },
+    {
+      "id": "ask-news-toolkit",
+      "name": "Ask News Toolkit",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/ask_news_toolkit.py"
+    },
+    {
+      "id": "audio-analysis-toolkit",
+      "name": "Audio Analysis",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/audio_analysis_toolkit.py"
+    },
+    {
+      "id": "baidu-search",
+      "name": "Baidu Search",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/baidu_search.py"
+    },
+    {
+      "id": "bing-search",
+      "name": "Bing Search",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/bing_search.py"
+    },
+    {
+      "id": "brave-search",
+      "name": "Brave Search",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/brave_search.py"
+    },
+    {
+      "id": "browser-toolkit",
+      "name": "Browser",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/browser_toolkit.py"
+    },
+    {
+      "id": "bocha-search",
+      "name": "Bocha Search",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/bocha_search.py"
+    },
+    {
+      "id": "code-execution-toolkit",
+      "name": "Code Execution",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/code_execution.py"
+    },
+    {
+      "id": "dappier-toolkit",
+      "name": "Dappier",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/dappier_toolkit.py"
+    },
+    {
+      "id": "data-commons-toolkit",
+      "name": "Data Commons",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/data_commons_toolkit.py"
+    },
+    {
+      "id": "duckduckgo-search",
+      "name": "DuckDuckGo Search",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/duckduckgo_search.py"
+    },
+    {
+      "id": "exa-search",
+      "name": "Exa Search",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/exa_search.py"
+    },
+    {
+      "id": "excel-toolkit",
+      "name": "Excel",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/excel_toolkit.py"
+    },
+    {
+      "id": "file-write-toolkit",
+      "name": "File Write",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/file_write_toolkit.py"
+    },
+    {
+      "id": "github-toolkit",
+      "name": "Github",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/github_toolkit.py"
+    },
+    {
+      "id": "google-calendar-toolkit",
+      "name": "Google Calendar",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/google_calendar_toolkit.py"
+    },
+    {
+      "id": "google-maps-toolkit",
+      "name": "Google Map",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/google_maps_toolkit.py"
+    },
+    {
+      "id": "google-scholar-toolkit",
+      "name": "Google Scholar",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/google_scholar_toolkit.py"
+    },
+    {
+      "id": "google-search-toolkit",
+      "name": "Google Search",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/google_search_toolkit.py"
+    },
+    {
+      "id": "image-analysis-toolkit",
+      "name": "Image Analysis",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/image_analysis_toolkit.py"
+    },
+    {
+      "id": "jina-reranker-toolkit",
+      "name": "Jina Reranker",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/jina_reranker_toolkit.py"
+    },
+    {
+      "id": "linkedin-toolkit",
+      "name": "LinkedIn",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/linkedin_toolkit.py"
+    },
+    {
+      "id": "linkup-search-toolkit",
+      "name": "LinkUp Search",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/linkup_search_toolkit.py"
+    },
+    {
+      "id": "math-toolkit",
+      "name": "Math",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/math_toolkit.py"
+    },
+    {
+      "id": "meshy-toolkit",
+      "name": "Meshy",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/meshy_toolkit.py"
+    },
+    {
+      "id": "mineru-toolkit",
+      "name": "MinerU",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/mineru_toolkit.py"
+    },
+    {
+      "id": "networkx-toolkit",
+      "name": "NetworkX",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/networkx_toolkit.py"
+    },
+    {
+      "id": "notion-toolkit",
+      "name": "Notion",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/notion_toolkit.py"
+    },
+    {
+      "id": "open-api-toolkit",
+      "name": "Open API",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/open_api_toolkit.py"
+    },
+    {
+      "id": "open-bb-toolkit",
+      "name": "Open BB",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/openbb_toolkit.py"
+    },
+    {
+      "id": "pubmed-toolkit",
+      "name": "Pubmed",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/pubmed_toolkit.py"
+    },
+    {
+      "id": "pyautogui-toolkit",
+      "name": "Pyautogui",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/pyautogui_toolkit.py"
+    },
+    {
+      "id": "reddit-toolkit",
+      "name": "Reddit",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/reddit_toolkit.py"
+    },
+    {
+      "id": "retrieval-toolkit",
+      "name": "Retrieval",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/retrieval_toolkit.py"
+    },
+    {
+      "id": "scraper-toolkit",
+      "name": "Scraper",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/scraper_toolkit.py"
+    },
+    {
+      "id": "searxng-toolkit",
+      "name": "Searxng",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/searxng_toolkit.py"
+    },
+    {
+      "id": "semantic-scholar-toolkit",
+      "name": "Semantic Scholar",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/semantic_scholar_toolkit.py"
+    },
+    {
+      "id": "slack-toolkit",
+      "name": "Slack",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/slack_toolkit.py"
+    },
+    {
+      "id": "stripe-toolkit",
+      "name": "Stripe",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/stripe_toolkit.py"
+    },
+    {
+      "id": "sympy-toolkit",
+      "name": "Sympy",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/sympy_toolkit.py"
+    },
+    {
+      "id": "tavily-search-toolkit",
+      "name": "Tavily Search",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/tavily_search_toolkit.py"
+    },
+    {
+      "id": "terminal-toolkit",
+      "name": "Terminal",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/terminal_toolkit.py"
+    },
+    {
+      "id": "thinking-toolkit",
+      "name": "Thinking",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/thinking_toolkit.py"
+    },
+    {
+      "id": "video-analysis-toolkit",
+      "name": "Video Analysis",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/video_analysis_toolkit.py"
+    },
+    {
+      "id": "video-download-toolkit",
+      "name": "Video Download",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/video_download_toolkit.py"
+    },
+    {
+      "id": "weather-toolkit",
+      "name": "Weather",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/weather_toolkit.py"
+    },
+    {
+      "id": "whatsapp-toolkit",
+      "name": "WhatsApp",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/whatsapp_toolkit.py"
+    },
+    {
+      "id": "twitter-toolkit",
+      "name": "Twitter",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/twitter_toolkit.py"
+    },
+    {
+      "id": "wikipedia-search-toolkit",
+      "name": "Wikipedia Search",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/wikipedia_search_toolkit.py"
+    },
+    {
+      "id": "wolfram-alpha-toolkit",
+      "name": "Wolfram Alpha",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/wolfram_alpha_toolkit.py"
+    },
+    {
+      "id": "zapier-toolkit",
+      "name": "Zapier",
+      "logo": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/zapier_toolkit.py"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "Agent Society",
+  "subtitle": "Multi-agent",
+  "variant": "neon",
+  "items": [
+    {
+      "id": "role-playing",
+      "name": "Role Playing",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/societies/role_playing.py"
+    },
+    {
+      "id": "workforce",
+      "name": "Workforce",
+      "url": "https://github.com/camel-ai/camel/tree/master/camel/societies/workforce"
+    }
+  ]
+}

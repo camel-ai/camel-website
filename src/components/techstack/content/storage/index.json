@@ -1,0 +1,106 @@
+{
+  "title": "Storage",
+  "variant": "orange",
+  "items": [
+    {
+      "id": "in-memory-storage",
+      "name": "In Memory",
+      "subcategory": "Key-Value Storage",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/storages/key_value_storages/in_memory.py"
+    },
+    {
+      "id": "json-storage",
+      "name": "JSON",
+      "subcategory": "Key-Value Storage",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/storages/key_value_storages/json.py"
+    },
+    {
+      "id": "redis-storage",
+      "name": "redis",
+      "logo": true,
+      "showText": false,
+      "subcategory": "Key-Value Storage",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/storages/key_value_storages/redis.py"
+    },
+    {
+      "id": "mem0-cloud-storage",
+      "name": "Mem0",
+      "logo": true,
+      "showText": false,
+      "subcategory": "Key-Value Storage",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/storages/key_value_storages/mem0_cloud.py"
+    },
+    {
+      "id": "nebula-graph-storage",
+      "name": "NebulaGraph",
+      "logo": true,
+      "showText": false,
+      "subcategory": "Graph DB Storage",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/storages/graph_storages/nebula_graph.py"
+    },
+    {
+      "id": "neo4j-storage",
+      "name": "neo4j",
+      "logo": true,
+      "showText": false,
+      "subcategory": "Graph DB Storage",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/storages/graph_storages/neo4j_graph.py"
+    },
+    {
+      "id": "amazon-storage",
+      "name": "Amazon",
+      "logo": true,
+      "showText": false,
+      "subcategory": "Object Storage",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/storages/object_storages/amazon_s3.py"
+    },
+    {
+      "id": "google-cloud-storage",
+      "name": "Google Cloud",
+      "logo": true,
+      "showText": false,
+      "subcategory": "Object Storage",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/storages/object_storages/google_cloud.py"
+    },
+    {
+      "id": "microsoft-azure-storage",
+      "name": "Microsoft Azure",
+      "logo": true,
+      "showText": false,
+      "subcategory": "Object Storage",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/storages/object_storages/azure_blob.py"
+    },
+    {
+      "id": "qdrant-storage",
+      "name": "Qdrant",
+      "logo": true,
+      "showText": false,
+      "subcategory": "Vector DB Storage",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/storages/vectordb_storages/qdrant.py"
+    },
+    {
+      "id": "milvus-storage",
+      "name": "Milvus",
+      "logo": true,
+      "showText": false,
+      "subcategory": "Vector DB Storage",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/storages/vectordb_storages/milvus.py"
+    },
+    {
+      "id": "oceanbase",
+      "name": "OceanBase",
+      "logo": true,
+      "showText": false,
+      "subcategory": "Vector DB Storage",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/storages/vectordb_storages/oceanbase.py"
+    },
+    {
+      "id": "surreal-db",
+      "name": "SurrealDB",
+      "logo": true,
+      "showText": false,
+      "subcategory": "Vector DB Storage",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/storages/vectordb_storages/surreal.py"
+    }
+  ]
+}

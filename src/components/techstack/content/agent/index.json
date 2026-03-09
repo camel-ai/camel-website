@@ -1,0 +1,67 @@
+{
+  "title": "Agent",
+  "subtitle": "Single-agent",
+  "variant": "neon",
+  "items": [
+    {
+      "id": "chat-agent",
+      "name": "Chat Agent",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/agents/chat_agent.py"
+    },
+    {
+      "id": "critic-agent",
+      "name": "Critic Agent",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/agents/critic_agent.py"
+    },
+    {
+      "id": "deductive-reasoner-agent",
+      "name": "Deductive Reasoner Agent",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/agents/deductive_reasoner_agent.py"
+    },
+    {
+      "id": "embodied-agent",
+      "name": "Embodied Agent",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/agents/embodied_agent.py"
+    },
+    {
+      "id": "huggingface-tool-agent",
+      "name": "HuggingFace Tool Agent",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/agents/huggingface_tool_agent.py"
+    },
+    {
+      "id": "knowledge-graph-agent",
+      "name": "Knowledge Graph Agent",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/agents/knowledge_graph_agent.py"
+    },
+    {
+      "id": "multihop-generator-agent",
+      "name": "MultiHop Generator Agent",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/agents/multihop_generator_agent.py"
+    },
+    {
+      "id": "programmed-instruction-agent",
+      "name": "Programmed Instruction Agent",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/agents/programmed_instruction_agent.py"
+    },
+    {
+      "id": "repo-agent",
+      "name": "Repo Agent",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/agents/repo_agent.py"
+    },
+    {
+      "id": "role-assignment-agent",
+      "name": "Role Assignment Agent",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/agents/role_assignment_agent.py"
+    },
+    {
+      "id": "search-agent",
+      "name": "Search Agent",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/agents/search_agent.py"
+    },
+    {
+      "id": "task-agent",
+      "name": "Task Agent",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/agents/task_agent.py"
+    }
+  ]
+}

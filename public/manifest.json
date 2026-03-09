@@ -1,0 +1,28 @@
+{
+  "name": "CAMEL-AI | Finding the Scaling Laws of Agents",
+  "short_name": "CAMEL-AI",
+  "description": "CAMEL-AI is an open-source community for finding the scaling laws of agents for data generation, world simulation, task automation.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "icons": [
+    { "src": "/favicon.ico", "sizes": "48x48", "type": "image/x-icon", "purpose": "any" },
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["productivity", "technology", "utilities"],
+  "lang": "en-US",
+  "dir": "ltr"
+}

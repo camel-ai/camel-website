@@ -1,0 +1,21 @@
+{
+  "title": "Verifier",
+  "variant": "grey",
+  "items": [
+    {
+      "id": "python-verifier",
+      "name": "Python Verifier",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/verifiers/python_verifier.py"
+    },
+    {
+      "id": "math-verifier",
+      "name": "Math Verifier",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/verifiers/math_verifier.py"
+    },
+    {
+      "id": "physics-verifier",
+      "name": "Physics Verifier",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/verifiers/physics_verifier.py"
+    }
+  ]
+}

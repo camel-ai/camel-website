@@ -1,0 +1,16 @@
+{
+  "title": "Memories",
+  "variant": "purple",
+  "items": [
+    {
+      "id": "long-term-memory",
+      "name": "Long Term Memory",
+      "url": "https://github.com/camel-ai/camel/tree/master/camel/memories"
+    },
+    {
+      "id": "short-term-memory",
+      "name": "Short Term Memory",
+      "url": "https://github.com/camel-ai/camel/tree/master/camel/memories"
+    }
+  ]
+}

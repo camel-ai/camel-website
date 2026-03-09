@@ -1,0 +1,26 @@
+{
+  "title": "Data Generation",
+  "variant": "bone",
+  "items": [
+    {
+      "id": "cot-data-generation",
+      "name": "Chain of Thought (CoT) Data Generation",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/datagen/cot_datagen.py"
+    },
+    {
+      "id": "self-improving-cot",
+      "name": "Self-Improving CoT Data Generation",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/datagen/self_improving_cot.py"
+    },
+    {
+      "id": "self-instruct",
+      "name": "Self-Instruct: Instruction Generation",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/datagen/self_instruct/self_instruct.py"
+    },
+    {
+      "id": "source2synth",
+      "name": "Source2Synth: Multi-Hop Question-Answer Generation",
+      "url": "https://github.com/camel-ai/camel/tree/master/camel/datagen/source2synth"
+    }
+  ]
+}

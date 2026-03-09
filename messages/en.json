@@ -1,0 +1,209 @@
+{
+  "NavBar": {
+    "product": "Product",
+    "research": "Research",
+    "community": "Community",
+    "docs": "Docs",
+    "about": "About",
+    "discord": "Discord",
+    "openSourceCowork": "Open Source Cowork",
+    "openSourceCoworkDesc": "From context to action — AI workforce on desktop automates your operations in any scenarios.",
+    "environmentsForAgents": "Environments for Agents",
+    "environmentsForAgentsDesc": "Continuous Evals to Train Agents for Your Workflows",
+    "openSourceFramework": "Open Source Framework",
+    "coreComponents": "Core Components",
+    "foundationComponents": "Foundation Components",
+    "applicationComponents": "Application Components",
+    "learnMore": "Learn more",
+    "projects": "Projects",
+    "researchWithUs": "Research with Us",
+    "researchWithUsDesc": "Partner with the CAMEL-AI community to explore new scaling laws, benchmarks, and agent architectures. Join our open research initiatives and shape the future of multi-agent systems.",
+    "learn": "LEARN",
+    "blogs": "Blogs",
+    "blogsDesc": "Deep dives into multi-agent systems.",
+    "github": "GitHub",
+    "githubDesc": "Explore our open-source projects.",
+    "discordDesc": "Chat with the community in real-time.",
+    "builtWithCamel": "BUILT WITH CAMEL",
+    "communityHub": "Community Hub",
+    "communityHubDesc": "Explore events, channels, and initiatives.",
+    "ambassadorProgram": "Ambassador Program",
+    "ambassadorProgramDesc": "Lead local communities and evangelize agents.",
+    "joinAmbassadorProgram": "Join Our Ambassador Program",
+    "joinAmbassadorProgramDesc": "Become a CAMEL-AI Ambassador and lead the multi-agent community in your region. Get exclusive access to resources, events, and the core team.",
+    "applyNow": "Apply now",
+    "toggleMenu": "Toggle Menu",
+    "language": "Language",
+    "theme": "Theme",
+    "becomeAmbassador": "Become an Ambassador",
+    "starOnGitHub": "Star on GitHub",
+    "researchItems": {
+      "camel": { "title": "CAMEL", "description": "The first and the best multi-agent framework." },
+      "seta": { "title": "SETA", "description": "Scaling Environments for Terminal Agents" },
+      "owl": {
+        "title": "OWL",
+        "description": "Optimized Workforce Learning for Multi-Agent Assistance"
+      },
+      "oasis": { "title": "OASIS", "description": "Open Agent Social Interaction Simulations" },
+      "crab": { "title": "CRAB", "description": "Cross-environment Agent Benchmark" },
+      "loong": { "title": "LOONG", "description": "Synthesize Long CoTs at Scale" },
+      "agentTrust": { "title": "AGENT TRUST", "description": "LLM Agents Simulate Human Trust" },
+      "emos": { "title": "EMOS", "description": "Embodiment-aware Multi-robot OS" }
+    }
+  },
+  "Footer": {
+    "slogan": "Finding the Scaling Laws of Agents.",
+    "subscribeDesc": "Subscribe to get product updates, research highlights, and new frameworks for building your fully local AI workforce.",
+    "mission": "Building the world's first and best multi-agent framework to power autonomous, reliable AI workforces.",
+    "product": "Product",
+    "research": "Research",
+    "community": "Community",
+    "framework": "Framework",
+    "resources": "Resources",
+    "camel": "CAMEL",
+    "seta": "SETA",
+    "owl": "OWL",
+    "oasis": "OASIS",
+    "crab": "CRAB",
+    "loong": "LOONG",
+    "agentTrust": "AGENT-TRUST",
+    "emos": "EMOS",
+    "openSourceCowork": "Open Source Cowork",
+    "environmentForAgent": "Environments for Agents",
+    "informationRetrieval": "Information Retrieval",
+    "softwareEngineering": "Software Engineering",
+    "multimodal": "Multimodal",
+    "embodiedAI": "Embodied AI",
+    "socialSimulation": "Social Simulation",
+    "domainSpecific": "Domain-specific",
+    "communityHub": "Community Hub",
+    "ambassador": "Ambassador",
+    "mcp": "MCP",
+    "blogs": "Blogs",
+    "docs": "Docs",
+    "techStack": "Tech Stack",
+    "about": "About",
+    "careers": "Careers",
+    "branding": "Branding",
+    "copyright": "© {year} CAMEL-AI. All rights reserved."
+  },
+  "HomePage": {
+    "hero": {
+      "tag": "HuggingFace-like Community for Multi-agent systems",
+      "titleLine1": "Build Multi-Agent",
+      "titleLine2": "System for",
+      "description": "CAMEL-AI is an open-source community for finding the scaling laws of agents for data generation, world simulation, task automation.",
+      "typingPhrases": ["Task Automation", "Data Generation", "World Simulation"],
+      "startBuilding": "Start Building",
+      "tabs": {
+        "camel": {
+          "header": "Camel: Orchestrating agent collectives",
+          "body": "Camel coordinates large populations of specialized agents, routing work, sharing tools, and learning optimal division of labor from experience."
+        },
+        "owl": {
+          "header": "Owl: Watching the whole system",
+          "body": "Owl monitors thousands of concurrent trajectories, surfaces anomalies, and turns messy traces into clean metrics and dashboards."
+        },
+        "seta": {
+          "header": "Seta: Teaching agents new skills",
+          "body": "Seta turns raw interaction data into curricula, shaping agents that can adapt, specialize, and transfer skills across tasks."
+        },
+        "oasis": {
+          "header": "OASIS: Our agent playground",
+          "body": "OASIS is the environment where these systems meet: dense, noisy, and open-ended enough for emergent behavior to appear."
+        }
+      }
+    },
+    "mission": {
+      "tag": "Our Mission",
+      "titlePart1": "We Are Finding the",
+      "scalingLaws": "Scaling Laws",
+      "of": "of",
+      "agents": "Agents",
+      "description": "We believe that studying intelligent agents and multi-agent systems agents on a large scale offers valuable insights into their behaviors, capabilities, and potential risks.",
+      "numberOfAgents": "Number of Agents",
+      "environments": "Environments",
+      "evolution": "Evolution"
+    },
+    "research": {
+      "tag": "Multi-Agent Research",
+      "title": "Advancing Multi-Agent Research",
+      "description": "We conduct foundational research on multi-agent systems, investigating the principles that shape performance and emergent behavior at scale, and developing methods to make these systems more reliable, interpretable, and robust.",
+      "researchWithUs": "Research with Us",
+      "researchInvite": "We warmly invite you to use CAMEL for your impactful research.",
+      "researchDescription": "Rigorous research takes time and resources. We are a community-driven research collective with 100+ researchers exploring the frontier research of Multi-agent Systems and intelligent agents for real-world automation. Join our ongoing projects or test new ideas with us.",
+      "contactUs": "Contact Us"
+    },
+    "principles": {
+      "tag": "Design Principles",
+      "title": "CAMEL Framework Design Principles",
+      "description": "Four core principles guide how we build data-driven, stateful, and scalable multi-agent systems.",
+      "learnMore": "Learn More",
+      "foundationComponents": "Foundation Components",
+      "coreComponents": "Core Components",
+      "applicationComponents": "Application Components",
+      "items": [
+        {
+          "title": "Evolvability",
+          "description": "Agents can continuously evolve via data generation and interactions with their environment, driven by reinforcement or supervised learning."
+        },
+        {
+          "title": "Scalability",
+          "description": "Systems with millions of agents can be built, ensuring efficient coordination, communication, and resource management at scale."
+        },
+        {
+          "title": "Statefulness",
+          "description": "Agent context is managed as a state transition process, supporting rich, dynamic memory management over time."
+        },
+        {
+          "title": "Code-as-prompt",
+          "description": "Each line of code or comment serves as a prompt, ensuring that both humans and agents can interpret and extend it effectively."
+        }
+      ]
+    },
+    "capabilities": {
+      "tag": "Unique Capabilities",
+      "title": "Unique Capabilities of CAMEL Framework",
+      "description": "Discover the powerful features that make CAMEL the leading framework for building advanced AI agent systems and multi-agent workflows.",
+      "knowMore": "Know more",
+      "cards": [
+        {
+          "title": "Workforce",
+          "description": "Model real agent workforces with roles, hierarchies, and long-horizon tasks."
+        },
+        {
+          "title": "CAMEL Toolkit",
+          "description": "Batteries-included toolkit for messaging, planning, evaluation, and observability."
+        },
+        {
+          "title": "Connect to RL",
+          "description": "Close the loop from interaction logs to RL and fine-tuning pipelines."
+        },
+        {
+          "title": "Research Ecosystem",
+          "description": "Built on state-of-the-art CAMEL/OASIS research with open benchmarks and datasets."
+        }
+      ]
+    },
+    "techStack": {
+      "tag": "Tech Stack",
+      "title": "Create Powerful Agentic Applications with Our Tools",
+      "description": "A comprehensive ecosystem of tools, frameworks, and integrations to build production-ready multi-agent systems.",
+      "viewFullTechStack": "View full tech stack"
+    },
+    "community": {
+      "tag": "Community",
+      "title": "Join Our Community",
+      "description": "Connect with other CAMEL users and get support from the community.",
+      "joinCommunity": "Join the community",
+      "stars": "Stars",
+      "contributors": "Contributors",
+      "communityMembers": "Community Members",
+      "forks": "Forks"
+    },
+    "testimonials": {
+      "tag": "Success Stories with CAMEL",
+      "title": "What People Are Saying"
+    }
+  }
+}

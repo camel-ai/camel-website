@@ -1,0 +1,224 @@
+{
+  "NavBar": {
+    "product": "プロダクト",
+    "research": "研究",
+    "community": "コミュニティ",
+    "docs": "ドキュメント",
+    "about": "について",
+    "discord": "Discord",
+    "openSourceCowork": "オープンソースコワーク",
+    "openSourceCoworkDesc": "コンテキストからアクションへ——デスクトップ上のAIワークフォースがあらゆるシナリオで運用を自動化します。",
+    "environmentsForAgents": "エージェント環境",
+    "environmentsForAgentsDesc": "ワークフローに合わせてエージェントを訓練する継続的評価",
+    "openSourceFramework": "オープンソースフレームワーク",
+    "coreComponents": "コアコンポーネント",
+    "foundationComponents": "基盤コンポーネント",
+    "applicationComponents": "アプリケーションコンポーネント",
+    "learnMore": "詳細を見る",
+    "projects": "プロジェクト",
+    "researchWithUs": "研究パートナー募集",
+    "researchWithUsDesc": "CAMEL-AIコミュニティと協力し、新しいスケーリング則、ベンチマーク、エージェントアーキテクチャを探求しましょう。オープン研究イニシアチブに参加し、マルチエージェントシステムの未来を形作りましょう。",
+    "learn": "学習",
+    "blogs": "ブログ",
+    "blogsDesc": "マルチエージェントシステムの詳細解説。",
+    "github": "GitHub",
+    "githubDesc": "オープンソースプロジェクトを探索。",
+    "discordDesc": "コミュニティとリアルタイムでチャット。",
+    "builtWithCamel": "CAMELで構築",
+    "communityHub": "コミュニティハブ",
+    "communityHubDesc": "イベント、チャンネル、イニシアチブを探索。",
+    "ambassadorProgram": "アンバサダープログラム",
+    "ambassadorProgramDesc": "地域コミュニティをリードし、エージェント技術を普及。",
+    "joinAmbassadorProgram": "アンバサダープログラムに参加",
+    "joinAmbassadorProgramDesc": "CAMEL-AIアンバサダーになり、お住まいの地域でマルチエージェントコミュニティをリードしましょう。リソース、イベント、コアチームへの限定アクセスを獲得。",
+    "applyNow": "今すぐ応募",
+    "toggleMenu": "メニューを開く",
+    "language": "言語",
+    "theme": "テーマ",
+    "becomeAmbassador": "アンバサダーになる",
+    "starOnGitHub": "GitHubでスター",
+    "researchItems": {
+      "camel": {
+        "title": "CAMEL",
+        "description": "最初で最高のマルチエージェントフレームワーク。"
+      },
+      "seta": { "title": "SETA", "description": "ターミナルエージェントのためのスケーリング環境" },
+      "owl": {
+        "title": "OWL",
+        "description": "マルチエージェント支援のための最適化ワークフォース学習"
+      },
+      "oasis": {
+        "title": "OASIS",
+        "description": "100万エージェントのオープンエージェント社会シミュレーション"
+      },
+      "crab": {
+        "title": "CRAB",
+        "description": "マルチモーダル言語モデルエージェントのクロス環境ベンチマーク"
+      },
+      "loong": { "title": "LOONG", "description": "検証器による大規模長鎖思考の合成" },
+      "agentTrust": {
+        "title": "AGENT TRUST",
+        "description": "LLMエージェントが人間の信頼行動をシミュレート"
+      },
+      "emos": {
+        "title": "EMOS",
+        "description": "LLMエージェントを備えた具身型ヘテロジニアスマルチロボットOS"
+      }
+    }
+  },
+  "Footer": {
+    "slogan": "エージェントのスケーリング則を探求する。",
+    "subscribeDesc": "製品アップデート、研究ハイライト、完全ローカルAIワークフォース構築のための新フレームワークをお届けします。",
+    "mission": "自律的で信頼性の高いAIワークフォースを支える、世界初かつ最高のマルチエージェントフレームワークを構築しています。",
+    "product": "プロダクト",
+    "research": "研究",
+    "community": "コミュニティ",
+    "framework": "フレームワーク",
+    "resources": "リソース",
+    "camel": "CAMEL",
+    "seta": "SETA",
+    "owl": "OWL",
+    "oasis": "OASIS",
+    "crab": "CRAB",
+    "loong": "LOONG",
+    "agentTrust": "AGENT-TRUST",
+    "emos": "EMOS",
+    "openSourceCowork": "オープンソースコワーク",
+    "environmentForAgent": "エージェント環境",
+    "informationRetrieval": "情報検索",
+    "softwareEngineering": "ソフトウェア工学",
+    "multimodal": "マルチモーダル",
+    "embodiedAI": "具身AI",
+    "socialSimulation": "社会シミュレーション",
+    "domainSpecific": "ドメイン特化",
+    "communityHub": "コミュニティハブ",
+    "ambassador": "アンバサダー",
+    "mcp": "MCP",
+    "blogs": "ブログ",
+    "docs": "ドキュメント",
+    "techStack": "テックスタック",
+    "about": "について",
+    "careers": "採用情報",
+    "branding": "ブランディング",
+    "copyright": "© {year} CAMEL-AI. All rights reserved."
+  },
+  "HomePage": {
+    "hero": {
+      "tag": "マルチエージェントシステムのHuggingFace的コミュニティ",
+      "titleLine1": "マルチエージェント",
+      "titleLine2": "システムを構築",
+      "description": "CAMEL-AIは、データ生成、世界シミュレーション、タスク自動化のためのエージェントのスケーリング則を探求するオープンソースコミュニティです。",
+      "typingPhrases": ["タスク自動化", "データ生成", "世界シミュレーション"],
+      "startBuilding": "構築を始める",
+      "tabs": {
+        "camel": {
+          "header": "CAMEL：エージェント集団のオーケストレーション",
+          "body": "CAMELは大規模な専門エージェント群を調整し、作業のルーティング、ツールの共有、経験からの最適な分業の学習を行います。"
+        },
+        "owl": {
+          "header": "OWL：システム全体の監視",
+          "body": "OWLは数千の並行軌跡を監視し、異常を検出し、乱雑なトレースをクリーンなメトリクスとダッシュボードに変換します。"
+        },
+        "seta": {
+          "header": "SETA：エージェントに新スキルを教える",
+          "body": "SETAは生のインタラクションデータをカリキュラムに変換し、適応、専門化、タスク間でのスキル移転が可能なエージェントを形成します。"
+        },
+        "oasis": {
+          "header": "OASIS：エージェントの遊び場",
+          "body": "OASISはこれらのシステムが出会う環境です。密集し、ノイジーで、創発行動が現れるのに十分なオープンエンドです。"
+        }
+      }
+    },
+    "mission": {
+      "tag": "私たちの使命",
+      "titlePart1": "私たちは",
+      "scalingLaws": "スケーリング則",
+      "of": "を探求しています——",
+      "agents": "エージェント",
+      "description": "大規模な知的エージェントとマルチエージェントシステムの研究が、その行動、能力、潜在リスクに関する貴重な洞察を提供すると信じています。",
+      "numberOfAgents": "エージェント数",
+      "environments": "環境",
+      "evolution": "進化"
+    },
+    "research": {
+      "tag": "マルチエージェント研究",
+      "title": "マルチエージェント研究の推進",
+      "description": "マルチエージェントシステムの基礎研究を行い、大規模でのパフォーマンスと創発行動を形作る原理を探究し、これらのシステムをより信頼性が高く、解釈可能で堅牢にする方法を開発しています。",
+      "researchWithUs": "研究パートナー募集",
+      "researchInvite": "影響力のある研究にCAMELをご利用いただくよう、心よりお誘いします。",
+      "researchDescription": "厳密な研究には時間とリソースが必要です。私たちは100人以上の研究者を擁するコミュニティ駆動の研究集団で、マルチエージェントシステムと実世界自動化のフロンティア研究を探求しています。進行中のプロジェクトに参加するか、新しいアイデアを一緒にテストしてください。",
+      "contactUs": "お問い合わせ"
+    },
+    "principles": {
+      "tag": "設計原則",
+      "title": "CAMELフレームワーク設計原則",
+      "description": "4つのコア原則が、データ駆動型で状態を保持し、スケーラブルなマルチエージェントシステムの構築を導きます。",
+      "learnMore": "詳細を見る",
+      "foundationComponents": "基盤コンポーネント",
+      "coreComponents": "コアコンポーネント",
+      "applicationComponents": "アプリケーションコンポーネント",
+      "items": [
+        {
+          "title": "進化可能性",
+          "description": "エージェントは、強化学習または教師あり学習によって駆動され、データ生成と環境とのインタラクションを通じて継続的に進化できます。"
+        },
+        {
+          "title": "スケーラビリティ",
+          "description": "数百万のエージェントを持つシステムを構築でき、大規模での効率的な調整、通信、リソース管理を確保します。"
+        },
+        {
+          "title": "状態保持",
+          "description": "エージェントのコンテキストは状態遷移プロセスとして管理され、時間の経過とともに豊かで動的なメモリ管理をサポートします。"
+        },
+        {
+          "title": "コード即プロンプト",
+          "description": "各行のコードやコメントがプロンプトとして機能し、人間とエージェントの両方が効果的に解釈し拡張できるようにします。"
+        }
+      ]
+    },
+    "capabilities": {
+      "tag": "独自の能力",
+      "title": "CAMELフレームワークの独自の能力",
+      "description": "CAMELを高度なAIエージェントシステムとマルチエージェントワークフロー構築のリーディングフレームワークにする強力な機能を発見してください。",
+      "knowMore": "詳細を見る",
+      "cards": [
+        {
+          "title": "ワークフォース",
+          "description": "役割、階層、長期タスクを持つ実際のエージェントワークフォースをモデル化。"
+        },
+        {
+          "title": "CAMELツールキット",
+          "description": "メッセージング、計画、評価、可観測性のためのバッテリー付きツールキット。"
+        },
+        {
+          "title": "RLへの接続",
+          "description": "インタラクションログからRLおよびファインチューニングパイプラインへのループを閉じる。"
+        },
+        {
+          "title": "研究エコシステム",
+          "description": "オープンベンチマークとデータセットを備えた最先端のCAMEL/OASIS研究に基づく。"
+        }
+      ]
+    },
+    "techStack": {
+      "tag": "テックスタック",
+      "title": "当社のツールで強力なエージェントアプリケーションを構築",
+      "description": "本番対応のマルチエージェントシステムを構築するためのツール、フレームワーク、統合の包括的なエコシステム。",
+      "viewFullTechStack": "フルテックスタックを見る"
+    },
+    "community": {
+      "tag": "コミュニティ",
+      "title": "コミュニティに参加",
+      "description": "他のCAMELユーザーとつながり、コミュニティからサポートを受けましょう。",
+      "joinCommunity": "コミュニティに参加",
+      "stars": "スター",
+      "contributors": "コントリビューター",
+      "communityMembers": "コミュニティメンバー",
+      "forks": "フォーク"
+    },
+    "testimonials": {
+      "tag": "CAMELの成功事例",
+      "title": "人々の声"
+    }
+  }
+}

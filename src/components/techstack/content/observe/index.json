@@ -1,0 +1,13 @@
+{
+  "title": "Observe",
+  "variant": "blue",
+  "items": [
+    {
+      "id": "trancetroot-ai",
+      "name": "TranceRoot AI",
+      "logo": true,
+      "showText": true,
+      "url": "https://github.com/camel-ai/camel/blob/master/examples/debug/traceroot_example.py"
+    }
+  ]
+}

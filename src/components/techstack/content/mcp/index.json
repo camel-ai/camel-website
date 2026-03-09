@@ -1,0 +1,16 @@
+{
+  "title": "MCP",
+  "variant": "red",
+  "items": [
+    {
+      "id": "camel-mcp-hub",
+      "name": "CAMEL MCP Hub",
+      "url": "https://mcp.camel-ai.org/"
+    },
+    {
+      "id": "camel-mcp-toolkit",
+      "name": "MCP Toolkit",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/mcp_toolkit.py"
+    }
+  ]
+}

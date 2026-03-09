@@ -1,0 +1,21 @@
+{
+  "title": "Environments",
+  "variant": "grey",
+  "items": [
+    {
+      "id": "multi-step-env",
+      "name": "Multi-step Env",
+      "url": ""
+    },
+    {
+      "id": "single-step-env",
+      "name": "Single-step Env",
+      "url": ""
+    },
+    {
+      "id": "tic-tac-toe-env",
+      "name": "Tic Tac Toe",
+      "url": ""
+    }
+  ]
+}

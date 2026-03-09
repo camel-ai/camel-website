@@ -1,0 +1,206 @@
+{
+  "NavBar": {
+    "product": "产品",
+    "research": "研究",
+    "community": "社区",
+    "docs": "文档",
+    "about": "关于",
+    "discord": "Discord",
+    "openSourceCowork": "开源协作",
+    "openSourceCoworkDesc": "从上下文到行动——桌面 AI 工作队伍在任何场景下自动化您的运营。",
+    "environmentsForAgents": "智能体环境",
+    "environmentsForAgentsDesc": "持续评估以训练智能体适应您的工作流",
+    "openSourceFramework": "开源框架",
+    "coreComponents": "核心组件",
+    "foundationComponents": "基础组件",
+    "applicationComponents": "应用组件",
+    "learnMore": "了解更多",
+    "projects": "项目",
+    "researchWithUs": "与我们合作研究",
+    "researchWithUsDesc": "与 CAMEL-AI 社区合作探索新的扩展规律、基准和智能体架构。加入我们的开放研究计划，塑造多智能体系统的未来。",
+    "learn": "学习",
+    "blogs": "博客",
+    "blogsDesc": "深入探讨多智能体系统。",
+    "github": "GitHub",
+    "githubDesc": "探索我们的开源项目。",
+    "discordDesc": "与社区实时交流。",
+    "builtWithCamel": "基于 CAMEL 构建",
+    "communityHub": "社区中心",
+    "communityHubDesc": "探索活动、频道和倡议。",
+    "ambassadorProgram": "大使计划",
+    "ambassadorProgramDesc": "领导本地社区，推广智能体技术。",
+    "joinAmbassadorProgram": "加入大使计划",
+    "joinAmbassadorProgramDesc": "成为 CAMEL-AI 大使，在您所在地区领导多智能体社区。获得独家资源、活动和核心团队支持。",
+    "applyNow": "立即申请",
+    "toggleMenu": "切换菜单",
+    "language": "语言",
+    "theme": "主题",
+    "becomeAmbassador": "成为大使",
+    "starOnGitHub": "在 GitHub 上星标",
+    "researchItems": {
+      "camel": { "title": "CAMEL", "description": "首个也是最好的多智能体框架。" },
+      "seta": { "title": "SETA", "description": "终端智能体的扩展环境" },
+      "owl": { "title": "OWL", "description": "多智能体辅助的优化工作队伍学习" },
+      "oasis": { "title": "OASIS", "description": "开放智能体社交交互模拟" },
+      "crab": { "title": "CRAB", "description": "跨环境智能体基准" },
+      "loong": { "title": "LOONG", "description": "通过验证器大规模合成长链推理" },
+      "agentTrust": { "title": "AGENT TRUST", "description": "LLM 智能体模拟人类信任行为" },
+      "emos": { "title": "EMOS", "description": "具身感知的多机器人操作系统" }
+    }
+  },
+  "Footer": {
+    "slogan": "探索智能体的扩展规律。",
+    "subscribeDesc": "订阅以获取产品更新、研究亮点以及构建完全本地 AI 工作队伍的新框架。",
+    "mission": "构建世界首个也是最好的多智能体框架，为自主、可靠的 AI 工作队伍提供动力。",
+    "product": "产品",
+    "research": "研究",
+    "community": "社区",
+    "framework": "框架",
+    "resources": "资源",
+    "camel": "CAMEL",
+    "seta": "SETA",
+    "owl": "OWL",
+    "oasis": "OASIS",
+    "crab": "CRAB",
+    "loong": "LOONG",
+    "agentTrust": "AGENT-TRUST",
+    "emos": "EMOS",
+    "openSourceCowork": "开源协作",
+    "environmentForAgent": "智能体环境",
+    "informationRetrieval": "信息检索",
+    "softwareEngineering": "软件工程",
+    "multimodal": "多模态",
+    "embodiedAI": "具身智能",
+    "socialSimulation": "社交模拟",
+    "domainSpecific": "领域特定",
+    "communityHub": "社区中心",
+    "ambassador": "大使",
+    "mcp": "MCP",
+    "blogs": "博客",
+    "docs": "文档",
+    "techStack": "技术栈",
+    "about": "关于",
+    "careers": "招聘",
+    "branding": "品牌",
+    "copyright": "© {year} CAMEL-AI 版权所有。"
+  },
+  "HomePage": {
+    "hero": {
+      "tag": "多智能体系统的开源社区",
+      "titleLine1": "构建多智能体",
+      "titleLine2": "系统，用于",
+      "description": "CAMEL-AI 是一个开源社区，致力于寻找智能体在数据生成、世界模拟和任务自动化方面的扩展规律。",
+      "typingPhrases": ["任务自动化", "数据生成", "世界模拟"],
+      "startBuilding": "开始构建",
+      "tabs": {
+        "camel": {
+          "header": "CAMEL：协调智能体集群",
+          "body": "CAMEL 协调大规模专业智能体群体，路由工作、共享工具，并从经验中学习最优分工。"
+        },
+        "owl": {
+          "header": "OWL：监控整个系统",
+          "body": "OWL 监控数千个并发轨迹，发现异常，并将杂乱的追踪数据转化为清晰的指标和仪表板。"
+        },
+        "seta": {
+          "header": "SETA：教授智能体新技能",
+          "body": "SETA 将原始交互数据转化为课程，塑造能够适应、专业化并跨任务迁移技能的智能体。"
+        },
+        "oasis": {
+          "header": "OASIS：智能体实验场",
+          "body": "OASIS 是这些系统相遇的环境：密集、嘈杂，足够开放以产生涌现行为。"
+        }
+      }
+    },
+    "mission": {
+      "tag": "我们的使命",
+      "titlePart1": "我们正在探索",
+      "scalingLaws": "扩展规律",
+      "of": "——",
+      "agents": "智能体",
+      "description": "我们相信，大规模研究智能体和多智能体系统能够为其行为、能力和潜在风险提供宝贵的洞见。",
+      "numberOfAgents": "智能体数量",
+      "environments": "运行环境",
+      "evolution": "进化机制"
+    },
+    "research": {
+      "tag": "多智能体研究",
+      "title": "推进多智能体研究",
+      "description": "我们开展多智能体系统的基础研究，探究影响大规模性能和涌现行为的原理，并开发方法使这些系统更可靠、可解释和鲁棒。",
+      "researchWithUs": "与我们合作研究",
+      "researchInvite": "我们诚挚邀请您使用 CAMEL 开展有影响力的研究。",
+      "researchDescription": "严谨的研究需要时间和资源。我们是一个社区驱动的研究团体，拥有 100 多名研究人员，探索多智能体系统和真实世界自动化的前沿研究。加入我们的持续项目或与我们一起测试新想法。",
+      "contactUs": "联系我们"
+    },
+    "principles": {
+      "tag": "设计原则",
+      "title": "CAMEL 框架设计原则",
+      "description": "四项核心原则指导我们构建数据驱动、有状态且可扩展的多智能体系统。",
+      "learnMore": "了解更多",
+      "foundationComponents": "基础组件",
+      "coreComponents": "核心组件",
+      "applicationComponents": "应用组件",
+      "items": [
+        {
+          "title": "可进化性",
+          "description": "智能体可以通过数据生成和与环境的交互持续进化，由强化学习或监督学习驱动。"
+        },
+        {
+          "title": "可扩展性",
+          "description": "可以构建拥有数百万智能体的系统，确保大规模的高效协调、通信和资源管理。"
+        },
+        {
+          "title": "有状态性",
+          "description": "智能体上下文作为状态转换过程进行管理，支持随时间推移的丰富动态内存管理。"
+        },
+        {
+          "title": "代码即提示",
+          "description": "每行代码或注释都作为提示，确保人类和智能体都能有效地理解和扩展它。"
+        }
+      ]
+    },
+    "capabilities": {
+      "tag": "独特能力",
+      "title": "CAMEL 框架的独特能力",
+      "description": "探索使 CAMEL 成为构建高级 AI 智能体系统和多智能体工作流领先框架的强大功能。",
+      "knowMore": "了解更多",
+      "cards": [
+        {
+          "title": "工作队伍",
+          "description": "构建具有角色、层级和长期任务的真实智能体工作队伍。"
+        },
+        {
+          "title": "CAMEL 工具包",
+          "description": "包含消息传递、规划、评估和可观测性的一体化工具包。"
+        },
+        {
+          "title": "连接强化学习",
+          "description": "从交互日志到强化学习和微调流程形成完整闭环。"
+        },
+        {
+          "title": "研究生态系统",
+          "description": "基于最先进的 CAMEL/OASIS 研究，提供开放基准和数据集。"
+        }
+      ]
+    },
+    "techStack": {
+      "tag": "技术栈",
+      "title": "使用我们的工具构建强大的智能体应用",
+      "description": "完整的工具、框架和集成生态系统，用于构建生产就绪的多智能体系统。",
+      "viewFullTechStack": "查看完整技术栈"
+    },
+    "community": {
+      "tag": "社区",
+      "title": "加入我们的社区",
+      "description": "与其他 CAMEL 用户联系，从社区获取支持。",
+      "joinCommunity": "加入社区",
+      "stars": "星标",
+      "contributors": "贡献者",
+      "communityMembers": "社区成员",
+      "forks": "分叉数"
+    },
+    "testimonials": {
+      "tag": "CAMEL 成功案例",
+      "title": "人们怎么说"
+    }
+  }
+}

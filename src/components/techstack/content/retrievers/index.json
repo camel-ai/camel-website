@@ -1,0 +1,31 @@
+{
+  "title": "Retrievers",
+  "variant": "grey",
+  "items": [
+    {
+      "id": "auto-retriever",
+      "name": "Auto Retriever (AutoReranker)",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/retrievers/auto_retriever.py"
+    },
+    {
+      "id": "bm25-retriever",
+      "name": "BM25 Retriever",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/retrievers/bm25_retriever.py"
+    },
+    {
+      "id": "cohere-rerank-retriever",
+      "name": "Cohere Rerank Retriever",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/retrievers/cohere_rerank_retriever.py"
+    },
+    {
+      "id": "hybrid-retriever",
+      "name": "Hybrid Retriever",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/retrievers/hybrid_retrival.py"
+    },
+    {
+      "id": "vector-retriever",
+      "name": "Vector Retriever",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/retrievers/vector_retriever.py"
+    }
+  ]
+}

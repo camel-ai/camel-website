@@ -1,0 +1,72 @@
+{
+  "title": "Data Loaders",
+  "variant": "grey",
+  "items": [
+    {
+      "id": "apify",
+      "name": "APIFY",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/loaders/apify_loader.py"
+    },
+    {
+      "id": "chunkr",
+      "name": "Chunkr",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/loaders/chunkr_loader.py"
+    },
+    {
+      "id": "firecrawl",
+      "name": "Firecrawl",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/loaders/firecrawl_loader.py"
+    },
+    {
+      "id": "jina",
+      "name": "JINA",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/loaders/jina_loader.py"
+    },
+    {
+      "id": "mineru",
+      "name": "MinerU",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/loaders/mineru_loader.py"
+    },
+    {
+      "id": "panda-reader",
+      "name": "Panda Reader",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/loaders/panda_reader.py"
+    },
+    {
+      "id": "scape-graph",
+      "name": "Scape Graph",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/loaders/scape_graph_loader.py"
+    },
+    {
+      "id": "unstructure-io",
+      "name": "Unstructure IO",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/loaders/unstructure_io_loader.py"
+    },
+    {
+      "id": "crawl4ai-reader",
+      "name": "Crawl4AI Reader",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/loaders/crawl4ai_reader.py"
+    },
+    {
+      "id": "markitdown",
+      "name": "Markitdown",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/loaders/markitdown.py"
+    }
+  ]
+}

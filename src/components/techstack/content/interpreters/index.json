@@ -1,0 +1,44 @@
+{
+  "title": "Interpreters",
+  "variant": "grey",
+  "items": [
+    {
+      "id": "docker",
+      "name": "Docker",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/interpreters/docker_interpreter.py"
+    },
+    {
+      "id": "e2b",
+      "name": "E2B",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/interpreters/e2b_interpreter.py"
+    },
+    {
+      "id": "internal-python",
+      "name": "Internal Python",
+      "logo": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/interpreters/internal_python_interpreter.py"
+    },
+    {
+      "id": "interpreter-error",
+      "name": "Interpreter Error",
+      "logo": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/interpreters/interpreter_error.py"
+    },
+    {
+      "id": "ipython",
+      "name": "Ipython",
+      "logo": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/interpreters/ipython_interpreter.py"
+    },
+    {
+      "id": "subprocess",
+      "name": "Subprocess",
+      "logo": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/interpreters/subprocess_interpreter.py"
+    }
+  ]
+}
