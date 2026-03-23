@@ -595,13 +595,13 @@ export default function NavBar() {
                         </p>
                       </div>
                       <div className="mt-6">
-                        <Link
-                          href="/resources/research"
+                        <a
+                          href="mailto:camel@eigent.ai"
                           className="text-foreground inline-flex items-center gap-2 text-sm font-semibold hover:underline"
                         >
                           {t("learnMore")}
                           <ArrowRight className="size-4" />
-                        </Link>
+                        </a>
                       </div>
                     </div>
                   </div>
