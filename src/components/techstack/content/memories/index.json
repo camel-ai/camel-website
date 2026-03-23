@@ -3,14 +3,24 @@
   "variant": "purple",
   "items": [
     {
-      "id": "long-term-memory",
-      "name": "Long Term Memory",
-      "url": "https://github.com/camel-ai/camel/tree/master/camel/memories"
+      "id": "agent-memories",
+      "name": "AgentMemories",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/memories/agent_memories.py"
     },
     {
-      "id": "short-term-memory",
-      "name": "Short Term Memory",
-      "url": "https://github.com/camel-ai/camel/tree/master/camel/memories"
+      "id": "chat-history-block",
+      "name": "ChatHistoryBlock",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/memories/blocks/chat_history_block.py"
+    },
+    {
+      "id": "vectordb-block",
+      "name": "VectorDBBlock",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/memories/blocks/vectordb_block.py"
+    },
+    {
+      "id": "score-based-context-creator",
+      "name": "ScoreBasedContextCreator",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/memories/context_creators/score_based.py"
     }
   ]
 }

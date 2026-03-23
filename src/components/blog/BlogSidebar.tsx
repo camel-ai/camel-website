@@ -1,11 +1,13 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
+
+import { AuthorAvatar } from "@/components/blog/AuthorAvatar";
 
 interface AuthorInfo {
   name: string;
   avatar?: string;
+  avatarDark?: string;
   role?: string;
   bio?: string;
   social?: {
@@ -28,15 +30,11 @@ export function BlogSidebar({ author }: BlogSidebarProps) {
       {/* Author info */}
       <div className="flex flex-col items-start gap-3">
         {author.avatar ? (
-          <div className="h-10 w-10 shrink-0 overflow-hidden rounded-full">
-            <Image
-              src={author.avatar}
-              alt={author.name}
-              width={40}
-              height={40}
-              className="h-full w-full object-cover"
-            />
-          </div>
+          <AuthorAvatar
+            name={author.name}
+            avatar={author.avatar}
+            avatarDark={author.avatarDark}
+          />
         ) : (
           <div className="bg-muted flex h-10 w-10 shrink-0 items-center justify-center rounded-full">
             <span className="text-foreground text-sm font-medium">

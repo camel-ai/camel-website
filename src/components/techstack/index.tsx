@@ -18,138 +18,117 @@ import {
   observe,
 } from "./content";
 
+function withItemClickHandlers<T extends { items: Array<{ url?: string }> }>(section: T) {
+  return {
+    ...section,
+    items: section.items.map((item) => ({
+      ...item,
+      onClick: () => {
+        if (item.url) {
+          window.open(item.url, "_blank");
+        }
+      },
+    })),
+  };
+}
+
 function TechStackContent() {
-  // Handle item clicks to open URLs
-  const handleItemClick = (item: { url?: string }) => {
-    if (item.url) {
-      window.open(item.url, "_blank");
-    }
-  };
-
-  // Transform techstack data to include click handlers
-  const agentData = {
-    ...agent,
-    items: agent.items.map((item) => ({
-      ...item,
-      onClick: () => handleItemClick(item),
-    })),
-  };
-
-  const agentSocietyData = {
-    ...agentSociety,
-    items: agentSociety.items.map((item) => ({
-      ...item,
-      onClick: () => handleItemClick(item),
-    })),
-  };
-
-  const modelsData = {
-    ...models,
-    items: models.items.map((item) => ({
-      ...item,
-      onClick: () => handleItemClick(item),
-    })),
-  };
-
-  const storageData = {
-    ...storage,
-    items: storage.items.map((item) => ({
-      ...item,
-      onClick: () => handleItemClick(item),
-    })),
-  };
+  const agentData = withItemClickHandlers(agent);
+  const agentSocietyData = withItemClickHandlers(agentSociety);
+  const dataGenerationData = withItemClickHandlers(dataGeneration);
+  const modelsData = withItemClickHandlers(models);
+  const toolsData = withItemClickHandlers(tools);
+  const memoriesData = withItemClickHandlers(memories);
+  const storageData = withItemClickHandlers(storage);
+  const dataLoadersData = withItemClickHandlers(dataLoaders);
+  const environmentsData = withItemClickHandlers(environments);
+  const interpretersData = withItemClickHandlers(interpreters);
+  const retrieversData = withItemClickHandlers(retrievers);
+  const runtimeData = withItemClickHandlers(runtime);
+  const verifierData = withItemClickHandlers(verifier);
+  const mcpData = withItemClickHandlers(mcp);
+  const humanInTheLoopData = withItemClickHandlers(humanInTheLoop);
+  const observeData = withItemClickHandlers(observe);
 
   return (
     <div className="mx-auto w-full max-w-[1200px] flex-1 py-6 md:py-8">
       <div className="font-display-title text-text-pirmary flex flex-col items-center justify-center py-3 text-sm font-semibold sm:text-base md:py-4">
-        Updated on July 18, 2025
+        Updated on March 23, 2026
       </div>
       <div className="flex flex-col">
-        {/* Agent Section */}
         <StackSection
           title={agentData.title}
           subtitle={agentData.subtitle}
           items={agentData.items}
           variant={agent.variant as "neon"}
         />
-        {/* Agent Society Section */}
         <StackSection
           title={agentSocietyData.title}
           subtitle={agentSocietyData.subtitle}
           items={agentSocietyData.items}
           variant={agentSociety.variant as "neon"}
         />
-        {/* Data Generation Section */}
         <StackSection
-          title={dataGeneration.title}
-          items={dataGeneration.items}
+          title={dataGenerationData.title}
+          items={dataGenerationData.items}
           variant={dataGeneration.variant as "bone"}
         />
-        {/* Models Section */}
         <StackSection
           title={modelsData.title}
           items={modelsData.items}
           variant={models.variant as "green"}
         />
-        {/* Tools Section */}
-        <StackSection title={tools.title} items={tools.items} variant={tools.variant as "yellow"} />
-        {/* Memories Section */}
-        <StackSection title={memories.title} items={memories.items} variant={"pink"} />
-        {/* Storage Section */}
+        <StackSection
+          title={toolsData.title}
+          items={toolsData.items}
+          variant={tools.variant as "yellow"}
+        />
+        <StackSection title={memoriesData.title} items={memoriesData.items} variant={"pink"} />
         <StackSection
           title={storageData.title}
           items={storageData.items}
-          variant={storageData.variant as "orange"}
+          variant={storage.variant as "orange"}
           grouped={true}
         />
-        {/* Data Loaders Section */}
         <StackSection
-          title={dataLoaders.title}
-          items={dataLoaders.items}
+          title={dataLoadersData.title}
+          items={dataLoadersData.items}
           variant={dataLoaders.variant as "grey"}
         />
-        {/* Environments Section */}
         <StackSection
-          title={environments.title}
-          items={environments.items}
+          title={environmentsData.title}
+          items={environmentsData.items}
           variant={environments.variant as "grey"}
         />
-        {/* Interpreters Section */}
         <StackSection
-          title={interpreters.title}
-          items={interpreters.items}
+          title={interpretersData.title}
+          items={interpretersData.items}
           variant={interpreters.variant as "grey"}
         />
-        {/* Retrievers Section */}
         <StackSection
-          title={retrievers.title}
-          items={retrievers.items}
+          title={retrieversData.title}
+          items={retrieversData.items}
           variant={retrievers.variant as "grey"}
         />
-        {/* Runtime Section */}
         <StackSection
-          title={runtime.title}
-          items={runtime.items}
+          title={runtimeData.title}
+          items={runtimeData.items}
           variant={runtime.variant as "grey"}
         />
-        {/* Verifier Section */}
         <StackSection
-          title={verifier.title}
-          items={verifier.items}
+          title={verifierData.title}
+          items={verifierData.items}
           variant={verifier.variant as "grey"}
         />
-        {/* MCP Section */}
-        <StackSection title={mcp.title} items={mcp.items} variant={mcp.variant as "red"} />
-        {/* Human In The Loop Section */}
+        <StackSection title={mcpData.title} items={mcpData.items} variant={mcp.variant as "red"} />
         <StackSection
-          title={humanInTheLoop.title}
-          items={humanInTheLoop.items}
+          title={humanInTheLoopData.title}
+          items={humanInTheLoopData.items}
           variant={humanInTheLoop.variant as "blue"}
         />
-        {/* Observe Section */}
         <StackSection
-          title={observe.title}
-          items={observe.items}
+          title={observeData.title}
+          items={observeData.items}
           variant={observe.variant as "blue"}
         />
       </div>

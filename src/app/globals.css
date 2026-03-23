@@ -937,6 +937,9 @@
       line-height: 1.2;
       margin-bottom: 1.5rem;
       margin-top: 2rem;
+      margin-left: 0;
+      padding-left: 0;
+      text-align: left;
       font-family: var(--font-display-title);
     }
 
@@ -947,6 +950,9 @@
       line-height: 1.25;
       margin-bottom: 1.25rem;
       margin-top: 2.5rem;
+      margin-left: 0;
+      padding-left: 0;
+      text-align: left;
       font-family: var(--font-display-title);
     }
 
@@ -957,6 +963,9 @@
       line-height: 1.3;
       margin-bottom: 1rem;
       margin-top: 1.5rem;
+      margin-left: 0;
+      padding-left: 0;
+      text-align: left;
     }
 
     /* H4: 1.125rem, 600, line-height 1.35, margin-bottom 0.75rem */
@@ -966,6 +975,9 @@
       line-height: 1.35;
       margin-bottom: 0.75rem;
       margin-top: 1.25rem;
+      margin-left: 0;
+      padding-left: 0;
+      text-align: left;
     }
 
     h5 {
@@ -974,6 +986,9 @@
       line-height: 1.35;
       margin-bottom: 0.5rem;
       margin-top: 1rem;
+      margin-left: 0;
+      padding-left: 0;
+      text-align: left;
     }
 
     h6 {
@@ -982,13 +997,17 @@
       line-height: 1.35;
       margin-bottom: 0.5rem;
       margin-top: 1rem;
+      margin-left: 0;
+      padding-left: 0;
+      text-align: left;
       @apply text-muted-foreground;
     }
 
-    /* Heading anchor links */
+    /* Heading anchor links (trailing; title text stays flush left) */
     .anchor-link {
-      @apply text-muted-foreground hover:text-foreground mr-2 no-underline opacity-0;
+      @apply text-muted-foreground hover:text-foreground ml-2 inline-flex shrink-0 items-center no-underline opacity-0;
       @apply font-normal transition-opacity duration-200;
+      vertical-align: middle;
     }
 
     h1:hover .anchor-link,
@@ -1016,11 +1035,40 @@
       margin-bottom: 1.25rem;
     }
 
-    /* Lists - bullet points and ordered lists */
+    /* Author line with affiliation superscripts: body size + paper-style number tags */
+    p:first-of-type:has(.author-affiliation) {
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+
+    .author-affiliation {
+      display: inline-block;
+      vertical-align: super;
+      font-family: var(--font-inconsolata), ui-monospace, monospace;
+      font-size: 0.62em;
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: 0.03em;
+      padding: 0.1em 0.35em 0.06em;
+      margin-left: 0.08em;
+      border-radius: 3px;
+      position: relative;
+      top: -0.28em;
+      background-color: var(--muted);
+      color: var(--muted-foreground);
+      border: 1px solid var(--border);
+    }
+
+    /* Lists: top-level ul is unbulleted; bullets from nested ul onward */
     ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin-bottom: 1rem;
+    }
+
+    li > ul {
       list-style-type: disc;
       padding-left: 1.5rem;
-      margin-bottom: 1rem;
     }
 
     ol {
@@ -1042,7 +1090,7 @@
       margin-bottom: 0;
     }
 
-    /* Nested list indentation */
+    /* Deeper nested list indentation */
     li > ul > li > ul,
     li > ol > li > ol {
       padding-left: 1rem;
@@ -1063,13 +1111,15 @@
       @apply italic;
     }
 
-    /* Inline code: 0.875em, 400, inherit line-height */
+    /* Inline code: light gray chip in light mode */
     code {
       font-size: 0.875em;
       font-weight: 400;
       line-height: inherit;
-      @apply bg-muted text-foreground rounded px-1.5 py-0.5 font-mono;
-      border: 1px solid var(--border);
+      @apply rounded px-1.5 py-0.5 font-mono;
+      background-color: #f0f0f2;
+      color: #3f3f46;
+      border: 1px solid #d4d4d8;
     }
 
     /* Code block wrapper */
@@ -1079,16 +1129,17 @@
     }
 
     .code-lang-badge {
-      @apply absolute top-0 right-0 px-2.5 py-1 font-mono tracking-wider uppercase;
+      @apply absolute top-0 right-0 px-2.5 py-1 tracking-wider uppercase;
+      font-family: var(--font-inconsolata), ui-monospace, monospace;
       font-size: 0.75rem;
       font-weight: 500;
       line-height: 1.4;
-      @apply z-10 rounded-tr-lg rounded-bl-md bg-neutral-800 text-neutral-400;
+      @apply z-10 rounded-tr-lg rounded-bl-md bg-[#2a2a2a] text-neutral-400;
     }
 
     .copy-code-btn {
       @apply absolute top-2 right-2 cursor-pointer rounded-md p-1.5;
-      @apply bg-neutral-800 text-neutral-400 hover:bg-neutral-700 hover:text-neutral-200;
+      @apply bg-[#2a2a2a] text-neutral-400 hover:bg-[#333333] hover:text-neutral-200;
       @apply z-10 opacity-0 transition-opacity duration-200;
     }
 
@@ -1100,17 +1151,35 @@
       @apply top-8;
     }
 
-    /* Code block: 0.875rem, 400, line-height 1.6, margin-bottom 1.25rem */
+    /* Code block: Inconsolata; light mode surface #1d1d1d */
     pre {
       font-size: 0.875rem; /* 14px */
       font-weight: 400;
       line-height: 1.6;
       margin-bottom: 1.25rem;
-      @apply overflow-x-auto rounded-lg border border-neutral-800 bg-neutral-900 p-4 font-mono text-neutral-50;
+      font-family: var(--font-inconsolata), ui-monospace, monospace;
+      background-color: #1d1d1d;
+      border-color: #333333;
+      @apply overflow-x-auto rounded-lg border p-4 text-neutral-50;
     }
 
-    pre code {
+    :is(.dark *) .blog-prose pre {
+      background-color: #171717;
+      border-color: #262626;
+    }
+
+    :is(.dark *) .blog-prose .code-lang-badge {
+      @apply bg-neutral-800 text-neutral-400;
+    }
+
+    :is(.dark *) .blog-prose .copy-code-btn {
+      @apply bg-neutral-800 text-neutral-400 hover:bg-neutral-700 hover:text-neutral-200;
+    }
+
+    /* Scoped to fenced blocks so dark-mode .blog-prose code does not tint pre contents */
+    .code-block-wrapper pre code {
       font-size: inherit;
+      font-family: inherit;
       @apply border-0 bg-transparent p-0 text-inherit;
     }
 
@@ -1307,9 +1376,13 @@
       @apply bg-muted/20;
     }
 
-    /* Images */
+    /* Images: block + horizontal margin centers in the content column */
+    p:has(> img:only-child) {
+      @apply text-center;
+    }
+
     img {
-      @apply my-4 h-auto max-w-full rounded-xl shadow-sm;
+      @apply my-4 mx-auto block h-auto max-w-full rounded-xl shadow-sm;
     }
 
     /* Horizontal rules */
@@ -1343,5 +1416,11 @@
       background-color: var(--color-status-warning-bg);
       @apply rounded-sm px-0.5;
     }
+  }
+
+  /* Blog inline code in dark theme: theme-muted chip (pre code reset kept above with higher specificity) */
+  :is(.dark *) .blog-prose code {
+    @apply bg-muted text-foreground;
+    border-color: var(--border);
   }
 }

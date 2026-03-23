@@ -506,15 +506,40 @@ export default function NavBar() {
                       </div>
                     </a>
 
-                    {/* Column 3: Open Source Framework */}
-                    <div className="flex flex-col gap-1">
-                      <p className="text-muted-foreground mb-2 text-xs font-bold tracking-wider uppercase">
-                        {t("openSourceFramework")}
-                      </p>
-                      <NavContentItem title={t("coreComponents")} href="/framework" />
-                      <NavContentItem title={t("foundationComponents")} href="/framework" />
-                      <NavContentItem title={t("applicationComponents")} href="/framework" />
-                    </div>
+                    {/* Column 3: Open Source Framework - card */}
+                    <Link
+                      href="/framework"
+                      className="border-border bg-muted/40 hover:bg-card group flex cursor-pointer flex-col justify-between rounded-xl border p-6 transition-all duration-200"
+                    >
+                      <div>
+                        <Image
+                          src="/logo/camel_icon.png"
+                          alt="CAMEL"
+                          width={32}
+                          height={32}
+                          className="mb-3 object-contain dark:hidden"
+                        />
+                        <Image
+                          src="/logo/camel_icon_white.png"
+                          alt="CAMEL"
+                          width={32}
+                          height={32}
+                          className="mb-3 hidden object-contain dark:block"
+                        />
+                        <p className="font-display-title group-hover:text-foreground mb-2 text-lg font-bold transition-colors">
+                          {t("openSourceFramework")}
+                        </p>
+                        <p className="text-muted-foreground text-sm leading-relaxed">
+                          {t("openSourceFrameworkDesc")}
+                        </p>
+                      </div>
+                      <div className="mt-6">
+                        <span className="text-foreground inline-flex items-center gap-2 text-sm font-semibold group-hover:underline">
+                          {t("learnMore")}
+                          <ArrowRight className="size-4" />
+                        </span>
+                      </div>
+                    </Link>
                   </div>
                 )}
 
@@ -724,29 +749,33 @@ export default function NavBar() {
                   {t("environmentsForAgentsDesc")}
                 </p>
               </Link>
-              <p className="text-muted-foreground mt-1 mb-1 px-2 text-xs font-bold tracking-wider">
-                {t("openSourceFramework")}
-              </p>
               <Link
                 href="/framework"
-                className="font-display-title hover:bg-muted/70 active:bg-muted/70 rounded-lg px-2 py-2.5 text-base font-semibold transition-colors"
+                className="border-border bg-muted/40 hover:bg-muted/70 active:bg-muted/70 flex flex-col rounded-xl border p-4 transition-colors"
                 onClick={toggleMobileMenu}
               >
-                {t("coreComponents")}
-              </Link>
-              <Link
-                href="/framework"
-                className="font-display-title hover:bg-muted/70 active:bg-muted/70 rounded-lg px-2 py-2.5 text-base font-semibold transition-colors"
-                onClick={toggleMobileMenu}
-              >
-                {t("foundationComponents")}
-              </Link>
-              <Link
-                href="/framework"
-                className="font-display-title hover:bg-muted/70 active:bg-muted/70 rounded-lg px-2 py-2.5 text-base font-semibold transition-colors"
-                onClick={toggleMobileMenu}
-              >
-                {t("applicationComponents")}
+                <Image
+                  src="/logo/camel_icon.png"
+                  alt="CAMEL"
+                  width={28}
+                  height={28}
+                  className="mb-2 object-contain dark:hidden"
+                />
+                <Image
+                  src="/logo/camel_icon_white.png"
+                  alt="CAMEL"
+                  width={28}
+                  height={28}
+                  className="mb-2 hidden object-contain dark:block"
+                />
+                <span className="font-display-title text-base font-bold">
+                  {t("openSourceFramework")}
+                </span>
+                <p className="text-muted-foreground mt-1 text-xs">{t("openSourceFrameworkDesc")}</p>
+                <span className="text-foreground mt-3 inline-flex items-center gap-2 text-sm font-semibold">
+                  {t("learnMore")}
+                  <ArrowRight className="size-4" />
+                </span>
               </Link>
             </div>
           )}

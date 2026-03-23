@@ -4,69 +4,73 @@
   "items": [
     {
       "id": "apify",
-      "name": "APIFY",
+      "name": "Apify",
       "logo": true,
       "showText": false,
-      "url": "https://github.com/camel-ai/camel/blob/master/camel/loaders/apify_loader.py"
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/loaders/apify_reader.py"
     },
     {
-      "id": "chunkr",
+      "id": "chunkr-reader",
       "name": "Chunkr",
       "logo": true,
       "showText": false,
-      "url": "https://github.com/camel-ai/camel/blob/master/camel/loaders/chunkr_loader.py"
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/loaders/chunkr_reader.py"
+    },
+    {
+      "id": "crawl4ai",
+      "name": "Crawl4AI",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/loaders/crawl4ai_reader.py"
     },
     {
       "id": "firecrawl",
       "name": "Firecrawl",
       "logo": true,
       "showText": false,
-      "url": "https://github.com/camel-ai/camel/blob/master/camel/loaders/firecrawl_loader.py"
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/loaders/firecrawl_reader.py"
     },
     {
-      "id": "jina",
-      "name": "JINA",
+      "id": "jina-url-reader",
+      "name": "Jina URL Reader",
       "logo": true,
       "showText": false,
-      "url": "https://github.com/camel-ai/camel/blob/master/camel/loaders/jina_loader.py"
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/loaders/jina_url_reader.py"
+    },
+    {
+      "id": "markitdown",
+      "name": "MarkItDown",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/loaders/markitdown.py"
     },
     {
       "id": "mineru",
       "name": "MinerU",
       "logo": true,
       "showText": false,
-      "url": "https://github.com/camel-ai/camel/blob/master/camel/loaders/mineru_loader.py"
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/loaders/mineru_extractor.py"
     },
     {
-      "id": "panda-reader",
-      "name": "Panda Reader",
-      "url": "https://github.com/camel-ai/camel/blob/master/camel/loaders/panda_reader.py"
-    },
-    {
-      "id": "scape-graph",
-      "name": "Scape Graph",
+      "id": "mistral-reader",
+      "name": "Mistral Reader",
       "logo": true,
       "showText": false,
-      "url": "https://github.com/camel-ai/camel/blob/master/camel/loaders/scape_graph_loader.py"
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/loaders/mistral_reader.py"
     },
     {
-      "id": "unstructure-io",
-      "name": "Unstructure IO",
+      "id": "scrapegraph-ai",
+      "name": "ScrapeGraphAI",
       "logo": true,
       "showText": false,
-      "url": "https://github.com/camel-ai/camel/blob/master/camel/loaders/unstructure_io_loader.py"
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/loaders/scrapegraph_reader.py"
     },
     {
-      "id": "crawl4ai-reader",
-      "name": "Crawl4AI Reader",
-      "url": "https://github.com/camel-ai/camel/blob/master/camel/loaders/crawl4ai_reader.py"
-    },
-    {
-      "id": "markitdown",
-      "name": "Markitdown",
+      "id": "unstructured-io",
+      "name": "UnstructuredIO",
       "logo": true,
       "showText": false,
-      "url": "https://github.com/camel-ai/camel/blob/master/camel/loaders/markitdown.py"
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/loaders/unstructured_io.py"
     }
   ]
 }

@@ -32,7 +32,7 @@ export default function NotFound() {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-neon-primary hover:bg-neon-primary/90 text-foreground gap-2"
+                  className="gap-2 text-foreground"
                 >
                   <Link href="/">
                     <Home className="size-5" />

@@ -3,19 +3,39 @@
   "variant": "grey",
   "items": [
     {
-      "id": "multi-step-env",
-      "name": "Multi-step Env",
-      "url": ""
+      "id": "single-step-env",
+      "name": "SingleStepEnv",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/environments/single_step.py"
     },
     {
-      "id": "single-step-env",
-      "name": "Single-step Env",
-      "url": ""
+      "id": "multi-step-env",
+      "name": "MultiStepEnv",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/environments/multi_step.py"
     },
     {
       "id": "tic-tac-toe-env",
-      "name": "Tic Tac Toe",
-      "url": ""
+      "name": "TicTacToeEnv",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/environments/tic_tac_toe.py"
+    },
+    {
+      "id": "rlcards-env",
+      "name": "RLCardsEnv",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/environments/rlcards_env.py"
+    },
+    {
+      "id": "blackjack-env",
+      "name": "BlackjackEnv",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/environments/models.py"
+    },
+    {
+      "id": "leduc-holdem-env",
+      "name": "LeducHoldemEnv",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/environments/models.py"
+    },
+    {
+      "id": "doudizhu-env",
+      "name": "DoudizhuEnv",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/environments/models.py"
     }
   ]
 }

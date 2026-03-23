@@ -6,6 +6,7 @@ import { BlogSidebar } from "@/components/blog/BlogSidebar";
 import { ArrowLeftIcon, Clock } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { AuthorAvatar } from "@/components/blog/AuthorAvatar";
 
 export async function generateStaticParams() {
   const posts = getAllPosts();
@@ -116,9 +117,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 
           {/* Main Content */}
           <div className="order-2 min-w-0 xl:col-span-8">
-            <div className="blog-prose">
-              <CustomMDX source={post.content} />
-            </div>
+            <CustomMDX source={post.content} />
           </div>
 
           {/* Right Sidebar - Author */}
@@ -182,12 +181,12 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
                   )}
                   <div className="text-muted-foreground mt-auto flex items-center gap-2 text-xs">
                     {p.authorData?.avatar && (
-                      <Image
-                        src={p.authorData.avatar}
-                        alt={p.authorData.name}
-                        width={20}
-                        height={20}
-                        className="rounded-full"
+                      <AuthorAvatar
+                        name={p.authorData.name}
+                        avatar={p.authorData.avatar}
+                        avatarDark={p.authorData.avatarDark}
+                        className="h-5 w-5 shrink-0"
+                        sizes="20px"
                       />
                     )}
                     <span>{p.authorData?.name || p.data.author}</span>

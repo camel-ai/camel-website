@@ -3,39 +3,34 @@
   "variant": "grey",
   "items": [
     {
-      "id": "api-runtime",
-      "name": "API",
-      "logo": false,
-      "url": "https://github.com/camel-ai/camel/blob/master/camel/runtime/api.py"
-    },
-    {
-      "id": "configs-runtime",
-      "name": "Configs",
-      "logo": false,
-      "url": "https://github.com/camel-ai/camel/blob/master/camel/runtime/configs.py"
-    },
-    {
       "id": "docker-runtime",
-      "name": "Docker Runtime",
+      "name": "DockerRuntime",
       "logo": true,
       "showText": false,
-      "url": "https://github.com/camel-ai/camel/blob/master/camel/runtime/docker_runtime.py"
-    },
-    {
-      "id": "llm-guard-runtime",
-      "name": "LLM Guard Runtime",
-      "logo": false,
-      "url": "https://github.com/camel-ai/camel/blob/master/camel/runtime/llm_guard_runtime.py"
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/runtimes/docker_runtime.py"
     },
     {
       "id": "remote-http-runtime",
-      "name": "Remote HTTP Runtime",
-      "logo": false,
-      "url": "https://github.com/camel-ai/camel/blob/master/camel/runtime/remote_http_runtime.py"
+      "name": "RemoteHttpRuntime",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/runtimes/remote_http_runtime.py"
+    },
+    {
+      "id": "llm-guard-runtime",
+      "name": "LLMGuardRuntime",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/runtimes/llm_guard_runtime.py"
+    },
+    {
+      "id": "ubuntu-docker-runtime",
+      "name": "UbuntuDockerRuntime",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/runtimes/ubuntu_docker_runtime.py"
     },
     {
       "id": "daytona-runtime",
-      "name": "Daytona Runtime",
+      "name": "DaytonaRuntime",
       "logo": true,
       "showText": false,
       "url": "https://github.com/camel-ai/camel/blob/master/camel/runtimes/daytona_runtime.py"

@@ -3,10 +3,24 @@
   "variant": "blue",
   "items": [
     {
-      "id": "trancetroot-ai",
-      "name": "TranceRoot AI",
+      "id": "langfuse",
+      "name": "Langfuse",
       "logo": true,
-      "showText": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/utils/langfuse.py"
+    },
+    {
+      "id": "agentops",
+      "name": "AgentOps",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/utils/commons.py"
+    },
+    {
+      "id": "traceroot",
+      "name": "TraceRoot",
+      "logo": true,
+      "showText": false,
       "url": "https://github.com/camel-ai/camel/blob/master/examples/debug/traceroot_example.py"
     }
   ]

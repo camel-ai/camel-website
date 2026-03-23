@@ -8,6 +8,7 @@ import { Header } from "@/components/layout/Header";
 import { GitFork, Star, UserPlus, Users } from "lucide-react";
 import { CommunityImageSlider } from "@/components/community/CommunityImageSlider";
 import { ContributorsGrid } from "@/components/community/ContributorsGrid";
+import { GithubStarsCount } from "@/components/community/GithubStarsCount";
 
 export const metadata = {
   title: "Community | CAMEL-AI",
@@ -29,9 +30,7 @@ export default function CommunityPage() {
         <Content layout="grid" columns={4} spacing="normal" align="center" maxWidth="full">
           <div className="flex flex-col items-center gap-3">
             <Star className="text-neon-primary size-8 stroke-[1.5]" />
-            <span className="font-display-title text-neon-primary text-2xl font-bold md:text-5xl">
-              38K
-            </span>
+            <GithubStarsCount className="font-display-title text-neon-primary text-2xl font-bold md:text-5xl" />
             <span className="text-gray-primary text-sm tracking-wide uppercase">Stars</span>
           </div>
           <div className="flex flex-col items-center gap-3">

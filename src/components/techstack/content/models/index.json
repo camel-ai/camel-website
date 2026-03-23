@@ -3,74 +3,25 @@
   "variant": "green",
   "items": [
     {
-      "id": "aws-bedrock",
-      "name": "AWS Bedrock",
+      "id": "aihubmix",
+      "name": "AIHubMix",
       "logo": true,
       "showText": false,
-      "url": "https://github.com/camel-ai/camel/blob/master/camel/models/aws_bedrock_model.py"
-    },
-    {
-      "id": "azure",
-      "name": "Azure OpenAI",
-      "logo": true,
-      "showText": false,
-      "url": "https://github.com/camel-ai/camel/blob/master/camel/models/azure_openai_model.py"
-    },
-    {
-      "id": "lmstudio",
-      "name": "LMstudio",
-      "logo": true,
-      "showText": false,
-      "url": "https://github.com/camel-ai/camel/blob/master/camel/models/lmstudio_model.py"
-    },
-    {
-      "id": "modelscope",
-      "name": "Modelscope",
-      "logo": true,
-      "showText": false,
-      "url": "https://github.com/camel-ai/camel/blob/master/camel/models/modelscope_model.py"
-    },
-    {
-      "id": "netmind",
-      "name": "Netmind",
-      "logo": true,
-      "showText": false,
-      "url": "https://github.com/camel-ai/camel/blob/master/camel/models/netmind_model.py"
-    },
-    {
-      "id": "openrouter",
-      "name": "Openrouter",
-      "logo": true,
-      "showText": false,
-      "url": "https://github.com/camel-ai/camel/blob/master/camel/models/openrouter_model.py"
-    },
-    {
-      "id": "ppio",
-      "name": "Ppio",
-      "logo": true,
-      "showText": false,
-      "url": "https://github.com/camel-ai/camel/blob/master/camel/models/ppio_model.py"
-    },
-    {
-      "id": "siliconflow",
-      "name": "Siliconflow",
-      "logo": true,
-      "showText": false,
-      "url": "https://github.com/camel-ai/camel/blob/master/camel/models/siliconflow_model.py"
-    },
-    {
-      "id": "volcano",
-      "name": "Volcano",
-      "logo": true,
-      "showText": false,
-      "url": "https://github.com/camel-ai/camel/blob/master/camel/models/volcano_model.py"
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/models/aihubmix_model.py"
     },
     {
       "id": "aiml",
-      "name": "AI/ML API",
+      "name": "AIML",
       "logo": true,
       "showText": false,
       "url": "https://github.com/camel-ai/camel/blob/master/camel/models/aiml_model.py"
+    },
+    {
+      "id": "amd",
+      "name": "AMD",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/models/amd_model.py"
     },
     {
       "id": "anthropic",
@@ -80,6 +31,48 @@
       "url": "https://github.com/camel-ai/camel/blob/master/camel/models/anthropic_model.py"
     },
     {
+      "id": "atlascloud",
+      "name": "AtlasCloud",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/models/atlascloud_model.py"
+    },
+    {
+      "id": "avian",
+      "name": "Avian",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/models/avian_model.py"
+    },
+    {
+      "id": "aws-bedrock",
+      "name": "AWS Bedrock",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/models/aws_bedrock_model.py"
+    },
+    {
+      "id": "aws-bedrock-converse",
+      "name": "AWS Bedrock Converse",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/models/aws_bedrock_converse_model.py"
+    },
+    {
+      "id": "azure",
+      "name": "Azure OpenAI",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/models/azure_openai_model.py"
+    },
+    {
+      "id": "cerebras",
+      "name": "Cerebras",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/models/cerebras_model.py"
+    },
+    {
       "id": "cohere",
       "name": "Cohere",
       "logo": true,
@@ -87,11 +80,32 @@
       "url": "https://github.com/camel-ai/camel/blob/master/camel/models/cohere_model.py"
     },
     {
+      "id": "cometapi",
+      "name": "CometAPI",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/models/cometapi_model.py"
+    },
+    {
+      "id": "crynux",
+      "name": "Crynux",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/models/crynux_model.py"
+    },
+    {
       "id": "deepseek",
-      "name": "Deepseek",
+      "name": "DeepSeek",
       "logo": true,
       "showText": false,
       "url": "https://github.com/camel-ai/camel/blob/master/camel/models/deepseek_model.py"
+    },
+    {
+      "id": "function-gemma",
+      "name": "FunctionGemma",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/models/function_gemma_model.py"
     },
     {
       "id": "gemini",
@@ -122,22 +136,64 @@
       "url": "https://github.com/camel-ai/camel/blob/master/camel/models/litellm_model.py"
     },
     {
+      "id": "lmstudio",
+      "name": "LMStudio",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/models/lmstudio_model.py"
+    },
+    {
+      "id": "minimax",
+      "name": "MiniMax",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/models/minimax_model.py"
+    },
+    {
       "id": "mistral",
-      "name": "Mistral AI",
+      "name": "Mistral",
       "logo": true,
       "showText": false,
       "url": "https://github.com/camel-ai/camel/blob/master/camel/models/mistral_model.py"
     },
     {
+      "id": "modelscope",
+      "name": "ModelScope",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/models/modelscope_model.py"
+    },
+    {
       "id": "moonshot",
-      "name": "Moonshot AI",
+      "name": "Moonshot",
       "logo": true,
       "showText": false,
       "url": "https://github.com/camel-ai/camel/blob/master/camel/models/moonshot_model.py"
     },
     {
+      "id": "nebius",
+      "name": "Nebius",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/models/nebius_model.py"
+    },
+    {
+      "id": "netmind",
+      "name": "Netmind",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/models/netmind_model.py"
+    },
+    {
+      "id": "novita",
+      "name": "Novita",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/models/novita_model.py"
+    },
+    {
       "id": "nvidia",
-      "name": "Nvidia",
+      "name": "NVIDIA",
       "logo": true,
       "showText": false,
       "url": "https://github.com/camel-ai/camel/blob/master/camel/models/nvidia_model.py"
@@ -157,6 +213,34 @@
       "url": "https://github.com/camel-ai/camel/blob/master/camel/models/openai_model.py"
     },
     {
+      "id": "openai-compatible",
+      "name": "OpenAI Compatible",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/models/openai_compatible_model.py"
+    },
+    {
+      "id": "openrouter",
+      "name": "OpenRouter",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/models/openrouter_model.py"
+    },
+    {
+      "id": "ppio",
+      "name": "PPIO",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/models/ppio_model.py"
+    },
+    {
+      "id": "qianfan",
+      "name": "Qianfan",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/models/qianfan_model.py"
+    },
+    {
       "id": "qwen",
       "name": "Qwen",
       "logo": true,
@@ -171,13 +255,6 @@
       "url": "https://github.com/camel-ai/camel/blob/master/camel/models/reka_model.py"
     },
     {
-      "id": "sgl",
-      "name": "SGL",
-      "logo": true,
-      "showText": false,
-      "url": "https://github.com/camel-ai/camel/blob/master/camel/models/sglang_model.py"
-    },
-    {
       "id": "sambanova",
       "name": "SambaNova",
       "logo": true,
@@ -185,11 +262,46 @@
       "url": "https://github.com/camel-ai/camel/blob/master/camel/models/samba_model.py"
     },
     {
+      "id": "sgl",
+      "name": "SGLang",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/models/sglang_model.py"
+    },
+    {
+      "id": "siliconflow",
+      "name": "SiliconFlow",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/models/siliconflow_model.py"
+    },
+    {
       "id": "togetherai",
       "name": "Together AI",
       "logo": true,
       "showText": false,
       "url": "https://github.com/camel-ai/camel/blob/master/camel/models/togetherai_model.py"
+    },
+    {
+      "id": "vllm",
+      "name": "vLLM",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/models/vllm_model.py"
+    },
+    {
+      "id": "volcano",
+      "name": "Volcano",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/models/volcano_model.py"
+    },
+    {
+      "id": "watsonx",
+      "name": "WatsonX",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/models/watsonx_model.py"
     },
     {
       "id": "yi",
@@ -200,17 +312,10 @@
     },
     {
       "id": "zhipu",
-      "name": "Zhipu AI",
+      "name": "ZhipuAI",
       "logo": true,
       "showText": false,
       "url": "https://github.com/camel-ai/camel/blob/master/camel/models/zhipuai_model.py"
-    },
-    {
-      "id": "vllm",
-      "name": "vLLM",
-      "logo": true,
-      "showText": false,
-      "url": "https://github.com/camel-ai/camel/blob/master/camel/models/vllm_model.py"
     }
   ]
 }

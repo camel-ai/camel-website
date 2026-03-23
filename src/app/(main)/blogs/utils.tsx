@@ -6,7 +6,10 @@ import yaml from "js-yaml";
 export type AuthorData = {
   slug: string;
   name: string;
+  /** Light-theme avatar (e.g. full-color logo). */
   avatar?: string;
+  /** Dark-theme avatar when different from `avatar` (e.g. white mark). */
+  avatarDark?: string;
   role?: string;
   bio?: string;
   social?: {
@@ -69,6 +72,7 @@ export function getAuthorBySlug(slug: string): AuthorData | null {
     slug,
     name: (data.name as string) || slug,
     avatar: data.avatar as string | undefined,
+    avatarDark: data.avatarDark as string | undefined,
     role: data.role as string | undefined,
     bio: data.bio as string | undefined,
     social: data.social as AuthorData["social"],
@@ -84,20 +88,36 @@ export function getAllAuthors(): AuthorData[] {
     .filter(Boolean) as AuthorData[];
 }
 
-const CAMEL_ICON = "/logo/camel_icon_white.png";
+const CAMEL_TEAM_AVATAR_LIGHT = "/logo/camel_icon.png";
+const CAMEL_TEAM_AVATAR_DARK = "/logo/camel_icon_white.png";
 
 function resolveAuthor(authorName?: string, authorprofile?: string): AuthorData | undefined {
   if (!authorName) return undefined;
   const authorSlug = slugify(authorName);
   const author = getAuthorBySlug(authorSlug);
   if (author) return author;
-  // Fallback: use CAMEL icon for CAMEL-AI Team when no profile specified
+  // Fallback: theme-aware CAMEL icons for CAMEL-AI Team when no profile specified
   const isCamelTeam = /^CAMEL(-AI)?\s*Team$/i.test(authorName?.trim() || "");
-  const avatar = authorprofile || (isCamelTeam ? CAMEL_ICON : undefined);
+  if (authorprofile) {
+    return {
+      slug: authorSlug,
+      name: authorName,
+      avatar: authorprofile,
+      role: "Contributor",
+    };
+  }
+  if (isCamelTeam) {
+    return {
+      slug: authorSlug,
+      name: authorName,
+      avatar: CAMEL_TEAM_AVATAR_LIGHT,
+      avatarDark: CAMEL_TEAM_AVATAR_DARK,
+      role: "Contributor",
+    };
+  }
   return {
     slug: authorSlug,
     name: authorName,
-    avatar,
     role: "Contributor",
   };
 }

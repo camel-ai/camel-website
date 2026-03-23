@@ -3,24 +3,29 @@
   "variant": "bone",
   "items": [
     {
-      "id": "cot-data-generation",
-      "name": "Chain of Thought (CoT) Data Generation",
+      "id": "cot-data-generator",
+      "name": "CoTDataGenerator",
       "url": "https://github.com/camel-ai/camel/blob/master/camel/datagen/cot_datagen.py"
     },
     {
-      "id": "self-improving-cot",
-      "name": "Self-Improving CoT Data Generation",
+      "id": "self-improving-cot-pipeline",
+      "name": "SelfImprovingCoTPipeline",
       "url": "https://github.com/camel-ai/camel/blob/master/camel/datagen/self_improving_cot.py"
     },
     {
-      "id": "self-instruct",
-      "name": "Self-Instruct: Instruction Generation",
+      "id": "self-instruct-pipeline",
+      "name": "SelfInstructPipeline",
       "url": "https://github.com/camel-ai/camel/blob/master/camel/datagen/self_instruct/self_instruct.py"
     },
     {
+      "id": "evol-instruct-pipeline",
+      "name": "EvolInstructPipeline",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/datagen/evol_instruct/evol_instruct.py"
+    },
+    {
       "id": "source2synth",
-      "name": "Source2Synth: Multi-Hop Question-Answer Generation",
-      "url": "https://github.com/camel-ai/camel/tree/master/camel/datagen/source2synth"
+      "name": "Source2Synth",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/datagen/source2synth/data_processor.py"
     }
   ]
 }

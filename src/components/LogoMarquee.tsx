@@ -22,7 +22,7 @@ export default function LogoMarquee({ logos }: CustomerLogosProps) {
             {[...logos, ...logos].map((logo, idx) => (
               <div
                 key={`logo-${idx}`}
-                className="flex h-16 w-[160px] shrink-0 items-center justify-center px-4"
+                className="flex h-16 w-[160px] shrink-0 items-center justify-center rounded-xl border border-transparent px-4 dark:border-white/20 dark:bg-white"
               >
                 <Image
                   src={logo.src}
@@ -60,7 +60,7 @@ export default function LogoMarquee({ logos }: CustomerLogosProps) {
         }
 
         .track {
-          animation: marquee 30s linear infinite;
+          animation: marquee 60s linear infinite;
           will-change: transform;
         }
       `}</style>

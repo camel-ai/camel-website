@@ -5,13 +5,18 @@
   "items": [
     {
       "id": "role-playing",
-      "name": "Role Playing",
+      "name": "RolePlaying",
       "url": "https://github.com/camel-ai/camel/blob/master/camel/societies/role_playing.py"
     },
     {
       "id": "workforce",
       "name": "Workforce",
-      "url": "https://github.com/camel-ai/camel/tree/master/camel/societies/workforce"
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/societies/workforce/workforce.py"
+    },
+    {
+      "id": "babyagi",
+      "name": "BabyAGI",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/societies/babyagi_playing.py"
     }
   ]
 }

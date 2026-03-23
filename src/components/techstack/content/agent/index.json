@@ -5,62 +5,82 @@
   "items": [
     {
       "id": "chat-agent",
-      "name": "Chat Agent",
+      "name": "ChatAgent",
       "url": "https://github.com/camel-ai/camel/blob/master/camel/agents/chat_agent.py"
     },
     {
       "id": "critic-agent",
-      "name": "Critic Agent",
+      "name": "CriticAgent",
       "url": "https://github.com/camel-ai/camel/blob/master/camel/agents/critic_agent.py"
     },
     {
       "id": "deductive-reasoner-agent",
-      "name": "Deductive Reasoner Agent",
+      "name": "DeductiveReasonerAgent",
       "url": "https://github.com/camel-ai/camel/blob/master/camel/agents/deductive_reasoner_agent.py"
     },
     {
       "id": "embodied-agent",
-      "name": "Embodied Agent",
+      "name": "EmbodiedAgent",
       "url": "https://github.com/camel-ai/camel/blob/master/camel/agents/embodied_agent.py"
     },
     {
       "id": "huggingface-tool-agent",
-      "name": "HuggingFace Tool Agent",
-      "url": "https://github.com/camel-ai/camel/blob/master/camel/agents/huggingface_tool_agent.py"
+      "name": "HuggingFaceToolAgent",
+      "url": "https://github.com/camel-ai/camel/tree/master/camel/agents/tool_agents"
     },
     {
       "id": "knowledge-graph-agent",
-      "name": "Knowledge Graph Agent",
+      "name": "KnowledgeGraphAgent",
       "url": "https://github.com/camel-ai/camel/blob/master/camel/agents/knowledge_graph_agent.py"
     },
     {
-      "id": "multihop-generator-agent",
-      "name": "MultiHop Generator Agent",
-      "url": "https://github.com/camel-ai/camel/blob/master/camel/agents/multihop_generator_agent.py"
+      "id": "mcp-agent",
+      "name": "MCPAgent",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/agents/mcp_agent.py"
     },
     {
-      "id": "programmed-instruction-agent",
-      "name": "Programmed Instruction Agent",
-      "url": "https://github.com/camel-ai/camel/blob/master/camel/agents/programmed_instruction_agent.py"
+      "id": "multihop-generator-agent",
+      "name": "MultiHopGeneratorAgent",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/agents/multi_hop_generator_agent.py"
+    },
+    {
+      "id": "programmable-chat-agent",
+      "name": "ProgrammableChatAgent",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/agents/programmed_agent_instruction.py"
     },
     {
       "id": "repo-agent",
-      "name": "Repo Agent",
+      "name": "RepoAgent",
       "url": "https://github.com/camel-ai/camel/blob/master/camel/agents/repo_agent.py"
     },
     {
       "id": "role-assignment-agent",
-      "name": "Role Assignment Agent",
+      "name": "RoleAssignmentAgent",
       "url": "https://github.com/camel-ai/camel/blob/master/camel/agents/role_assignment_agent.py"
     },
     {
       "id": "search-agent",
-      "name": "Search Agent",
+      "name": "SearchAgent",
       "url": "https://github.com/camel-ai/camel/blob/master/camel/agents/search_agent.py"
     },
     {
-      "id": "task-agent",
-      "name": "Task Agent",
+      "id": "task-creation-agent",
+      "name": "TaskCreationAgent",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/agents/task_agent.py"
+    },
+    {
+      "id": "task-planner-agent",
+      "name": "TaskPlannerAgent",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/agents/task_agent.py"
+    },
+    {
+      "id": "task-prioritization-agent",
+      "name": "TaskPrioritizationAgent",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/agents/task_agent.py"
+    },
+    {
+      "id": "task-specify-agent",
+      "name": "TaskSpecifyAgent",
       "url": "https://github.com/camel-ai/camel/blob/master/camel/agents/task_agent.py"
     }
   ]

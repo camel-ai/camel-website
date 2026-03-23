@@ -3,17 +3,16 @@
   "variant": "blue",
   "items": [
     {
-      "id": "human-in-the-loop-toolkit",
-      "name": "Human in the Loop Toolkit",
-      "logo": false,
+      "id": "human-toolkit",
+      "name": "HumanToolkit",
       "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/human_toolkit.py"
     },
     {
       "id": "human-layer",
-      "name": "Human Layer",
+      "name": "HumanLayer",
       "logo": true,
       "showText": false,
-      "url": ""
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/human_toolkit.py"
     }
   ]
 }

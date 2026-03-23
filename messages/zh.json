@@ -11,6 +11,7 @@
     "environmentsForAgents": "智能体环境",
     "environmentsForAgentsDesc": "持续评估以训练智能体适应您的工作流",
     "openSourceFramework": "开源框架",
+    "openSourceFrameworkDesc": "用于构建可扩展多智能体系统的核心、基础与应用组件。",
     "coreComponents": "核心组件",
     "foundationComponents": "基础组件",
     "applicationComponents": "应用组件",

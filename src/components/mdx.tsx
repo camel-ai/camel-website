@@ -20,9 +20,23 @@ function slugify(text: string): string {
     .replace(/\-\-+/g, "-");
 }
 
-renderer.heading = function ({ text, depth }) {
+/** Wraps `Name 1,2` after **Authors:** into <sup> tags (conference-paper style). */
+function wrapAuthorAffiliationMarks(markdown: string): string {
+  return markdown.replace(/^(\*\*Authors:\*\*\s*)(.+)$/m, (_, prefix: string, body: string) => {
+    const wrapped = body.replace(
+      /\b([A-Z][\w.'()\-]*(?:\s+[\w.'()\-]+)*)\s+(\d+(?:,\d+)*)\b/g,
+      '$1<sup class="author-affiliation">$2</sup>',
+    );
+    return prefix + wrapped;
+  });
+}
+
+renderer.heading = function ({ text, depth, tokens }) {
   const slug = slugify(text);
-  return `<h${depth} id="${slug}"><a href="#${slug}" class="anchor-link" aria-hidden="true">#</a>${text}</h${depth}>`;
+  const body = this.parser.parseInline(tokens);
+  const chainIcon =
+    '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>';
+  return `<h${depth} id="${slug}">${body}<a href="#${slug}" class="anchor-link" aria-label="Link to this section">${chainIcon}</a></h${depth}>`;
 };
 
 // External links open in new tab
@@ -132,7 +146,7 @@ export function CustomMDX({ source }: { source: string }) {
   }, []);
 
   const sanitizedHtml = useMemo(() => {
-    const parsedHtml = marked(source) as string;
+    const parsedHtml = marked(wrapAuthorAffiliationMarks(source)) as string;
 
     return DOMPurify.sanitize(parsedHtml, {
       USE_PROFILES: { html: true, svg: true },

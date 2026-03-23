@@ -11,6 +11,7 @@
     "environmentsForAgents": "Environments for Agents",
     "environmentsForAgentsDesc": "Continuous Evals to Train Agents for Your Workflows",
     "openSourceFramework": "Open Source Framework",
+    "openSourceFrameworkDesc": "Core, foundation, and application components for building scalable multi-agent systems.",
     "coreComponents": "Core Components",
     "foundationComponents": "Foundation Components",
     "applicationComponents": "Application Components",

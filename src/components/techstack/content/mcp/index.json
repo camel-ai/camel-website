@@ -3,14 +3,58 @@
   "variant": "red",
   "items": [
     {
-      "id": "camel-mcp-hub",
-      "name": "CAMEL MCP Hub",
-      "url": "https://mcp.camel-ai.org/"
+      "id": "mcp-agent",
+      "name": "MCPAgent",
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/agents/mcp_agent.py"
     },
     {
-      "id": "camel-mcp-toolkit",
-      "name": "MCP Toolkit",
+      "id": "mcp-toolkit",
+      "name": "MCPToolkit",
+      "logo": true,
+      "showText": false,
       "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/mcp_toolkit.py"
+    },
+    {
+      "id": "playwright-mcp-toolkit",
+      "name": "PlaywrightMCPToolkit",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/playwright_mcp_toolkit.py"
+    },
+    {
+      "id": "edgeone-pages-mcp-toolkit",
+      "name": "EdgeOnePagesMCPToolkit",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/edgeone_pages_mcp_toolkit.py"
+    },
+    {
+      "id": "google-drive-mcp-toolkit",
+      "name": "GoogleDriveMCPToolkit",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/google_drive_mcp_toolkit.py"
+    },
+    {
+      "id": "minimax-mcp-toolkit",
+      "name": "MinimaxMCPToolkit",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/minimax_mcp_toolkit.py"
+    },
+    {
+      "id": "notion-mcp-toolkit",
+      "name": "NotionMCPToolkit",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/notion_mcp_toolkit.py"
+    },
+    {
+      "id": "origene-toolkit",
+      "name": "OrigeneToolkit",
+      "logo": true,
+      "showText": false,
+      "url": "https://github.com/camel-ai/camel/blob/master/camel/toolkits/origene_mcp_toolkit.py"
     }
   ]
 }

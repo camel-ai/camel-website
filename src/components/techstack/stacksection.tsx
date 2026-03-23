@@ -25,7 +25,8 @@ const backgroundColorVariants = {
   yellow: "bg-yellow-secondary/30",
   pink: "bg-pink-secondary/30",
   orange: "bg-orange-secondary/30",
-  grey: "bg-gray-secondary/30",
+  grey:
+    "bg-[color-mix(in_srgb,var(--gray-4)_16%,transparent)] dark:bg-[color-mix(in_srgb,var(--gray-8)_18%,transparent)]",
   blue: "bg-blue-secondary/30",
   red: "bg-red-secondary/30",
   bone: "bg-bone-secondary/30",
@@ -42,6 +43,14 @@ const borderColorVariants = {
   red: "border-red-primary",
   bone: "border-bone-primary",
 };
+
+/** Logo chips: hide label unless `showText: true`. Non-logo items: show label unless `showText: false`. */
+function resolveShowText(item: StackItemData): boolean {
+  if (item.logo) {
+    return item.showText === true;
+  }
+  return item.showText !== false;
+}
 
 // Group items by subcategory
 const groupItemsBySubcategory = (items: StackItemData[]) => {
@@ -107,7 +116,7 @@ export default function StackSection({
                       id={item.id}
                       title={title}
                       showLogo={item.logo || false}
-                      showText={item.showText !== false}
+                      showText={resolveShowText(item)}
                     >
                       {item.name}
                     </StackItem>
@@ -147,7 +156,7 @@ export default function StackSection({
               id={item.id}
               title={title}
               showLogo={item.logo || false}
-              showText={item.showText !== false}
+              showText={resolveShowText(item)}
             >
               {item.name}
             </StackItem>

@@ -19,7 +19,7 @@ const RESEARCH_KEYS = [
 
 const PRODUCT_KEYS = [
   { key: "openSourceCowork", href: "https://www.eigent.ai" },
-  { key: "environmentForAgent", href: "https://www.eigent.ai/environment" },
+  { key: "environmentForAgent", href: "https://www.eigent.ai/environments" },
 ];
 
 const FRAMEWORK_KEYS = [

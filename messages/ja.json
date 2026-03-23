@@ -11,6 +11,7 @@
     "environmentsForAgents": "エージェント環境",
     "environmentsForAgentsDesc": "ワークフローに合わせてエージェントを訓練する継続的評価",
     "openSourceFramework": "オープンソースフレームワーク",
+    "openSourceFrameworkDesc": "スケーラブルなマルチエージェントシステム向けのコア、基盤、アプリケーションコンポーネント。",
     "coreComponents": "コアコンポーネント",
     "foundationComponents": "基盤コンポーネント",
     "applicationComponents": "アプリケーションコンポーネント",

@@ -30,6 +30,7 @@ import Image from "next/image";
 import LogoMarquee from "@/components/LogoMarquee";
 import TechStackContent from "@/components/techstack";
 import { CommunityMap } from "@/components/community/CommunityMap";
+import { GithubStarsCount } from "@/components/community/GithubStarsCount";
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
 
@@ -524,15 +525,18 @@ export default function Home() {
               </Button>
             </div>
 
-            <div className="grid w-full grid-cols-2 gap-6 sm:grid-cols-3 lg:w-1/2">
+            <div className="grid w-full grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-5 lg:w-1/2">
               {researchLogos.map((logo) => (
-                <div key={logo.alt} className="flex items-center justify-center px-4 py-3">
+                <div
+                  key={logo.alt}
+                  className="bg-card/40 flex h-16 w-full items-center justify-center rounded-xl px-4 dark:bg-white dark:border-white/20"
+                >
                   <Image
                     src={logo.src}
                     alt={logo.alt}
                     width={140}
                     height={40}
-                    className="h-10 w-auto object-contain"
+                    className="max-h-10 w-auto max-w-full object-contain"
                   />
                 </div>
               ))}
@@ -768,9 +772,7 @@ export default function Home() {
             <div className="grid grid-cols-2 gap-5 sm:gap-8 md:grid-cols-4">
               <div className="flex flex-col items-center gap-3">
                 <Star className="text-neon-primary size-8 stroke-[1.5]" />
-                <span className="font-display-title text-neon-primary text-2xl font-bold md:text-5xl">
-                  38K
-                </span>
+                <GithubStarsCount className="font-display-title text-neon-primary text-2xl font-bold md:text-5xl" />
                 <span className="text-muted-foreground text-sm tracking-wide uppercase">
                   {t("community.stars")}
                 </span>
