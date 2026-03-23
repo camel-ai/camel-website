@@ -109,6 +109,15 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
+        source: "/package/:file",
+        headers: [
+          {
+            key: "Content-Disposition",
+            value: "attachment",
+          },
+        ],
+      },
+      {
         source: "/:path*",
         headers: securityHeaders,
       },

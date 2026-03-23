@@ -28,6 +28,7 @@ export function CommunityImageSlider() {
                   alt={`Community ${(idx % IMAGES.length) + 1}`}
                   width={1200}
                   height={600}
+                  sizes="(max-width: 640px) 90vw, (max-width: 1024px) 50vw, 480px"
                   className="h-full w-auto object-contain"
                   priority={idx < 2}
                 />

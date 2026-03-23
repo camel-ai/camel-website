@@ -29,6 +29,7 @@ export default function LogoMarquee({ logos }: CustomerLogosProps) {
                   alt={logo.alt}
                   width={140}
                   height={40}
+                  sizes="140px"
                   className="h-10 w-auto object-contain"
                 />
               </div>

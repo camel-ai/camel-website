@@ -49,11 +49,14 @@ renderer.link = function ({ href, title, text }) {
   return `<a href="${safeHref}" target="_blank" rel="noopener noreferrer"${titleAttr}>${text}</a>`;
 };
 
-// Build Next.js image optimization URL for CDN-style delivery (AVIF/WebP, responsive)
+// Build Next.js image optimization URL for CDN-style delivery (AVIF/WebP per next.config, responsive)
 function getOptimizedImageUrl(src: string, width: number, quality = 75): string {
   const encoded = encodeURIComponent(src);
   return `/_next/image?url=${encoded}&w=${width}&q=${quality}`;
 }
+
+/** Widths must match `images.deviceSizes` / `imageSizes` in next.config.ts */
+const MARKDOWN_IMAGE_WIDTHS = [640, 750, 828, 1080, 1200, 1920] as const;
 
 // Images with rounded corners, figure support, and CDN optimization
 renderer.image = function ({ href, title, text }) {
@@ -62,11 +65,11 @@ renderer.image = function ({ href, title, text }) {
   const isLocal = safeHref.startsWith("/");
   let imgTag: string;
   if (isLocal) {
-    // Route through Next.js image optimization for AVIF/WebP, responsive srcset
-    const widths = [640, 828, 1200];
+    const widths = MARKDOWN_IMAGE_WIDTHS;
     const srcset = widths.map((w) => `${getOptimizedImageUrl(safeHref, w)} ${w}w`).join(", ");
     const defaultSrc = getOptimizedImageUrl(safeHref, 1200);
-    const sizes = "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px";
+    const sizes =
+      "(max-width: 768px) 100vw, (max-width: 1280px) min(100vw, 896px), min(100vw, 800px)";
     imgTag = `<img src="${defaultSrc}" srcset="${srcset}" sizes="${sizes}" alt="${text || ""}" loading="lazy" decoding="async" class="rounded-lg" />`;
   } else {
     imgTag = `<img src="${safeHref}" alt="${text || ""}" loading="lazy" decoding="async" class="rounded-lg" />`;

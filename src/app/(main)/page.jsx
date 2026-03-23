@@ -134,6 +134,7 @@ export default function Home() {
                 alt="Mission"
                 width={600}
                 height={600}
+                sizes="(max-width: 768px) 100vw, 28rem"
                 className="h-full w-full object-cover"
               />
             </div>
@@ -428,6 +429,7 @@ export default function Home() {
                                   alt={paper.brand}
                                   width={160}
                                   height={160}
+                                  sizes="64px"
                                   className="h-8 w-auto shrink-0 object-contain dark:hidden"
                                 />
                                 <Image
@@ -435,6 +437,7 @@ export default function Home() {
                                   alt={paper.brand}
                                   width={160}
                                   height={160}
+                                  sizes="64px"
                                   className="hidden h-8 w-auto shrink-0 object-contain dark:block"
                                 />
                               </div>
@@ -445,6 +448,7 @@ export default function Home() {
                                   alt={paper.title}
                                   width={600}
                                   height={900}
+                                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                                   className="h-auto w-full object-cover"
                                 />
                               </div>
@@ -536,6 +540,7 @@ export default function Home() {
                     alt={logo.alt}
                     width={140}
                     height={40}
+                    sizes="(max-width: 640px) 42vw, (max-width: 1024px) 28vw, 180px"
                     className="max-h-10 w-auto max-w-full object-contain"
                   />
                 </div>
@@ -830,6 +835,7 @@ export default function Home() {
                   alt="Sam Witteveen"
                   width={48}
                   height={48}
+                  sizes="48px"
                   className="shrink-0 rounded-full object-cover"
                 />
                 <div className="flex flex-col">
@@ -852,6 +858,7 @@ export default function Home() {
                   alt="Valory"
                   width={48}
                   height={48}
+                  sizes="48px"
                   className="shrink-0 rounded-full object-cover"
                 />
                 <div className="flex flex-col">
@@ -874,6 +881,7 @@ export default function Home() {
                   alt="The Economist"
                   width={48}
                   height={48}
+                  sizes="48px"
                   className="shrink-0 rounded-full object-cover"
                 />
                 <div className="flex flex-col">
@@ -896,6 +904,7 @@ export default function Home() {
                   alt="Sophia Yang"
                   width={48}
                   height={48}
+                  sizes="48px"
                   className="shrink-0 rounded-full object-cover"
                 />
                 <div className="flex flex-col">
@@ -919,6 +928,7 @@ export default function Home() {
                   alt="Databricks"
                   width={48}
                   height={48}
+                  sizes="48px"
                   className="shrink-0 rounded-full object-cover"
                 />
                 <div className="flex flex-col">
@@ -940,6 +950,7 @@ export default function Home() {
                   alt="Yogesh Haribhau Kulkarni"
                   width={48}
                   height={48}
+                  sizes="48px"
                   className="shrink-0 rounded-full object-cover"
                 />
                 <div className="flex flex-col">

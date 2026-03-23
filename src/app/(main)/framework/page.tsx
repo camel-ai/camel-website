@@ -91,7 +91,7 @@ export default function FrameworkPage() {
                 width={1000}
                 height={1000}
                 className="h-auto w-full"
-                sizes="100vw"
+                sizes="(max-width: 1280px) 100vw, min(1200px, 100vw)"
               />
             </div>
           </Content>

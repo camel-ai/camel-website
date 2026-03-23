@@ -25,8 +25,7 @@ const backgroundColorVariants = {
   yellow: "bg-yellow-secondary/30",
   pink: "bg-pink-secondary/30",
   orange: "bg-orange-secondary/30",
-  grey:
-    "bg-[color-mix(in_srgb,var(--gray-4)_16%,transparent)] dark:bg-[color-mix(in_srgb,var(--gray-8)_18%,transparent)]",
+  grey: "bg-[color-mix(in_srgb,var(--gray-4)_16%,transparent)] dark:bg-[color-mix(in_srgb,var(--gray-8)_18%,transparent)]",
   blue: "bg-blue-secondary/30",
   red: "bg-red-secondary/30",
   bone: "bg-bone-secondary/30",

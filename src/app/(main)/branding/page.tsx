@@ -55,22 +55,27 @@ const downloadLinks = [
 
 const navSections = [
   { id: "overview", num: "01", label: "Overview" },
-  { id: "positioning", num: "02", label: "Positioning" },
-  { id: "logo", num: "03", label: "Logo" },
-  { id: "color", num: "04", label: "Color" },
-  { id: "typography", num: "05", label: "Typography" },
-  { id: "imagery", num: "06", label: "Imagery" },
-  { id: "voice", num: "07", label: "Voice" },
-  { id: "downloads", num: "08", label: "Assets" },
+  { id: "logo", num: "02", label: "Logo" },
+  { id: "color", num: "03", label: "Color" },
+  { id: "downloads", num: "04", label: "Assets" },
 ] as const;
 
-const brandColors = [
-  { name: "Neon primary", className: "bg-neon-primary", fg: "text-black" },
-  { name: "Neon secondary", className: "bg-neon-secondary", fg: "text-foreground" },
-  { name: "Cyan", className: "bg-cyan-primary", fg: "text-black" },
-  { name: "Pink", className: "bg-pink-primary", fg: "text-black" },
-  { name: "Surface / card", className: "bg-card border-border border", fg: "text-foreground" },
-  { name: "Foreground", className: "bg-foreground", fg: "text-background" },
+const colorGuides = [
+  {
+    title: "Primary",
+    src: "/branding/colors-primary.png",
+    alt: "Primary palette: Neon and Neon Light with hex codes",
+  },
+  {
+    title: "Base",
+    src: "/branding/colors-base.png",
+    alt: "Base neutrals: black, grey, white, background, and gradient with hex codes",
+  },
+  {
+    title: "Supporting",
+    src: "/branding/colors-supporting.png",
+    alt: "Supporting palette: accent colors and lights in a grid with hex codes",
+  },
 ] as const;
 
 function BrandNav({ className }: { className?: string }) {
@@ -109,7 +114,7 @@ function SectionBlock({
 }) {
   return (
     <div id={id} className={cn("scroll-mt-24 pt-4 first:pt-0 lg:scroll-mt-28", className)}>
-      <div className="mb-8 flex flex-col gap-2 border-b border-border pb-8 lg:mb-10 lg:pb-10">
+      <div className="border-border mb-8 flex flex-col gap-2 border-b pb-8 lg:mb-10 lg:pb-10">
         <div className="text-muted-foreground flex items-center gap-3 font-mono text-xs tracking-widest uppercase">
           <span className="tabular-nums">{num}</span>
           {kicker ? (
@@ -123,7 +128,7 @@ function SectionBlock({
           {title}
         </h2>
       </div>
-      <div className="text-muted-foreground space-y-6 text-base leading-relaxed md:text-lg [&_strong]:text-foreground">
+      <div className="text-muted-foreground [&_strong]:text-foreground space-y-6 text-base leading-relaxed md:text-lg">
         {children}
       </div>
     </div>
@@ -144,8 +149,8 @@ export default function BrandingPage() {
               Eigent AI
             </h1>
             <p className="text-muted-foreground mt-6 text-lg md:text-xl">
-              Language, color, type, and files for representing Eigent AI and CAMEL in product,
-              press, and partner materials.
+              Color and brand files for representing Eigent AI and CAMEL in product, press, and
+              partner materials.
             </p>
             <p className="text-muted-foreground mt-4 text-sm">
               Copyright 2025 Eigent AI. All rights reserved.
@@ -157,7 +162,7 @@ export default function BrandingPage() {
       <Section padding="lg" paddingBottom="xl" className="relative">
         <Container size="xl" className="flex flex-col gap-12 lg:flex-row lg:gap-16 xl:gap-24">
           {/* Mobile TOC */}
-          <div className="lg:hidden -mx-2 overflow-x-auto px-2 pb-2">
+          <div className="-mx-2 overflow-x-auto px-2 pb-2 lg:hidden">
             <div className="flex w-max gap-2">
               {navSections.map((item) => (
                 <a
@@ -172,7 +177,7 @@ export default function BrandingPage() {
           </div>
 
           {/* Desktop sticky TOC */}
-          <aside className="hidden lg:block w-52 shrink-0 xl:w-56">
+          <aside className="hidden w-52 shrink-0 lg:block xl:w-56">
             <div className="sticky top-28">
               <p className="text-muted-foreground mb-4 font-mono text-xs tracking-widest uppercase">
                 Contents
@@ -184,9 +189,9 @@ export default function BrandingPage() {
           <div className="min-w-0 flex-1 space-y-20 md:space-y-28 lg:space-y-32">
             <SectionBlock id="overview" num="01" title="Overview" kicker="Start here">
               <p>
-                This page is the single source for how we present Eigent AI alongside CAMEL—what we
-                say, how we look, and which files to use. When in doubt, prefer clarity and restraint
-                over decoration.
+                This page is the single source for how we present Eigent AI alongside CAMEL—how we
+                look and which files to use. When in doubt, prefer clarity and restraint over
+                decoration.
               </p>
               <p>
                 <strong>CAMEL-AI.org</strong> is the open research community;{" "}
@@ -195,19 +200,7 @@ export default function BrandingPage() {
               </p>
             </SectionBlock>
 
-            <SectionBlock id="positioning" num="02" title="Positioning" kicker="What we stand for">
-              <p>
-                We speak as builders of reliable, multi-agent systems—confident and precise, never
-                hype-driven. Lead with outcomes and evidence; avoid vague “AI magic” language.
-              </p>
-              <ul className="text-foreground list-inside list-disc space-y-2 marker:text-neon-primary">
-                <li>Pair technical depth with plain-English explanations for broader audiences.</li>
-                <li>Credit collaborators, datasets, and upstream OSS where relevant.</li>
-                <li>Reserve superlatives for claims you can substantiate.</li>
-              </ul>
-            </SectionBlock>
-
-            <SectionBlock id="logo" num="03" title="Logo" kicker="Marks & placement">
+            <SectionBlock id="logo" num="02" title="Logo" kicker="Marks & placement">
               <p>
                 Use approved logo packages only—do not redraw, skew, add effects, or change colors
                 outside the provided variants. Maintain clear space at least equal to the height of
@@ -220,6 +213,7 @@ export default function BrandingPage() {
                     alt="Eigent icon mark"
                     width={64}
                     height={64}
+                    sizes="64px"
                     className="h-16 w-16 object-contain"
                   />
                 </div>
@@ -229,6 +223,7 @@ export default function BrandingPage() {
                     alt="CAMEL wordmark on dark"
                     width={200}
                     height={48}
+                    sizes="(max-width: 640px) 85vw, 200px"
                     className="h-10 w-auto max-w-full object-contain object-left"
                   />
                 </div>
@@ -238,6 +233,7 @@ export default function BrandingPage() {
                     alt="CAMEL wordmark on light"
                     width={200}
                     height={48}
+                    sizes="(max-width: 640px) 85vw, 200px"
                     className="h-10 w-auto max-w-full object-contain"
                   />
                 </div>
@@ -251,63 +247,35 @@ export default function BrandingPage() {
               </p>
             </SectionBlock>
 
-            <SectionBlock id="color" num="04" title="Color" kicker="Core palette">
+            <SectionBlock id="color" num="03" title="Color" kicker="Core palette">
               <p>
-                Primary expression uses neon accents on neutral surfaces. Use accent color for focus
-                states, highlights, and key CTAs—not large fields of saturated color.
+                Use the approved primary, base, and supporting palettes below. Prefer neon accents
+                on neutral surfaces for focus states, highlights, and key CTAs—not large fields of
+                saturated color.
               </p>
-              <div className="not-prose grid grid-cols-2 gap-3 sm:grid-cols-3">
-                {brandColors.map((c) => (
-                  <div
-                    key={c.name}
-                    className={cn(
-                      "flex min-h-[100px] flex-col justify-end rounded-xl p-4 shadow-sm",
-                      c.className,
-                      c.fg,
-                    )}
-                  >
-                    <span className="text-xs font-medium">{c.name}</span>
-                  </div>
+              <div className="not-prose space-y-12">
+                {colorGuides.map((guide) => (
+                  <figure key={guide.src} className="space-y-4">
+                    <figcaption className="text-foreground font-display-title text-lg font-semibold tracking-tight">
+                      {guide.title}
+                    </figcaption>
+                    <div className="border-border overflow-hidden rounded-xl border bg-[#F0F2F5] shadow-sm">
+                      <Image
+                        src={guide.src}
+                        alt={guide.alt}
+                        width={1024}
+                        height={1024}
+                        className="h-auto w-full object-contain"
+                        sizes="(min-width: 1280px) 896px, (min-width: 1024px) calc(100vw - 14rem), 100vw"
+                        priority={guide.title === "Primary"}
+                      />
+                    </div>
+                  </figure>
                 ))}
               </div>
             </SectionBlock>
 
-            <SectionBlock id="typography" num="05" title="Typography" kicker="Type hierarchy">
-              <p>
-                <strong className="font-display-title text-2xl md:text-3xl">Display — Palatino</strong>{" "}
-                for page titles and editorial headlines.
-              </p>
-              <p>
-                <strong className="font-sans text-xl font-semibold">UI body — Inter</strong> for
-                interface copy, long-form web reading, and descriptions.
-              </p>
-              <p>
-                <strong className="font-mono text-base">Mono — Inconsolata</strong> for code, technical
-                labels, and metadata.
-              </p>
-            </SectionBlock>
-
-            <SectionBlock id="imagery" num="06" title="Imagery" kicker="Screens & diagrams">
-              <p>
-                Prefer real product UI, readable diagrams, and neutral backgrounds. Crop tightly,
-                remove sensitive data, and keep contrast high enough for accessibility.
-              </p>
-              <p>
-                Avoid stock “robots shaking hands” tropes and cluttered collages. When showing
-                agents or workflows, favor schematics and timelines that explain behavior.
-              </p>
-            </SectionBlock>
-
-            <SectionBlock id="voice" num="07" title="Voice & tone" kicker="How we write">
-              <ul className="text-foreground list-inside list-disc space-y-2 marker:text-neon-primary">
-                <li>Active voice, short sentences, concrete nouns.</li>
-                <li>Define acronyms on first use in external-facing docs.</li>
-                <li>Match formality to channel: more technical in papers, warmer on the website.</li>
-                <li>Do not imply human oversight where automation is fully autonomous unless true.</li>
-              </ul>
-            </SectionBlock>
-
-            <SectionBlock id="downloads" num="08" title="Assets & contact" kicker="Downloads">
+            <SectionBlock id="downloads" num="04" title="Assets & contact" kicker="Downloads">
               <p className="mb-8">
                 Official logo archives, fonts, and CAMEL templates. Use these bundles rather than
                 exporting from the website.

@@ -19,8 +19,7 @@ const colorVariants = {
   yellow: "bg-yellow-secondary/30 hover:bg-yellow-secondary/80",
   pink: "bg-pink-secondary/30 hover:bg-pink-secondary/80",
   orange: "bg-orange-secondary/30 hover:bg-orange-secondary/80",
-  grey:
-    "bg-[color-mix(in_srgb,var(--gray-5)_18%,transparent)] hover:bg-[color-mix(in_srgb,var(--gray-5)_38%,transparent)] dark:bg-[color-mix(in_srgb,var(--gray-8)_22%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--gray-8)_40%,transparent)]",
+  grey: "bg-[color-mix(in_srgb,var(--gray-5)_18%,transparent)] hover:bg-[color-mix(in_srgb,var(--gray-5)_38%,transparent)] dark:bg-[color-mix(in_srgb,var(--gray-8)_22%,transparent)] dark:hover:bg-[color-mix(in_srgb,var(--gray-8)_40%,transparent)]",
   blue: "bg-blue-secondary/30 hover:bg-blue-secondary/80",
   red: "bg-red-secondary/30 hover:bg-red-secondary/80",
   bone: "bg-bone-secondary/30 hover:bg-bone-secondary/80",

@@ -69,6 +69,7 @@ export default function CommunityPage() {
                   src="/image/join_discord.avif"
                   alt="Join Discord"
                   fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-contain p-4 transition-transform duration-300 group-hover:rotate-6"
                 />
               </div>
@@ -89,6 +90,7 @@ export default function CommunityPage() {
                   src="/image/ambassador.png"
                   alt="Ambassador Program"
                   fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-contain p-4 transition-transform duration-300 group-hover:rotate-6"
                 />
               </div>
@@ -109,6 +111,7 @@ export default function CommunityPage() {
                   src="/image/build_with_camel.avif"
                   alt="Build with CAMEL"
                   fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-contain p-4 transition-transform duration-300 group-hover:rotate-6"
                 />
               </div>

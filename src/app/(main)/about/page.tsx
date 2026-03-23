@@ -69,6 +69,7 @@ export default function About() {
                     alt="Guohao Li"
                     width={160}
                     height={160}
+                    sizes="(max-width: 640px) 128px, 160px"
                     className="aspect-square h-32 w-32 rounded-xl object-cover sm:h-40 sm:w-40"
                   />
                 </div>
@@ -136,6 +137,7 @@ export default function About() {
                       alt="Bernard Ghanem"
                       width={120}
                       height={120}
+                      sizes="112px"
                       className="aspect-square h-24 w-24 rounded-xl object-cover sm:h-28 sm:w-28"
                     />
                   </div>
@@ -166,6 +168,7 @@ export default function About() {
                       alt="Philip Torr"
                       width={120}
                       height={120}
+                      sizes="112px"
                       className="aspect-square h-24 w-24 rounded-xl object-cover sm:h-28 sm:w-28"
                     />
                   </div>

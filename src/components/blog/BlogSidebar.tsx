@@ -30,11 +30,7 @@ export function BlogSidebar({ author }: BlogSidebarProps) {
       {/* Author info */}
       <div className="flex flex-col items-start gap-3">
         {author.avatar ? (
-          <AuthorAvatar
-            name={author.name}
-            avatar={author.avatar}
-            avatarDark={author.avatarDark}
-          />
+          <AuthorAvatar name={author.name} avatar={author.avatar} avatarDark={author.avatarDark} />
         ) : (
           <div className="bg-muted flex h-10 w-10 shrink-0 items-center justify-center rounded-full">
             <span className="text-foreground text-sm font-medium">

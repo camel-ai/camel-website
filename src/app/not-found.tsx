@@ -29,11 +29,7 @@ export default function NotFound() {
                 get you back on track.
               </p>
               <div className="flex flex-col gap-4 sm:flex-row">
-                <Button
-                  asChild
-                  size="lg"
-                  className="gap-2 text-foreground"
-                >
+                <Button asChild size="lg" className="text-foreground gap-2">
                   <Link href="/">
                     <Home className="size-5" />
                     Back to home

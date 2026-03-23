@@ -137,7 +137,7 @@ export default function BlogContent({ posts, categories }: BlogContentProps) {
                         src={post.thumbnail}
                         alt={post.title}
                         fill
-                        sizes="(max-width: 640px) 100vw, 320px"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 420px"
                         className="object-cover"
                       />
                     )}
