@@ -50,7 +50,7 @@ export default function SocialLinks() {
             href={item.href}
             target={isExternal ? "_blank" : undefined}
             rel={isExternal ? "noopener noreferrer" : undefined}
-            className="bg-neon-secondary/10 hover:bg-neon-secondary/20 text-neon-primary hover:text-neon-primary inline-flex size-10 items-center justify-center rounded-full transition-colors"
+            className="bg-neon-secondary/10 hover:bg-neon-secondary/20 dark:bg-white dark:hover:bg-neutral-100 text-neon-primary hover:text-neon-primary inline-flex size-10 items-center justify-center rounded-full transition-colors"
             aria-label={item.title}
           >
             {item.icon}

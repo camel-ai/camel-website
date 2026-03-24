@@ -57,27 +57,32 @@ const Hero: React.FC = () => {
       header: string;
       body: string;
       logs: string[];
+      repoUrl: string;
     }
   > = {
     camel: {
       header: t("tabs.camel.header"),
       body: t("tabs.camel.body"),
       logs: ["pip install camel-ai"],
+      repoUrl: "https://github.com/camel-ai/camel",
     },
     owl: {
       header: t("tabs.owl.header"),
       body: t("tabs.owl.body"),
       logs: ["git clone https://github.com/camel-ai/owl.git"],
+      repoUrl: "https://github.com/camel-ai/owl",
     },
     seta: {
       header: t("tabs.seta.header"),
       body: t("tabs.seta.body"),
       logs: ["git clone https://github.com/camel-ai/seta.git"],
+      repoUrl: "https://github.com/camel-ai/seta",
     },
     oasis: {
       header: t("tabs.oasis.header"),
       body: t("tabs.oasis.body"),
       logs: ["pip install camel-oasis"],
+      repoUrl: "https://github.com/camel-ai/oasis",
     },
   };
 
@@ -217,10 +222,12 @@ const Hero: React.FC = () => {
                         variant="default"
                         size="default"
                         className="font-display-title w-full cursor-pointer font-bold sm:w-auto"
-                        onClick={() => (window.location.href = "https://github.com/camel-ai")}
+                        asChild
                       >
-                        {t("startBuilding")}
-                        <ArrowRight className="size-4" />
+                        <a href={current.repoUrl} target="_blank" rel="noopener noreferrer">
+                          {t("startBuilding")}
+                          <ArrowRight className="size-4" />
+                        </a>
                       </Button>
                     </div>
                   </Tabs>

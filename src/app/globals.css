@@ -824,6 +824,13 @@
     }
   }
 
+  /* Community page image marquee (duplicated track translates by half width) */
+  .animate-community-marquee {
+    width: max-content;
+    animation: scroll-left 80s linear infinite;
+    will-change: transform;
+  }
+
   /* Grow underline on hover - reusable for nav links, etc. */
   .link-grow-underline {
     @apply relative;
