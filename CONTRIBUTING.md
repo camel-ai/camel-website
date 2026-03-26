@@ -22,7 +22,7 @@ If your change is large, user-facing, or changes site structure, open an issue o
 
 ### Requirements
 
-- `Node.js` 18+ recommended
+- `Node.js` 20.19+ required
 - `npm` (this repo includes `package-lock.json`)
 
 ### Install

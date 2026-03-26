@@ -1,5 +1,5 @@
-# 基础镜像，使用 Node.js 18 的 Alpine 版本
-FROM node:18-alpine AS base
+# 基础镜像，使用 Node.js 20 的 Alpine 版本
+FROM node:20-alpine AS base
 
 # 设置工作目录
 WORKDIR /app
