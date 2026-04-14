@@ -158,6 +158,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.camel-ai.org/",
   },
+  verification: {
+    google: "a8ucbvO0e8WxdSmRILn0u4TV_WrPUg0ljSK2LnnGI9s",
+  },
   other: {
     "apple-mobile-web-app-capable": "yes",
     "apple-mobile-web-app-status-bar-style": "default",
