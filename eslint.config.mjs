@@ -12,7 +12,7 @@ const compat = new FlatCompat({
 
 const eslintConfig = [
   {
-    ignores: [".next/**", "next-env.d.ts"],
+    ignores: [".next/**", "astro/.astro/**", "astro/dist/**", "next-env.d.ts"],
   },
   ...compat.extends("next/core-web-vitals", "next/typescript", "plugin:prettier/recommended"),
   ...compat.config({

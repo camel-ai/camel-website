@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "dev:blog": "npm run dev --prefix astro",
+    "build": "npm run build:blog && next build",
+    "build:blog": "npm run build --prefix astro && node scripts/sync-astro-assets.mjs",
     "start": "next start",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",

@@ -2,3 +2,5 @@ node_modules
 .next
 .git
 *.md
+!public/blogs/**/*.md
+!public/blogs/**/*.mdx

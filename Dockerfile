@@ -10,14 +10,17 @@ FROM base AS deps
 RUN npm config set registry https://registry.npmmirror.com
 # 复制包管理文件
 COPY package.json package-lock.json* ./
+COPY astro/package.json astro/package-lock.json* ./astro/
 # 安装依赖
 RUN npm ci --prefer-offline --no-audit
+RUN npm ci --prefix astro --prefer-offline --no-audit
 
 # 构建阶段
 FROM base AS builder
 WORKDIR /app
 # 从 deps 阶段复制 node_modules
 COPY --from=deps /app/node_modules ./node_modules
+COPY --from=deps /app/astro/node_modules ./astro/node_modules
 # 复制项目文件
 COPY . .
 # COPY ./.env.production ./.env.production
@@ -37,6 +40,7 @@ RUN addgroup --system --gid 1001 nodejs && adduser --system --uid 1001 nextjs
 
 # 复制构建产物和必要文件
 COPY --from=builder --chown=nextjs:nodejs /app/.next ./.next
+COPY --from=builder --chown=nextjs:nodejs /app/astro/dist ./astro/dist
 COPY --from=builder --chown=nextjs:nodejs /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/node_modules ./node_modules
 COPY --from=builder --chown=nextjs:nodejs /app/package.json ./package.json

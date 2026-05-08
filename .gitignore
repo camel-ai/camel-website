@@ -17,6 +17,12 @@
 /.next/
 /out/
 
+# astro blog
+/astro/dist/
+/astro/.astro/
+/astro/node_modules/
+/public/_astro/
+
 # production
 /build
 

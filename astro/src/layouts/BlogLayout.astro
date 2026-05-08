@@ -1,0 +1,117 @@
+---
+import Nav from "@components/Nav.astro";
+import Footer from "@components/Footer.astro";
+import "@styles/global.css";
+
+interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+  canonical?: string;
+  keywords?: string[];
+  publishedDate?: string;
+  author?: string;
+  type?: "website" | "article";
+}
+
+const {
+  title,
+  description = "CAMEL-AI blog: updates, tutorials, and insights on multi-agent systems, data generation, and AI research.",
+  ogImage = "/image/thumbnail.png",
+  canonical,
+  keywords,
+  publishedDate,
+  author,
+  type = "website",
+} = Astro.props;
+
+const siteName = "CAMEL-AI";
+const siteUrl = "https://www.camel-ai.org";
+const canonicalUrl = canonical ? `${siteUrl}${canonical}` : `${siteUrl}${Astro.url.pathname}`;
+const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
+---
+
+<!doctype html>
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Primary meta -->
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    {keywords?.length && <meta name="keywords" content={keywords.join(", ")} />}
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content={type} />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={`${siteUrl}${ogImage}`} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    {publishedDate && <meta property="article:published_time" content={publishedDate} />}
+    {author && <meta property="article:author" content={author} />}
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@camel_ai" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={`${siteUrl}${ogImage}`} />
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png" />
+    <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Google Fonts: Inter + Inconsolata -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Dark mode script: runs before body to prevent FOUC -->
+    <script is:inline>
+      (function () {
+        const stored = localStorage.getItem("theme");
+        const prefersDark =
+          !stored && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        if (stored === "dark" || prefersDark) {
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
+  </head>
+
+  <body class="bg-[--background] text-[--foreground] min-h-screen flex flex-col font-sans antialiased">
+    <Nav />
+
+    <main class="flex-1">
+      <slot />
+    </main>
+
+    <Footer />
+
+    <!-- Copy-code button handler -->
+    <script>
+      document.addEventListener("click", (e) => {
+        const btn = (e.target as HTMLElement).closest(".copy-code-btn");
+        if (!btn) return;
+        const wrapper = btn.closest(".code-block-wrapper") as HTMLElement | null;
+        if (!wrapper) return;
+        const code = decodeURIComponent(wrapper.dataset.code || "");
+        navigator.clipboard.writeText(code).then(() => {
+          btn.classList.add("copied");
+          setTimeout(() => btn.classList.remove("copied"), 2000);
+        });
+      });
+    </script>
+  </body>
+</html>
