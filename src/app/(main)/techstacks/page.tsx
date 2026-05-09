@@ -1,6 +1,3 @@
-"use client";
-
-import React from "react";
 import { Section } from "@/components/layout/Section";
 import { Container } from "@/components/layout/Container";
 import { Header } from "@/components/layout/Header";
