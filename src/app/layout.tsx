@@ -5,9 +5,6 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { NextIntlClientProvider } from "next-intl";
-import { cookies, headers } from "next/headers";
-import { locales, defaultLocale } from "@/i18n/config";
-import type { Locale } from "@/i18n/config";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -171,36 +168,17 @@ export const metadata: Metadata = {
   },
 };
 
-async function getLocaleAndMessages(): Promise<{
-  locale: Locale;
+async function getLocaleMessages(): Promise<{
+  locale: "en";
   messages: Record<string, unknown>;
 }> {
-  const headerStore = await headers();
-  const urlLocale = headerStore.get("x-next-locale");
-  const cookieStore = await cookies();
-  const cookieLocale = cookieStore.get("NEXT_LOCALE")?.value;
-  // Prefer locale from URL (set by middleware), then cookie, then default
-  const locale: Locale = locales.includes(urlLocale as Locale)
-    ? (urlLocale as Locale)
-    : locales.includes(cookieLocale as Locale)
-      ? (cookieLocale as Locale)
-      : defaultLocale;
-
-  // Explicit imports let both webpack and Turbopack statically resolve the files
-  const messageLoaders: Record<string, () => Promise<{ default: Record<string, unknown> }>> = {
-    en: () => import("../../messages/en.json"),
-    zh: () => import("../../messages/zh.json"),
-    ja: () => import("../../messages/ja.json"),
-  };
-  const loader = messageLoaders[locale] ?? messageLoaders.en;
-  const loaded = await loader();
+  const loaded = await import("../../messages/en.json");
   const messages = (loaded.default ?? loaded) as Record<string, unknown>;
-
-  return { locale, messages };
+  return { locale: "en", messages };
 }
 
 export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  const { locale, messages } = await getLocaleAndMessages();
+  const { locale, messages } = await getLocaleMessages();
 
   return (
     <html

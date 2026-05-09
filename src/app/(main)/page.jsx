@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import Link from "next/link";
 import Section from "@/components/layout/Section";
@@ -7,23 +5,15 @@ import Container from "@/components/layout/Container";
 import Content from "@/components/layout/Content";
 import Header from "@/components/layout/Header";
 import {
-  ArrowRight,
-  Github,
-  Users,
-  BookOpen,
-  Terminal,
-  Share2,
-  Database,
-  Network,
-  Briefcase,
-  Wrench,
-  Link2,
-  GraduationCap,
-  ChevronDown,
   ArrowDown,
   Star,
   GitFork,
   UserPlus,
+  Users,
+  Briefcase,
+  Wrench,
+  Link2,
+  GraduationCap,
 } from "lucide-react";
 import Hero from "@/components/home/Hero";
 import Image from "next/image";
@@ -32,68 +22,49 @@ import TechStackContent from "@/components/techstack";
 import { CommunityMap } from "@/components/community/CommunityMap";
 import { GithubStarsCount } from "@/components/community/GithubStarsCount";
 import { Button } from "@/components/ui/button";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
+import ResearchPapersSlider from "@/components/home/ResearchPapersSlider";
 
-export default function Home() {
-  const t = useTranslations("HomePage");
-  const [currentPaperIndex, setCurrentPaperIndex] = React.useState(0);
-  const [visiblePaperCount, setVisiblePaperCount] = React.useState(4);
+const logos = [
+  { src: "/logo/partner/amazon.png", alt: "Amazon" },
+  { src: "/logo/partner/apple.png", alt: "Apple" },
+  { src: "/logo/partner/bytedance.png", alt: "Bytedance" },
+  { src: "/logo/partner/cambridge.png", alt: "Cambridge" },
+  { src: "/logo/partner/cmu.png", alt: "Carnegie Mellon University" },
+  { src: "/logo/partner/columbia.png", alt: "Columbia University" },
+  { src: "/logo/partner/deepmind.png", alt: "Deepmind" },
+  { src: "/logo/partner/hku.png", alt: "The University of Hong Kong" },
+  { src: "/logo/partner/kaust.png", alt: "KAUST" },
+  { src: "/logo/partner/meta.png", alt: "Meta" },
+  { src: "/logo/partner/mit.png", alt: "MIT" },
+  { src: "/logo/partner/oxford.png", alt: "Oxford" },
+  { src: "/logo/partner/stanford.png", alt: "Stanford" },
+  { src: "/logo/partner/tesla.png", alt: "Tesla" },
+];
 
-  React.useEffect(() => {
-    const updateVisibleCount = () => {
-      if (typeof window === "undefined") return;
-      const width = window.innerWidth;
-      if (width < 768) {
-        setVisiblePaperCount(1);
-      } else if (width < 1024) {
-        setVisiblePaperCount(2);
-      } else {
-        setVisiblePaperCount(4);
-      }
-    };
+const researchLogos = [
+  { src: "/logo/research/caltech.png", alt: "Caltech" },
+  { src: "/logo/research/chicago.png", alt: "University of Chicago" },
+  { src: "/logo/research/cmu.png", alt: "Carnegie Mellon University" },
+  { src: "/logo/research/fudan.png", alt: "Fudan University" },
+  { src: "/logo/research/harvard.png", alt: "Harvard University" },
+  { src: "/logo/research/hku.png", alt: "The University of Hong Kong" },
+  { src: "/logo/research/imperial.png", alt: "Imperial College London" },
+  { src: "/logo/research/kaust.png", alt: "KAUST" },
+  { src: "/logo/research/michigan.png", alt: "University of Michigan" },
+  { src: "/logo/research/northwestern.png", alt: "Northwestern University" },
+  { src: "/logo/research/nus.png", alt: "National University of Singapore" },
+  { src: "/logo/research/oxford.png", alt: "Oxford" },
+  { src: "/logo/research/pennstate.png", alt: "Penn State" },
+  { src: "/logo/research/santafi.png", alt: "Santa Fe Institute" },
+  { src: "/logo/research/standford.png", alt: "Stanford" },
+  { src: "/logo/research/sydney.png", alt: "University of Sydney" },
+  { src: "/logo/research/tokyou.png", alt: "University of Tokyo" },
+  { src: "/logo/research/tsinghua.png", alt: "Tsinghua University" },
+];
 
-    updateVisibleCount();
-    window.addEventListener("resize", updateVisibleCount);
-    return () => window.removeEventListener("resize", updateVisibleCount);
-  }, []);
-
-  const logos = [
-    { src: "/logo/partner/amazon.png", alt: "Amazon" },
-    { src: "/logo/partner/apple.png", alt: "Apple" },
-    { src: "/logo/partner/bytedance.png", alt: "Bytedance" },
-    { src: "/logo/partner/cambridge.png", alt: "Cambridge" },
-    { src: "/logo/partner/cmu.png", alt: "Carnegie Mellon University" },
-    { src: "/logo/partner/columbia.png", alt: "Columbia University" },
-    { src: "/logo/partner/deepmind.png", alt: "Deepmind" },
-    { src: "/logo/partner/hku.png", alt: "The University of Hong Kong" },
-    { src: "/logo/partner/kaust.png", alt: "KAUST" },
-    { src: "/logo/partner/meta.png", alt: "Meta" },
-    { src: "/logo/partner/mit.png", alt: "MIT" },
-    { src: "/logo/partner/oxford.png", alt: "Oxford" },
-    { src: "/logo/partner/stanford.png", alt: "Stanford" },
-    { src: "/logo/partner/tesla.png", alt: "Tesla" },
-  ];
-
-  const researchLogos = [
-    { src: "/logo/research/caltech.png", alt: "Caltech" },
-    { src: "/logo/research/chicago.png", alt: "University of Chicago" },
-    { src: "/logo/research/cmu.png", alt: "Carnegie Mellon University" },
-    { src: "/logo/research/fudan.png", alt: "Fudan University" },
-    { src: "/logo/research/harvard.png", alt: "Harvard University" },
-    { src: "/logo/research/hku.png", alt: "The University of Hong Kong" },
-    { src: "/logo/research/imperial.png", alt: "Imperial College London" },
-    { src: "/logo/research/kaust.png", alt: "KAUST" },
-    { src: "/logo/research/michigan.png", alt: "University of Michigan" },
-    { src: "/logo/research/northwestern.png", alt: "Northwestern University" },
-    { src: "/logo/research/nus.png", alt: "National University of Singapore" },
-    { src: "/logo/research/oxford.png", alt: "Oxford" },
-    { src: "/logo/research/pennstate.png", alt: "Penn State" },
-    { src: "/logo/research/santafi.png", alt: "Santa Fe Institute" },
-    { src: "/logo/research/standford.png", alt: "Stanford" },
-    { src: "/logo/research/sydney.png", alt: "University of Sydney" },
-    { src: "/logo/research/tokyou.png", alt: "University of Tokyo" },
-    { src: "/logo/research/tsinghua.png", alt: "Tsinghua University" },
-  ];
+export default async function Home() {
+  const t = await getTranslations("HomePage");
 
   const principles = [0, 1, 2, 3].map((i) => ({
     title: t(`principles.items.${i}.title`),
@@ -299,212 +270,7 @@ export default function Home() {
         />
         <Container size="xl">
           <Content align="center">
-            {/* Research papers slider */}
-            <div className="my-8 flex w-full flex-col items-start justify-center gap-4">
-              {(() => {
-                const researchPapers = [
-                  {
-                    logo: "/logo/camel.png",
-                    logoDark: "/logo/camel_white.png",
-                    image: "/paper/camel_paper.jpg",
-                    brand: "CAMEL",
-                    title:
-                      'CAMEL: Communicative Agents for "Mind" Exploration of Large Language Model Society',
-                    conference: "NeurIPS 2023",
-                    date: "2 Dec 2023",
-                    source: "arXiv",
-                    link: "https://arxiv.org/abs/2303.17760",
-                  },
-                  {
-                    logo: "/logo/owl.png",
-                    logoDark: "/logo/owl_white.png",
-                    image: "/paper/owl_paper.jpg",
-                    brand: "OWL",
-                    title:
-                      "OWL: Optimized Workforce Learning for General Multi-Agent Assistance in Real-World Task Automation",
-                    conference: "NeurIPS 2025",
-                    date: "29 May 2025",
-                    source: "arXiv",
-                    link: "https://arxiv.org/abs/2505.23885",
-                  },
-                  {
-                    logo: "/logo/oasis.png",
-                    logoDark: "/logo/oasis_white.png",
-                    image: "/paper/oasis_paper.jpg",
-                    brand: "OASIS",
-                    title:
-                      "OASIS: Open Agent Social Interaction Simulations with One Million Agents",
-                    conference: "NeurIPS 2024, Workshop Open-World Agents Poster",
-                    date: "18 Nov 2024",
-                    source: "arXiv",
-                    link: "https://arxiv.org/abs/2411.11581",
-                  },
-                  {
-                    logo: "/logo/loong.png",
-                    logoDark: "/logo/loong_white.png",
-                    image: "/paper/loong_paper.jpg",
-                    brand: "LOONG",
-                    title: "Loong: Synthesize Long Chain-of-Thoughts at Scale through Verifiers",
-                    conference: "arXiv preprint",
-                    date: "3 Sep 2025",
-                    source: "arXiv",
-                    link: "https://www.arxiv.org/abs/2509.03059",
-                  },
-                  {
-                    logo: "/logo/crab.png",
-                    logoDark: "/logo/crab_white.png",
-                    image: "/paper/crab_paper.jpg",
-                    brand: "CRAB",
-                    title:
-                      "CRAB: Cross-environment Agent Benchmark for Multimodal Language Model Agents",
-                    conference: "NeurIPS 2024, Workshop on OWA-2024",
-                    date: "18 Oct 2024",
-                    source: "arXiv",
-                    link: "https://arxiv.org/abs/2407.01511",
-                  },
-                  {
-                    logo: "/logo/agent_trust.png",
-                    logoDark: "/logo/agent_trust_white.png",
-                    image: "/paper/agent_trust_paper.jpg",
-                    brand: "AGENT TRUST",
-                    title: "Can Large Language Model Agents Simulate Human Trust Behavior?",
-                    conference: "NeurIPS 2024",
-                    date: "1 Nov 2024",
-                    source: "arXiv",
-                    link: "https://arxiv.org/abs/2402.04559",
-                  },
-                  {
-                    logo: "/logo/emos.png",
-                    logoDark: "/logo/emos_white.png",
-                    image: "/paper/emos_paper.jpg",
-                    brand: "EMOS",
-                    title:
-                      "EMOS: Embodiment-aware Heterogeneous Multi-robot Operating System with LLM Agents",
-                    conference: "ICLR 2025",
-                    date: "30 Oct 2024",
-                    source: "arXiv",
-                    link: "https://arxiv.org/abs/2410.22662",
-                  },
-                ];
-
-                const maxIndex = Math.max(0, researchPapers.length - visiblePaperCount);
-
-                const handlePrev = () => {
-                  setCurrentPaperIndex((prev) => Math.max(0, prev - 1));
-                };
-
-                const handleNext = () => {
-                  setCurrentPaperIndex((prev) => Math.min(maxIndex, prev + 1));
-                };
-
-                const itemWidthPercent = 100 / visiblePaperCount;
-
-                return (
-                  <div className="flex w-full flex-col gap-3">
-                    <div className="w-full overflow-x-visible">
-                      <div
-                        className="flex transition-transform duration-500 ease-out"
-                        style={{
-                          transform: `translateX(-${currentPaperIndex * itemWidthPercent}%)`,
-                        }}
-                      >
-                        {researchPapers.map((paper) => (
-                          <div
-                            key={paper.title}
-                            className="shrink-0 px-2"
-                            style={{
-                              width: `${itemWidthPercent}%`,
-                            }}
-                          >
-                            <Link
-                              className="group bg-card hover:border-neon-primary border-border flex h-full cursor-pointer flex-col overflow-hidden rounded-2xl border p-4 text-left shadow-none transition-all duration-200 hover:shadow-lg"
-                              href={paper.link}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              {/* 1. Logo + brand name row */}
-                              <div className="mb-2 flex shrink-0 items-center justify-center">
-                                <Image
-                                  src={paper.logo}
-                                  alt={paper.brand}
-                                  width={160}
-                                  height={160}
-                                  sizes="64px"
-                                  className="h-8 w-auto shrink-0 object-contain dark:hidden"
-                                />
-                                <Image
-                                  src={paper.logoDark ?? paper.logo}
-                                  alt={paper.brand}
-                                  width={160}
-                                  height={160}
-                                  sizes="64px"
-                                  className="hidden h-8 w-auto shrink-0 object-contain dark:block"
-                                />
-                              </div>
-                              {/* 2. Paper preview image */}
-                              <div className="relative mb-2 w-full overflow-hidden">
-                                <Image
-                                  src={paper.image}
-                                  alt={paper.title}
-                                  width={600}
-                                  height={900}
-                                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                                  className="h-auto w-full object-cover"
-                                />
-                              </div>
-                              {/* 3. Title (middle) - large, bold, multi-line */}
-                              <h3 className="text-md font-display-title text-foreground mb-4 min-h-0 flex-1 leading-relaxed font-bold">
-                                {paper.title}
-                              </h3>
-                              {/* 4. Metadata (bottom) - conference/date row, then source row */}
-                              <div className="text-muted-foreground flex shrink-0 flex-col gap-1 text-[10px]">
-                                <div className="flex items-start justify-between gap-4">
-                                  <span className="text-neon-primary font-semibold">
-                                    {paper.conference}
-                                  </span>
-                                  <span className="text-muted-foreground shrink-0">
-                                    {paper.date}
-                                  </span>
-                                </div>
-                              </div>
-                            </Link>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Counter + arrow controls - bottom right */}
-                    <div className="mt-4 flex w-full items-center justify-between gap-3 px-4">
-                      <span className="text-muted-foreground text-xs">
-                        {currentPaperIndex + 1} / {researchPapers.length}
-                      </span>
-                      <div className="flex gap-2">
-                        <button
-                          type="button"
-                          onClick={handlePrev}
-                          disabled={currentPaperIndex === 0}
-                          className="bg-card border-border text-muted-foreground hover:border-neon-primary hover:text-neon-primary flex h-8 w-8 cursor-pointer items-center justify-center rounded-full border shadow-sm disabled:cursor-not-allowed disabled:opacity-40"
-                          aria-label="Previous paper"
-                        >
-                          <span className="inline-block -scale-x-100">
-                            <ArrowRight className="h-4 w-4" />
-                          </span>
-                        </button>
-                        <button
-                          type="button"
-                          onClick={handleNext}
-                          disabled={currentPaperIndex === maxIndex}
-                          className="bg-card border-border text-gray-primary hover:border-neon-primary hover:text-neon-primary flex h-8 w-8 cursor-pointer items-center justify-center rounded-full border shadow-sm disabled:cursor-not-allowed disabled:opacity-40"
-                          aria-label="Next paper"
-                        >
-                          <ArrowRight className="h-4 w-4" />
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })()}
-            </div>
+            <ResearchPapersSlider />
           </Content>
         </Container>
         <Container size="xl">
@@ -523,9 +289,9 @@ export default function Home() {
                 variant="default"
                 size="lg"
                 className="w-fit cursor-pointer rounded-full px-6"
-                onClick={() => (window.location.href = "/community")}
+                asChild
               >
-                {t("research.contactUs")}
+                <Link href="/community">{t("research.contactUs")}</Link>
               </Button>
             </div>
 
@@ -963,17 +729,5 @@ export default function Home() {
         </Container>
       </Section>
     </>
-  );
-}
-
-function FeatureCard({ icon, title, description }) {
-  return (
-    <div className="bg-card border-border hover:border-neon-primary group rounded-[32px] border p-8 text-left transition-all hover:shadow-lg">
-      <div className="bg-primary-1 text-neon-primary mb-6 flex h-12 w-12 items-center justify-center rounded-xl transition-transform group-hover:scale-110">
-        {icon}
-      </div>
-      <h3 className="mb-4 text-xl font-bold">{title}</h3>
-      <p className="text-muted-foreground text-base leading-relaxed">{description}</p>
-    </div>
   );
 }

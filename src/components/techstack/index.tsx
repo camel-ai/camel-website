@@ -1,3 +1,5 @@
+"use client";
+
 import StackSection from "@/components/techstack/stacksection";
 import {
   agent,

@@ -44,7 +44,7 @@ const RESOURCE_KEYS = [
   { key: "about", href: "/about" },
   {
     key: "careers",
-    href: "https://eigent-ai.notion.site/eigent-ai-careers?source=copy_link",
+    href: "https://www.eigent.ai/careers",
   },
   { key: "branding", href: "/branding" },
 ];
