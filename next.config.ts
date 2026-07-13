@@ -126,6 +126,11 @@ const nextConfig: NextConfig = {
   // This is required to support PostHog trailing slash API requests
   skipTrailingSlashRedirect: true,
   images: {
+    // Serve original files directly. The self-hosted optimizer was producing
+    // (and caching for a year) zero-byte WebP/AVIF transforms, which showed up
+    // as broken figures across blogs. Originals also keep asset URLs stable
+    // for the planned S3 migration.
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
@@ -136,11 +141,6 @@ const nextConfig: NextConfig = {
         hostname: "avatars.githubusercontent.com",
       },
     ],
-    formats: ["image/avif", "image/webp"],
-    minimumCacheTTL: 31536000, // 1 year cache for optimized images
-    // CDN-style responsive breakpoints for optimized image delivery
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256],
   },
   // Performance optimizations
   compiler: {

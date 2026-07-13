@@ -49,31 +49,13 @@ renderer.link = function ({ href, title, text }) {
   return `<a href="${safeHref}" target="_blank" rel="noopener noreferrer"${titleAttr}>${text}</a>`;
 };
 
-// Build Next.js image optimization URL for CDN-style delivery (AVIF/WebP per next.config, responsive)
-function getOptimizedImageUrl(src: string, width: number, quality = 75): string {
-  const encoded = encodeURIComponent(src);
-  return `/_next/image?url=${encoded}&w=${width}&q=${quality}`;
-}
-
-/** Widths must match `images.deviceSizes` / `imageSizes` in next.config.ts */
-const MARKDOWN_IMAGE_WIDTHS = [640, 750, 828, 1080, 1200, 1920] as const;
-
-// Images with rounded corners, figure support, and CDN optimization
+// Images with rounded corners and figure support. Serve the original file
+// directly — image optimization is disabled (`images.unoptimized` in
+// next.config.ts) and keeping URLs 1:1 with `public/` simplifies CDN/S3 serving.
 renderer.image = function ({ href, title, text }) {
   const safeHref = href || "";
   const caption = title || text;
-  const isLocal = safeHref.startsWith("/");
-  let imgTag: string;
-  if (isLocal) {
-    const widths = MARKDOWN_IMAGE_WIDTHS;
-    const srcset = widths.map((w) => `${getOptimizedImageUrl(safeHref, w)} ${w}w`).join(", ");
-    const defaultSrc = getOptimizedImageUrl(safeHref, 1200);
-    const sizes =
-      "(max-width: 768px) 100vw, (max-width: 1280px) min(100vw, 896px), min(100vw, 800px)";
-    imgTag = `<img src="${defaultSrc}" srcset="${srcset}" sizes="${sizes}" alt="${text || ""}" loading="lazy" decoding="async" class="rounded-lg" />`;
-  } else {
-    imgTag = `<img src="${safeHref}" alt="${text || ""}" loading="lazy" decoding="async" class="rounded-lg" />`;
-  }
+  const imgTag = `<img src="${safeHref}" alt="${text || ""}" loading="lazy" decoding="async" class="rounded-lg" />`;
   if (caption && caption !== safeHref) {
     return `<figure class="blog-figure">${imgTag}<figcaption>${caption}</figcaption></figure>`;
   }

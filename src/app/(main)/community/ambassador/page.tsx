@@ -2,11 +2,6 @@ import { Section } from "@/components/layout/Section";
 import { Container } from "@/components/layout/Container";
 import { Content } from "@/components/layout/Content";
 import { Header } from "@/components/layout/Header";
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
-
-const AMBASSADOR_APPLY_URL =
-  "https://eigent-ai.notion.site/1ed511c70ba281dda616e5e5ed26d218?pvs=105";
 
 export const metadata = {
   title: "Ambassador Program | CAMEL-AI",
@@ -113,7 +108,7 @@ export default function AmbassadorPage() {
           </div>
         </Content>
 
-        {/* Apply CTA */}
+        {/* Applications closed notice */}
         <Content
           layout="stack"
           spacing="loose"
@@ -121,18 +116,13 @@ export default function AmbassadorPage() {
           maxWidth="full"
           className="my-12 md:my-16"
         >
-          <h2 className="font-display-title text-foreground text-2xl font-bold">Ready to Join?</h2>
-          <Button asChild size="lg" className="font-display-title font-semibold">
-            <a
-              href={AMBASSADOR_APPLY_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2"
-            >
-              Apply Now
-              <ArrowRight className="size-4" />
-            </a>
-          </Button>
+          <h2 className="font-display-title text-foreground text-2xl font-bold">
+            Applications Are Currently Closed
+          </h2>
+          <p className="text-text-secondary max-w-xl text-center">
+            The Ambassador Program is not accepting new applications right now. Follow our community
+            channels to hear when the next application round opens.
+          </p>
         </Content>
       </Container>
     </Section>

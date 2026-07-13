@@ -651,7 +651,7 @@ export default function NavBar() {
                         />
                         <NavContentItem
                           title={t("ambassadorProgram")}
-                          href="https://eigent-ai.notion.site/1ed511c70ba281dda616e5e5ed26d218?pvs=105"
+                          href="/community/ambassador"
                           description={t("ambassadorProgramDesc")}
                           hoverBg
                         />
@@ -669,15 +669,13 @@ export default function NavBar() {
                         </p>
                       </div>
                       <div className="mt-6">
-                        <a
-                          href="https://eigent-ai.notion.site/1ed511c70ba281dda616e5e5ed26d218?pvs=105"
-                          target="_blank"
-                          rel="noopener noreferrer"
+                        <Link
+                          href="/community/ambassador"
                           className="text-foreground inline-flex items-center gap-2 text-sm font-semibold hover:underline"
                         >
-                          {t("applyNow")}
+                          {t("learnMore")}
                           <ArrowRight className="size-4" />
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -877,15 +875,13 @@ export default function NavBar() {
               >
                 {t("communityHub")}
               </Link>
-              <a
-                href="https://eigent-ai.notion.site/1ed511c70ba281dda616e5e5ed26d218?pvs=105"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/community/ambassador"
                 className="font-display-title hover:bg-muted/70 active:bg-muted/70 rounded-lg px-2 py-2.5 text-base font-semibold transition-colors"
                 onClick={toggleMobileMenu}
               >
                 {t("ambassadorProgram")}
-              </a>
+              </Link>
             </div>
           )}
 
@@ -919,17 +915,6 @@ export default function NavBar() {
               <span className="text-muted-foreground text-sm">{t("theme")}</span>
               <ThemeToggle />
             </div>
-            <Button asChild className="w-full">
-              <a
-                href="https://eigent-ai.notion.site/1ed511c70ba281dda616e5e5ed26d218?pvs=105"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-display-title font-semibold"
-                onClick={toggleMobileMenu}
-              >
-                {t("becomeAmbassador")}
-              </a>
-            </Button>
             <Button variant="outline" asChild className="w-full gap-2">
               <a href="https://github.com/camel-ai/camel" target="_blank" rel="noopener noreferrer">
                 <Github className="size-4" />
