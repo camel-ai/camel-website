@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import Hero from "@/components/home/Hero";
 import Image from "next/image";
+import { assetUrl } from "@/lib/asset-url";
 import LogoMarquee from "@/components/LogoMarquee";
 import TechStackContent from "@/components/techstack";
 import { CommunityMap } from "@/components/community/CommunityMap";
@@ -101,7 +102,7 @@ export default async function Home() {
           <Content align="center" spacing="relaxed" maxWidth="xl">
             <div className="flex max-w-md flex-col gap-8">
               <Image
-                src="/image/mission.png"
+                src={assetUrl("/image/mission.png")}
                 alt="Mission"
                 width={600}
                 height={600}
@@ -115,7 +116,7 @@ export default async function Home() {
               <div className="flex-1 flex-col gap-8">
                 <div className="bg-neon-secondary/20 border-border relative mb-4 flex min-h-[140px] flex-col gap-2 overflow-hidden rounded-xl border p-6 md:h-[160px]">
                   <Image
-                    src="/icon/agents.svg"
+                    src={assetUrl("/icon/agents.svg")}
                     alt="Number of Agents"
                     width={40}
                     height={40}
@@ -163,7 +164,7 @@ export default async function Home() {
               <div className="flex-1 flex-col gap-8">
                 <div className="bg-neon-secondary/20 border-border relative mb-4 flex min-h-[140px] flex-col gap-2 overflow-hidden rounded-xl border p-6 md:h-[180px]">
                   <Image
-                    src="/icon/environments.svg"
+                    src={assetUrl("/icon/environments.svg")}
                     alt="Number of Agents"
                     width={40}
                     height={40}
@@ -211,7 +212,7 @@ export default async function Home() {
               <div className="flex-1 flex-col gap-8">
                 <div className="bg-neon-secondary/20 border-border relative mb-4 flex min-h-[140px] flex-col gap-2 overflow-hidden rounded-xl border p-6 md:h-[200px]">
                   <Image
-                    src="/icon/evolution.svg"
+                    src={assetUrl("/icon/evolution.svg")}
                     alt="Evolution"
                     width={40}
                     height={40}
@@ -299,10 +300,10 @@ export default async function Home() {
               {researchLogos.map((logo) => (
                 <div
                   key={logo.alt}
-                  className="bg-card/40 flex h-16 w-full items-center justify-center rounded-xl px-4 dark:bg-white dark:border-white/20"
+                  className="bg-card/40 flex h-16 w-full items-center justify-center rounded-xl px-4 dark:border-white/20 dark:bg-white"
                 >
                   <Image
-                    src={logo.src}
+                    src={assetUrl(logo.src)}
                     alt={logo.alt}
                     width={140}
                     height={40}
@@ -597,7 +598,7 @@ export default async function Home() {
               </blockquote>
               <div className="flex items-center gap-3">
                 <Image
-                  src="/testimonails/red_dragon_ai.avif"
+                  src={assetUrl("/testimonails/red_dragon_ai.avif")}
                   alt="Sam Witteveen"
                   width={48}
                   height={48}
@@ -620,7 +621,7 @@ export default async function Home() {
               </blockquote>
               <div className="flex items-center gap-3">
                 <Image
-                  src="/testimonails/valory.jpeg"
+                  src={assetUrl("/testimonails/valory.jpeg")}
                   alt="Valory"
                   width={48}
                   height={48}
@@ -643,7 +644,7 @@ export default async function Home() {
               </blockquote>
               <div className="flex items-center gap-3">
                 <Image
-                  src="/testimonails/economist.jpg"
+                  src={assetUrl("/testimonails/economist.jpg")}
                   alt="The Economist"
                   width={48}
                   height={48}
@@ -666,7 +667,7 @@ export default async function Home() {
               </blockquote>
               <div className="flex items-center gap-3">
                 <Image
-                  src="/testimonails/sophia_yang.avif"
+                  src={assetUrl("/testimonails/sophia_yang.avif")}
                   alt="Sophia Yang"
                   width={48}
                   height={48}
@@ -690,7 +691,7 @@ export default async function Home() {
               </blockquote>
               <div className="flex items-center gap-3">
                 <Image
-                  src="/testimonails/databricks.jpg"
+                  src={assetUrl("/testimonails/databricks.jpg")}
                   alt="Databricks"
                   width={48}
                   height={48}
@@ -712,7 +713,7 @@ export default async function Home() {
               </blockquote>
               <div className="flex items-center gap-3">
                 <Image
-                  src="/testimonails/yogesh_haribhau.jpeg"
+                  src={assetUrl("/testimonails/yogesh_haribhau.jpeg")}
                   alt="Yogesh Haribhau Kulkarni"
                   width={48}
                   height={48}

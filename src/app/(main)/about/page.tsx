@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { assetUrl } from "@/lib/asset-url";
 import { Section } from "@/components/layout/Section";
 import { Container } from "@/components/layout/Container";
 import { Header } from "@/components/layout/Header";
@@ -15,7 +16,7 @@ export default function About() {
         className="relative min-h-[80vh] items-center justify-center md:min-h-[90vh]"
       >
         <Image
-          src="/image/background_about.png"
+          src={assetUrl("/image/background_about.png")}
           alt=""
           fill
           className="object-cover object-bottom"
@@ -65,7 +66,7 @@ export default function About() {
               <div className="bg-card flex flex-col gap-6 rounded-xl p-6 sm:flex-row md:p-8">
                 <div className="shrink-0">
                   <Image
-                    src="/people/guohao_li.jpg"
+                    src={assetUrl("/people/guohao_li.jpg")}
                     alt="Guohao Li"
                     width={160}
                     height={160}
@@ -133,7 +134,7 @@ export default function About() {
                 <div className="bg-card flex flex-col gap-6 rounded-xl p-6 sm:flex-row md:p-8">
                   <div className="shrink-0">
                     <Image
-                      src="/people/bernard_ghanem.jpg"
+                      src={assetUrl("/people/bernard_ghanem.jpg")}
                       alt="Bernard Ghanem"
                       width={120}
                       height={120}
@@ -164,7 +165,7 @@ export default function About() {
                 <div className="bg-card flex flex-col gap-6 rounded-xl p-6 sm:flex-row md:p-8">
                   <div className="shrink-0">
                     <Image
-                      src="/people/philip_trorr.jpg"
+                      src={assetUrl("/people/philip_trorr.jpg")}
                       alt="Philip Torr"
                       width={120}
                       height={120}

@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import { getAllPosts, sortPostsByDateDesc } from "./utils";
+import { assetUrl } from "@/lib/asset-url";
 import { Section } from "@/components/layout/Section";
 import { Container } from "@/components/layout/Container";
 import { Header } from "@/components/layout/Header";
@@ -15,7 +16,7 @@ export const metadata = {
       "CAMEL-AI blog: updates, tutorials, and insights on multi-agent systems, data generation, and AI research.",
     images: [
       {
-        url: "/image/thumbnail.png",
+        url: assetUrl("/image/thumbnail.png"),
         width: 1200,
         height: 630,
         alt: "CAMEL-AI Blog",
@@ -26,7 +27,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Blog | CAMEL-AI",
     description: "CAMEL-AI blog: updates, tutorials, and insights on multi-agent systems.",
-    images: { url: "/image/thumbnail.png", alt: "CAMEL-AI Blog" },
+    images: { url: assetUrl("/image/thumbnail.png"), alt: "CAMEL-AI Blog" },
   },
 };
 

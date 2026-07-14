@@ -3,39 +3,86 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { assetUrl } from "@/lib/asset-url";
 
 const socialItems: { title: string; href: string; icon: ReactNode }[] = [
   {
     title: "GitHub",
     href: "https://github.com/camel-ai",
-    icon: <Image src="/icon/github.svg" alt="GitHub" width={24} height={24} className="size-5" />,
+    icon: (
+      <Image
+        src={assetUrl("/icon/github.svg")}
+        alt="GitHub"
+        width={24}
+        height={24}
+        className="size-5"
+      />
+    ),
   },
   {
     title: "Twitter/X",
     href: "https://x.com/CamelAIOrg",
-    icon: <Image src="/icon/x.svg" alt="Twitter/X" width={24} height={24} className="size-5" />,
+    icon: (
+      <Image
+        src={assetUrl("/icon/x.svg")}
+        alt="Twitter/X"
+        width={24}
+        height={24}
+        className="size-5"
+      />
+    ),
   },
   {
     title: "Discord",
     href: "https://discord.camel-ai.org",
-    icon: <Image src="/icon/discord.svg" alt="Discord" width={24} height={24} className="size-5" />,
+    icon: (
+      <Image
+        src={assetUrl("/icon/discord.svg")}
+        alt="Discord"
+        width={24}
+        height={24}
+        className="size-5"
+      />
+    ),
   },
   {
     title: "LinkedIn",
     href: "https://www.linkedin.com/company/camel-ai-org/",
     icon: (
-      <Image src="/icon/linkedin.svg" alt="LinkedIn" width={24} height={24} className="size-5" />
+      <Image
+        src={assetUrl("/icon/linkedin.svg")}
+        alt="LinkedIn"
+        width={24}
+        height={24}
+        className="size-5"
+      />
     ),
   },
   {
     title: "YouTube",
     href: "https://www.youtube.com/@CamelAI",
-    icon: <Image src="/icon/youtube.svg" alt="YouTube" width={24} height={24} className="size-5" />,
+    icon: (
+      <Image
+        src={assetUrl("/icon/youtube.svg")}
+        alt="YouTube"
+        width={24}
+        height={24}
+        className="size-5"
+      />
+    ),
   },
   {
     title: "Reddit",
     href: "https://www.reddit.com/r/CamelAI/",
-    icon: <Image src="/icon/reddit.svg" alt="Reddit" width={24} height={24} className="size-5" />,
+    icon: (
+      <Image
+        src={assetUrl("/icon/reddit.svg")}
+        alt="Reddit"
+        width={24}
+        height={24}
+        className="size-5"
+      />
+    ),
   },
 ];
 

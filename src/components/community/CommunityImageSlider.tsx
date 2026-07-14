@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { assetUrl } from "@/lib/asset-url";
 
 const IMAGES = [
   "/image/community_1.avif",
@@ -21,7 +22,7 @@ export function CommunityImageSlider() {
                 className="community-slide flex h-[180px] w-fit shrink-0 items-center justify-center sm:h-[240px] md:h-[320px]"
               >
                 <Image
-                  src={src}
+                  src={assetUrl(src)}
                   alt={`Community ${(idx % IMAGES.length) + 1}`}
                   width={1200}
                   height={600}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import NavBar from "@/components/navigation/NavBar";
 import Footer from "@/components/navigation/Footer";
+import { assetUrl } from "@/lib/asset-url";
 
 export const metadata: Metadata = {
   title: "CAMEL-AI | Finding the Scaling Laws of Agents",
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
       "CAMEL-AI is an open-source community for finding the scaling laws of agents for data generation, world simulation, task automation.",
     images: [
       {
-        url: "/image/thumbnail.png",
+        url: assetUrl("/image/thumbnail.png"),
         width: 1200,
         height: 630,
         alt: "CAMEL-AI - Finding the Scaling Laws of Agents",
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
     description:
       "CAMEL-AI is an open-source community for finding the scaling laws of agents for data generation, world simulation, task automation.",
     images: {
-      url: "/image/thumbnail.png",
+      url: assetUrl("/image/thumbnail.png"),
       alt: "CAMEL-AI - Finding the Scaling Laws of Agents",
     },
   },

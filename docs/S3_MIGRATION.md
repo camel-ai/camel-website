@@ -45,37 +45,42 @@ markdown resolves to an existing file under `public/` (audit commands at the bot
 
 ## Migration steps
 
-1. Sync assets (exclude markdown and root-domain files):
+1. Sync assets to the bucket (default name `camel-website-assets`). Both the sync and
+   the `package/*` `Content-Disposition: attachment` pass are wrapped in
+   [`scripts/sync-assets-to-s3.mjs`](../scripts/sync-assets-to-s3.mjs):
 
    ```sh
-   aws s3 sync public/ s3://<bucket>/ \
-     --exclude "*/index.md" \
-     --exclude "favicon*" --exclude "manifest.json" \
-     --exclude "apple-touch-icon.png" --exclude "android-chrome-*" \
-     --exclude "google*.html" --exclude "font/*" \
-     --cache-control "public, max-age=31536000, immutable"
+   # dry run first (needs AWS CLI v2 + ambient creds, e.g. AWS_PROFILE)
+   S3_ASSETS_BUCKET=camel-website-assets node scripts/sync-assets-to-s3.mjs --dryrun
+   # then for real
+   S3_ASSETS_BUCKET=camel-website-assets node scripts/sync-assets-to-s3.mjs
    ```
 
-2. For `package/*`, set `Content-Disposition: attachment` object metadata:
+   The script excludes `*/index.md`, `favicon*`, `manifest.json`, `apple-touch-icon.png`,
+   `android-chrome-*`, `google*.html`, and `font/*`, sets
+   `cache-control: public, max-age=31536000, immutable`, and applies
+   `Content-Disposition: attachment` to `package/*`. Re-run it after adding new blog posts.
 
-   ```sh
-   aws s3 cp s3://<bucket>/package/ s3://<bucket>/package/ --recursive \
-     --metadata-directive REPLACE --content-disposition attachment \
-     --cache-control "public, max-age=31536000, immutable"
-   ```
-
-3. Serve. Two options:
+2. Serve. Two options:
    - **CloudFront in front of the whole site** (recommended): route asset path
      patterns (`/blogs/*`, `/image/*`, `/logo/*`, `/icon/*`, `/people/*`, `/paper/*`,
      `/package/*`, `/tech-stack-logos/*`, `/branding/*`, `/testimonails/*`) to the S3
      origin and everything else to the Next.js origin. No code changes needed —
-     URLs stay identical.
-   - **CDN hostname in URLs**: requires rewriting the hardcoded `/...` paths in
-     components plus the blog resolver in `utils.tsx`. More churn; only do this if
-     a fronting CDN is not an option. (Note: Next's `assetPrefix` does NOT apply to
-     `public/` files, so it can't do this for you.)
+     URLs stay identical. Leave `NEXT_PUBLIC_ASSET_BASE_URL` empty in this mode.
 
-4. After cutover, `public/blogs/*/index.md` must remain in the repo/deployment —
+     Caveat: CloudFront path patterns match by prefix, so a bare `/blogs/*` behavior
+     would also capture the `/blogs/<slug>` HTML pages (Next.js routes served by the
+     app origin). Narrow the S3 behavior to `/blogs/*/assets/*` to avoid that collision.
+
+   - **CDN hostname in URLs** (assets on a distinct host, e.g. `cdn.camel-ai.org`):
+     set `NEXT_PUBLIC_ASSET_BASE_URL` to the CDN host. Blog image URLs are prefixed
+     automatically because the resolver in `src/app/(main)/blogs/utils.tsx` runs every
+     path through `assetUrl()` (`src/lib/asset-url.ts`). The ~139 hardcoded
+     `/image/...` / `/logo/...` paths in components are **not** wrapped yet — either
+     front them via CloudFront (previous option) or wrap them in `assetUrl()` as a
+     follow-up. (Note: Next's `assetPrefix` does NOT apply to `public/` files.)
+
+3. After cutover, `public/blogs/*/index.md` must remain in the repo/deployment —
    the blog pages read the markdown from the filesystem at build time.
 
 ## Re-run the audit

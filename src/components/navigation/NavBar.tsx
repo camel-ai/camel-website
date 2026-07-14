@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useTranslations } from "next-intl";
+import { assetUrl } from "@/lib/asset-url";
 
 type NavItem = "product" | "research" | "community" | null;
 
@@ -120,9 +121,13 @@ const ResearchContentItem = ({
       rel={isExternal ? "noopener noreferrer" : undefined}
       className="group hover:bg-muted/70 flex h-[68px] items-center gap-3 rounded-lg px-2 py-2.5 transition-colors"
     >
-      <img src={iconPath} alt={title} className="size-9 shrink-0 object-contain dark:hidden" />
       <img
-        src={iconPathDark ?? iconPath}
+        src={assetUrl(iconPath)}
+        alt={title}
+        className="size-9 shrink-0 object-contain dark:hidden"
+      />
+      <img
+        src={assetUrl(iconPathDark ?? iconPath)}
         alt={title}
         className="hidden size-9 shrink-0 object-contain dark:block"
       />
@@ -321,7 +326,7 @@ export default function NavBar() {
             )}
           >
             <Image
-              src="/logo/camel.png"
+              src={assetUrl("/logo/camel.png")}
               alt="CAMEL-AI"
               width={256}
               height={36}
@@ -329,7 +334,7 @@ export default function NavBar() {
               priority
             />
             <Image
-              src="/logo/camel_white.png"
+              src={assetUrl("/logo/camel_white.png")}
               alt="CAMEL-AI"
               width={256}
               height={36}
@@ -400,14 +405,14 @@ export default function NavBar() {
               className="font-display-title inline-flex cursor-pointer items-center gap-1 font-semibold"
             >
               <Image
-                src="/icon/discord_white.svg"
+                src={assetUrl("/icon/discord_white.svg")}
                 alt="discord"
                 width={24}
                 height={24}
                 className="dark:hidden"
               />
               <Image
-                src="/icon/discord.svg"
+                src={assetUrl("/icon/discord.svg")}
                 alt="discord"
                 width={24}
                 height={24}
@@ -455,7 +460,7 @@ export default function NavBar() {
                     >
                       <div>
                         <Image
-                          src="/logo/eigent_icon.png"
+                          src={assetUrl("/logo/eigent_icon.png")}
                           alt="Eigent"
                           width={32}
                           height={32}
@@ -485,7 +490,7 @@ export default function NavBar() {
                     >
                       <div>
                         <Image
-                          src="/logo/eigent_icon.png"
+                          src={assetUrl("/logo/eigent_icon.png")}
                           alt="Eigent"
                           width={32}
                           height={32}
@@ -513,14 +518,14 @@ export default function NavBar() {
                     >
                       <div>
                         <Image
-                          src="/logo/camel_icon.png"
+                          src={assetUrl("/logo/camel_icon.png")}
                           alt="CAMEL"
                           width={32}
                           height={32}
                           className="mb-3 object-contain dark:hidden"
                         />
                         <Image
-                          src="/logo/camel_icon_white.png"
+                          src={assetUrl("/logo/camel_icon_white.png")}
                           alt="CAMEL"
                           width={32}
                           height={32}
@@ -715,7 +720,7 @@ export default function NavBar() {
                 onClick={toggleMobileMenu}
               >
                 <Image
-                  src="/logo/eigent_icon.png"
+                  src={assetUrl("/logo/eigent_icon.png")}
                   alt="Eigent"
                   width={28}
                   height={28}
@@ -734,7 +739,7 @@ export default function NavBar() {
                 onClick={toggleMobileMenu}
               >
                 <Image
-                  src="/logo/eigent_icon.png"
+                  src={assetUrl("/logo/eigent_icon.png")}
                   alt="Eigent"
                   width={28}
                   height={28}
@@ -753,14 +758,14 @@ export default function NavBar() {
                 onClick={toggleMobileMenu}
               >
                 <Image
-                  src="/logo/camel_icon.png"
+                  src={assetUrl("/logo/camel_icon.png")}
                   alt="CAMEL"
                   width={28}
                   height={28}
                   className="mb-2 object-contain dark:hidden"
                 />
                 <Image
-                  src="/logo/camel_icon_white.png"
+                  src={assetUrl("/logo/camel_icon_white.png")}
                   alt="CAMEL"
                   width={28}
                   height={28}
@@ -806,12 +811,12 @@ export default function NavBar() {
                     onClick={toggleMobileMenu}
                   >
                     <img
-                      src={item.iconPath}
+                      src={assetUrl(item.iconPath)}
                       alt={item.title}
                       className="size-7 shrink-0 object-contain dark:hidden"
                     />
                     <img
-                      src={item.iconPathDark ?? item.iconPath}
+                      src={assetUrl(item.iconPathDark ?? item.iconPath)}
                       alt={item.title}
                       className="hidden size-7 shrink-0 object-contain dark:block"
                     />

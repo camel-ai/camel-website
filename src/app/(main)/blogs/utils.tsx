@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
 import yaml from "js-yaml";
+import { assetUrl } from "@/lib/asset-url";
 
 export type AuthorData = {
   slug: string;
@@ -159,17 +160,17 @@ export function buildTocFromMDX(markdown: string): TocItem[] {
   return toc;
 }
 
-/** Resolves relative image paths (./) to absolute /blogs/{slug}/ paths */
+/** Resolves relative image paths (./) to absolute /blogs/{slug}/ paths (optionally CDN-prefixed) */
 function resolveImagePaths(value: string | undefined, slug: string): string | undefined {
   if (!value || typeof value !== "string") return value;
-  if (value.startsWith("./")) return `/blogs/${slug}/${value.slice(2)}`;
-  if (value.startsWith("/")) return value;
+  if (value.startsWith("./")) return assetUrl(`/blogs/${slug}/${value.slice(2)}`);
+  if (value.startsWith("/")) return assetUrl(value);
   return value;
 }
 
 /** Resolves relative image paths in markdown content (e.g. ](./image.jpg) -> ](/blogs/slug/image.jpg)) */
 function resolveContentImagePaths(content: string, slug: string): string {
-  return content.replace(/\]\(\.\//g, `](/blogs/${slug}/`);
+  return content.replace(/\]\(\.\//g, `](${assetUrl(`/blogs/${slug}/`)}`);
 }
 
 export function getPostBySlug(slug: string): BlogPost | null {

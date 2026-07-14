@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import { assetUrl } from "@/lib/asset-url";
 
 const researchPapers = [
   {
@@ -129,7 +130,7 @@ export default function ResearchPapersSlider() {
                 >
                   <div className="mb-2 flex shrink-0 items-center justify-center">
                     <Image
-                      src={paper.logo}
+                      src={assetUrl(paper.logo)}
                       alt={paper.brand}
                       width={160}
                       height={160}
@@ -137,7 +138,7 @@ export default function ResearchPapersSlider() {
                       className="h-8 w-auto shrink-0 object-contain dark:hidden"
                     />
                     <Image
-                      src={paper.logoDark ?? paper.logo}
+                      src={assetUrl(paper.logoDark ?? paper.logo)}
                       alt={paper.brand}
                       width={160}
                       height={160}
@@ -147,7 +148,7 @@ export default function ResearchPapersSlider() {
                   </div>
                   <div className="relative mb-2 w-full overflow-hidden">
                     <Image
-                      src={paper.image}
+                      src={assetUrl(paper.image)}
                       alt={paper.title}
                       width={600}
                       height={900}

@@ -71,6 +71,16 @@ npm run format:check
 npm run build
 ```
 
+## Environment Variables
+
+Set these in `.env.local` (see `.env.local` for the newsletter keys already in use):
+
+| Variable | Required | Purpose |
+| --- | --- | --- |
+| `RESEND_API_KEY` | prod | Newsletter subscribe endpoint (`/api/newsletter/subscribe`) |
+| `RESEND_AUDIENCE_ID` | optional | Resend audience for collected contacts |
+| `NEXT_PUBLIC_ASSET_BASE_URL` | optional | CDN host for static assets (e.g. `https://cdn.camel-ai.org`). Empty ⇒ assets served same-origin. When set, blog image URLs are prefixed with this host. See [docs/S3_MIGRATION.md](docs/S3_MIGRATION.md). |
+
 ## Project Structure
 
 ```text

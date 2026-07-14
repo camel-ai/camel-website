@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
+import { assetUrl } from "@/lib/asset-url";
 import { Section } from "@/components/layout/Section";
 import { Container } from "@/components/layout/Container";
 import { Content } from "@/components/layout/Content";
@@ -66,7 +67,7 @@ export default function CommunityPage() {
             <div className="bg-card border-border hover:border-neon-primary flex h-full flex-col overflow-hidden rounded-xl border transition-colors">
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
-                  src="/image/join_discord.avif"
+                  src={assetUrl("/image/join_discord.avif")}
                   alt="Join Discord"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
@@ -87,7 +88,7 @@ export default function CommunityPage() {
             <div className="bg-card border-border hover:border-neon-primary flex h-full flex-col overflow-hidden rounded-xl border transition-colors">
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
-                  src="/image/ambassador.png"
+                  src={assetUrl("/image/ambassador.png")}
                   alt="Ambassador Program"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
@@ -108,7 +109,7 @@ export default function CommunityPage() {
             <div className="bg-card border-border hover:border-neon-primary flex h-full flex-col overflow-hidden rounded-xl border transition-colors">
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
-                  src="/image/build_with_camel.avif"
+                  src={assetUrl("/image/build_with_camel.avif")}
                   alt="Build with CAMEL"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"

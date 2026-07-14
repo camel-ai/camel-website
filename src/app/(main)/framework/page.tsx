@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Code, Layers, Zap, Database, Terminal } from "lucide-react";
 import Image from "next/image";
+import { assetUrl } from "@/lib/asset-url";
 
 export const metadata = {
   title: "Framework | CAMEL-AI",
@@ -86,7 +87,7 @@ export default function FrameworkPage() {
           <Content layout="stack" spacing="relaxed" align="center" className="mb-16">
             <div className="w-full text-center">
               <Image
-                src="/image/layer_architecture.png"
+                src={assetUrl("/image/layer_architecture.png")}
                 alt="Three-Layer Architecture"
                 width={1000}
                 height={1000}

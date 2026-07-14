@@ -14,6 +14,7 @@ import { useTheme } from "next-themes";
 import backgroundAnimation from "../../../public/image/background.json";
 import backgroundDarkAnimation from "../../../public/image/background_dark.json";
 import { useTranslations } from "next-intl";
+import { assetUrl } from "@/lib/asset-url";
 
 const Hero: React.FC = () => {
   const { resolvedTheme } = useTheme();
@@ -198,14 +199,14 @@ const Hero: React.FC = () => {
                               className="font-display-title text-neon-primary hover:bg-neon-secondary/30 data-[state=active]:bg-neon-secondary/50 data-[state=active]:text-neon-primary inline-flex items-center gap-2 rounded-lg px-3 py-1 text-sm font-bold transition-all sm:px-4 sm:text-base"
                             >
                               <Image
-                                src={iconSrc}
+                                src={assetUrl(iconSrc)}
                                 alt={`${label} logo`}
                                 width={40}
                                 height={40}
                                 className="h-8 w-8 object-contain dark:hidden"
                               />
                               <Image
-                                src={darkIconSrc}
+                                src={assetUrl(darkIconSrc)}
                                 alt={`${label} logo`}
                                 width={40}
                                 height={40}

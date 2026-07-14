@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import { assetUrl } from "@/lib/asset-url";
 
 type Logo = {
   src: string;
@@ -25,7 +26,7 @@ export default function LogoMarquee({ logos }: CustomerLogosProps) {
                 className="flex h-16 w-[160px] shrink-0 items-center justify-center rounded-xl border border-transparent px-4 dark:border-white/20 dark:bg-white"
               >
                 <Image
-                  src={logo.src}
+                  src={assetUrl(logo.src)}
                   alt={logo.alt}
                   width={140}
                   height={40}

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import NewsletterCard from "../newsletter/card";
+import { assetUrl } from "@/lib/asset-url";
 import SocialLinks from "./SocialLinks";
 
 const RESEARCH_KEYS = [
@@ -97,14 +98,14 @@ export default function Footer() {
             <div className="space-y-4">
               <Link href="/" className="w-fit transition-opacity hover:opacity-80">
                 <Image
-                  src="/logo/camel.png"
+                  src={assetUrl("/logo/camel.png")}
                   alt="CAMEL-AI"
                   width={256}
                   height={36}
                   className="h-10 w-auto object-contain dark:hidden"
                 />
                 <Image
-                  src="/logo/camel_white.png"
+                  src={assetUrl("/logo/camel_white.png")}
                   alt="CAMEL-AI"
                   width={256}
                   height={36}

@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { assetUrl } from "@/lib/asset-url";
 import { Section } from "@/components/layout/Section";
 import { Container } from "@/components/layout/Container";
 import { Download, Mail } from "lucide-react";
@@ -209,7 +210,7 @@ export default function BrandingPage() {
               <div className="not-prose grid gap-4 sm:grid-cols-2">
                 <div className="border-border bg-card flex min-h-[140px] items-center justify-center rounded-xl border p-8">
                   <Image
-                    src="/logo/eigent_icon.png"
+                    src={assetUrl("/logo/eigent_icon.png")}
                     alt="Eigent icon mark"
                     width={64}
                     height={64}
@@ -219,7 +220,7 @@ export default function BrandingPage() {
                 </div>
                 <div className="flex min-h-[140px] items-center justify-center rounded-xl border border-white/10 bg-neutral-950 p-8">
                   <Image
-                    src="/logo/camel_white.png"
+                    src={assetUrl("/logo/camel_white.png")}
                     alt="CAMEL wordmark on dark"
                     width={200}
                     height={48}
@@ -229,7 +230,7 @@ export default function BrandingPage() {
                 </div>
                 <div className="border-border bg-card flex min-h-[140px] items-center justify-center rounded-xl border p-8 sm:col-span-2">
                   <Image
-                    src="/logo/camel.png"
+                    src={assetUrl("/logo/camel.png")}
                     alt="CAMEL wordmark on light"
                     width={200}
                     height={48}
@@ -261,7 +262,7 @@ export default function BrandingPage() {
                     </figcaption>
                     <div className="border-border overflow-hidden rounded-xl border bg-[#F0F2F5] shadow-sm">
                       <Image
-                        src={guide.src}
+                        src={assetUrl(guide.src)}
                         alt={guide.alt}
                         width={1024}
                         height={1024}
@@ -293,7 +294,7 @@ export default function BrandingPage() {
                         return (
                           <a
                             key={item.file}
-                            href={item.href}
+                            href={assetUrl(item.href)}
                             {...(isExternal
                               ? { target: "_blank", rel: "noopener noreferrer" }
                               : { download: item.file })}

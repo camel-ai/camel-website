@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import { assetUrl } from "@/lib/asset-url";
 
 interface StackItemProps {
   children: React.ReactNode;
@@ -52,7 +53,7 @@ export default function StackItem({
 
   const logoCategory = title ? LOGO_CATEGORY_BY_SECTION[title] : undefined;
   const fullLogoPath =
-    showLogo && id && logoCategory ? `/tech-stack-logos/${logoCategory}/${id}.svg` : null;
+    showLogo && id && logoCategory ? assetUrl(`/tech-stack-logos/${logoCategory}/${id}.svg`) : null;
 
   const showImage = Boolean(fullLogoPath && !logoFailed);
   const showLabel = showText || logoFailed;

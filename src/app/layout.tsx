@@ -5,6 +5,7 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { NextIntlClientProvider } from "next-intl";
+import { assetUrl } from "@/lib/asset-url";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -133,7 +134,7 @@ export const metadata: Metadata = {
       "CAMEL-AI is an open-source community for finding the scaling laws of agents for data generation, world simulation, task automation.",
     images: [
       {
-        url: "/image/thumbnail.png",
+        url: assetUrl("/image/thumbnail.png"),
         width: 1200,
         height: 630,
         alt: "CAMEL-AI - Finding the Scaling Laws of Agents",
@@ -148,7 +149,7 @@ export const metadata: Metadata = {
     description:
       "CAMEL-AI is an open-source community for finding the scaling laws of agents for data generation, world simulation, task automation.",
     images: {
-      url: "/image/thumbnail.png",
+      url: assetUrl("/image/thumbnail.png"),
       alt: "CAMEL-AI - Finding the Scaling Laws of Agents",
     },
   },
